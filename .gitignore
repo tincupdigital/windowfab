@@ -40,6 +40,7 @@ npm-debug.log
 # Compiled CSS
 main.css
 main.min.css
+main.min.css.map
 
 # Compiled JS
 main.js
