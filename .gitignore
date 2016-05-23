@@ -19,10 +19,6 @@ wp/
 content/plugins/*
 !content/plugins/index.php
 
-# Themes folder
-content/themes/*
-!content/themes/windowfab
-
 # Upgrade folder
 content/upgrade
 

@@ -22,7 +22,7 @@ function my_theme_register_required_plugins() {
     array(
       'name' => 'Advanced Custom Fields: Repeater Field',
       'slug' => 'acf-repeater',
-      'source' => 'http://goo.gl/ifExSj',
+      'source' => 'http://www.ecm-design.com/assets/plugins/acf-repeater.zip',
       'required' => true,
       'force_activation' => true
     ),

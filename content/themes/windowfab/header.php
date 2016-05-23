@@ -17,6 +17,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<!-- Web fonts -->
+<link href='https://fonts.googleapis.com/css?family=Satisfy|Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
