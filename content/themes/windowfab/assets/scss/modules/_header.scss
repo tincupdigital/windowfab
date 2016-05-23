@@ -1,0 +1,38 @@
+/**
+ * _header.scss
+ */
+
+/*
+Header
+ */
+.site-header {}
+
+/*
+Navigation
+ */
+.main-navigation {
+  ul {
+    display: none;
+  }
+
+  &.toggled ul {
+    display: block;
+  }
+
+  @include break-sm {
+    ul {
+      display: block;
+    }
+  }
+}
+
+/*
+Mobile Menu
+ */
+.menu-toggle {
+  display: block;
+
+  @include break-sm {
+    display: none;
+  }
+}

@@ -1,0 +1,59 @@
+/**
+ * _classes.scss
+ */
+
+
+/*
+Mixins
+ */
+.screen-reader-text {
+  @include sr-only;
+}
+
+/*
+Media Queries
+ */
+// hidden classes
+@media (max-width: $break-sm) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (max-width: $break-md) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (max-width: $break-lg) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+
+// visible classes
+@media (min-width: $break-sm) {
+  .visible-xs {
+    display: none !important;
+  }
+}
+@media (min-width: $break-md) {
+  .visible-sm {
+    display: none !important;
+  }
+}
+@media (min-width: $break-lg) {
+  .visible-md {
+    display: none !important;
+  }
+}
+
+/*
+Screen reader
+ */
+@mixin sr-only {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}

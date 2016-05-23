@@ -1,0 +1,40 @@
+/**
+ * _global.scss
+ */
+
+/*
+Elements
+ */
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  @include font-smoothing(on);
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  @include link-color;
+  @include animate(color);
+
+  &:focus {
+    outline: thin dotted $border-color;
+  }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+
+hr, ul, ol, dd, table {
+  margin-bottom: $margin-p;
+}
+
+/*
+Site
+ */
+.site {
+  background-color: white;
+}
