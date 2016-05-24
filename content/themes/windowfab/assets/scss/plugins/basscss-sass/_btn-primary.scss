@@ -2,7 +2,7 @@
 // Converted Variables
 
 $blue: #0074d9 !default;
-$button-color: #fff !default;
+$bass-button-color: #fff !default;
 $button-background-color: $blue !default;
 $border-radius: 3px !default;
 $darken-1: rgba(0, 0, 0, .0625) !default;
@@ -15,7 +15,7 @@ $darken-3: rgba(0, 0, 0, .25) !default;
 /* Basscss Btn Primary */
 
 .btn-primary {
-  color: $button-color;
+  color: $bass-button-color;
   background-color: $button-background-color;
   border-radius: $border-radius;
 }

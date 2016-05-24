@@ -82,16 +82,16 @@ if ( post_password_required() ) {
   // set up comment form here
   $fields = array(
     'author' =>
-      '<label for="author">Name</label>
-      <input id="author" name="author" type="text" placeholder="Name" aria-required="true" class="field mbp">',
+      '<label for="author" class="label">Name</label>
+      <input id="author" name="author" type="text" placeholder="Name" aria-required="true" class="input">',
     'email' =>
-      '<label for="email">Email</label>
-      <input id="email" name="email" type="email" placeholder="Email" aria-describedby="email-notes" aria-required="true" class="field mbp">'
+      '<label for="email" class="label">Email</label>
+      <input id="email" name="email" type="email" placeholder="Email" aria-describedby="email-notes" aria-required="true" class="input">'
   );
 
   $comment_field =
-  '<label for="comment">Comment</label>
-  <textarea id="comment" name="comment" cols="45" rows="4" placeholder="" aria-required="true" class="field mbp"></textarea>';
+  '<label for="comment" class="label">Comment</label>
+  <textarea id="comment" name="comment" cols="45" rows="4" placeholder="" aria-required="true" class="textarea"></textarea>';
 
   $args = array(
     'fields' => apply_filters( 'comment_form_default_fields', $fields ),
