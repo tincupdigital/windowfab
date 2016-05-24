@@ -22,6 +22,11 @@ Content directories
 define('WP_CONTENT_DIR', dirname( __FILE__ ) . '/content');
 define('WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/starter/content');
 
+/**
+ * Database table prefix
+ */
+$table_prefix  = 'wp_'; 
+
 /*
 Debugging stuff
  */

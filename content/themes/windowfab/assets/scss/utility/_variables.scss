@@ -27,21 +27,24 @@ Colors
 }
 
 /* Variables */
-$gray-dark: #404040;
-$gray-light: #DDD;
-
 $brand-colors: (
-  'blue': #0077CC,
-  'green': #4C9B8F,
-  'orange': #DA7655
+  'gold': #BF9B3F,
+  'gray-brown': #3A3738,
+  'gray-light': #DDD,
+  'sand': #D4D2C7,
+  'teal': #4C9B8F,
+  'teal-blue': #3B7589,
+  'teal-light': #60ADA7
 );
 
 /* Definitions */
-$border-color: $gray-light;
-$text-color: $gray-dark;
+$border-color: brand-color('gray-light');
+$text-color: brand-color('gray-brown');
 
-$link-color: brand-color('blue');
+$link-color: brand-color('teal');
 $button-color: $link-color;
+
+$heading-color: brand-color('teal-blue');
 
 /* Social */
 $facebook: #415696;

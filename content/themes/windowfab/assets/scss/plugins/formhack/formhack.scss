@@ -8,19 +8,18 @@ $fh-font-size: 16px !default;
 $fh-font-color: rgb(40, 40, 40) !default;
 
 // Borders
-$fh-border-radius: 2px !default;
+$fh-border-radius: 5px !default;
 $fh-border-width: 1px !default;
 $fh-border-style: solid !default;
-$fh-border-color: $border-color !default;
+$fh-border-color: $border-color;
 
 // Inputs, Textareas, Select, Option
 $fh-input-height: 40px !default;
 $fh-input-width: 100% !default;
 $fh-input-max-width: 400px !default;
 $fh-input-bg-color: #fff !default;
-
 $fh-focus-bg-color: rgb(220, 220, 220) !default;
-$fh-focus-border-color: $fh-border-color !default;
+$fh-focus-border-color: darken($border-color, 10%) !default;
 $fh-focus-font-color: $fh-font-color !default;
 
 // Select Vendor Styling
@@ -263,29 +262,29 @@ button[disabled] {
 	cursor: not-allowed;
 }
 
-/*
-input:focus,
+input:not([type="submit"]):focus,
 textarea:focus,
 select:focus,
-option:focus,
-button:focus  {
-	background-color: $fh-focus-bg-color;
+option:focus {
 	border-color: $fh-focus-border-color;
 }
 
 input[type="checkbox"]:focus,
 input[type="radio"]:focus {
 	outline: $fh-focus-border-color solid 2px;
-}*/
+}
 
-button:hover,
-input[type="button"]:hover,
 input[type="submit"]:hover,
-input[type="reset"]:hover,
-button:focus,
-input[type="button"]:focus,
 input[type="submit"]:focus,
-input[type="reset"]:focus {
-	background-color: $fh-button-hover-bg-color;
-	color: $fh-button-hover-font-color;
+input[type="button"]:hover,
+input[type="button"]:focus,
+button:hover,
+button:focus {
+	background-color: darken($fh-focus-bg-color, 5%);
+}
+
+input[type="submit"]:active,
+input[type="button"]:active,
+button:active {
+	background-color: darken($fh-focus-bg-color, 10%);
 }
