@@ -23,7 +23,7 @@ require get_template_directory() . '/inc/utility/wpcpt-setup.php';
 /**
  * Advanced Custom Fields
  */
-if ( WP_ENV !== 'development' ) {
+if ( !WP_LOCAL_DEV ) {
   include get_template_directory() . '/inc/utility/acf-fields.php';
 
   if ( wp_get_current_user()->user_login !== 'sean' ) {
@@ -36,4 +36,4 @@ if ( WP_ENV !== 'development' ) {
  *
  * @link http://codex.wordpress.org/Function_Reference/add_image_size
  */
-// add_image_size( 'hero', 1600, 640, true );
+add_image_size( 'hero', 1600, 640, true );

@@ -3,23 +3,8 @@
  */
 
 /*
-General
- */
-.header-fancy {
-
-}
-
-/*
-Mixins
- */
-.screen-reader-text {
-  @include sr-only;
-}
-
-/*
 Media Queries
  */
-// hidden classes
 @media (max-width: $break-sm) {
   .hidden-xs {
     display: none !important;
@@ -36,7 +21,6 @@ Media Queries
   }
 }
 
-// visible classes
 @media (min-width: $break-sm) {
   .visible-xs {
     display: none !important;
@@ -54,12 +38,8 @@ Media Queries
 }
 
 /*
-Screen reader
+Mixins
  */
-@mixin sr-only {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
+.screen-reader-text {
+  @include sr-only;
 }
