@@ -528,4 +528,52 @@ acf_add_local_field_group(array (
   'description' => '',
 ));
 
+acf_add_local_field_group(array (
+  'key' => 'group_5745145a316b8',
+  'title' => 'Page Fields',
+  'fields' => array (
+    array (
+      'key' => 'field_5745147c1bdc0',
+      'label' => 'Page Background',
+      'name' => 'page_background',
+      'type' => 'image',
+      'instructions' => 'Upload an image to use as the page\'s background.',
+      'required' => 1,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'return_format' => 'array',
+      'preview_size' => 'thumbnail',
+      'library' => 'all',
+      'min_width' => 1600,
+      'min_height' => 640,
+      'min_size' => '',
+      'max_width' => '',
+      'max_height' => '',
+      'max_size' => '',
+      'mime_types' => 'jpg,jpeg,webp',
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'page',
+      ),
+    ),
+  ),
+  'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+  'active' => 1,
+  'description' => '',
+));
+
 endif;
