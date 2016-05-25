@@ -45,6 +45,12 @@ function my_theme_register_required_plugins() {
       'required' => true,
       'force_activation' => true,
       'external_url' => 'https://github.com/roots/soil.git'
+    ),
+    array(
+      'name' => 'Tiled Galleries Carousel Without Jetpack',
+      'slug' => 'tiled-gallery-carousel-without-jetpack',
+      'required' => true,
+      'force_activation' => true
     )
   );
 
