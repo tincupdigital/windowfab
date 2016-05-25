@@ -14,15 +14,9 @@ function my_theme_register_required_plugins() {
    */
   $plugins = array(
     array(
-      'name' => 'Advanced Custom Fields',
-      'slug' => 'advanced-custom-fields',
-      'required' => true,
-      'force_activation' => true
-    ),
-    array(
-      'name' => 'Advanced Custom Fields: Repeater Field',
-      'slug' => 'acf-repeater',
-      'source' => 'http://www.ecm-design.com/assets/plugins/acf-repeater.zip',
+      'name' => 'Advanced Custom Fields Pro',
+      'slug' => 'advanced-custom-fields-pro',
+      'source' => 'https://bitbucket.org/ecmdesign/advanced-custom-fields-pro/get/39e8d0f4d856.zip',
       'required' => true,
       'force_activation' => true
     ),

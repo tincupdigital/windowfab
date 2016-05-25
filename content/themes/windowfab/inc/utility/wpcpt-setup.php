@@ -9,27 +9,27 @@
 // https://developer.wordpress.org/resource/dashicons
 
 /**
- * CPT: Custom Posts
+ * CPT: Testimonials
  */
-$custom_post_labels = array(
-  'post_type_name' => 'custom_post',
-  'singular' => 'Custom Post',
-  'plural' => 'Custom Posts',
-  'slug' => 'custom-posts'
+$testimonial_labels = array(
+  'post_type_name' => 'testimonial',
+  'singular' => 'Testimonial',
+  'plural' => 'Testimonials',
+  'slug' => 'testimonials'
 );
-$custom_post_options = array(
+$testimonial_options = array(
   'public' => true,
   'has_archive' => false,
   'rewrite' => false,
   'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' ),
-  'menu_icon' => 'dashicons-admin-post'
+  'menu_icon' => 'dashicons-testimonial'
 );
-$custom_post = new CPT( $custom_post_labels, $custom_post_options );
+$testimonial = new CPT( $testimonial_labels, $testimonial_options );
 
 /**
  * Featured image column
  */
-$cpts = array( $custom_post );
+$cpts = array();
 
 // add column to each $cpt setup variable
 if ( $cpts ) {
