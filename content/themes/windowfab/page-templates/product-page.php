@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Category Page
+ * Template Name: Products Page
  *
  * @package _s
  */

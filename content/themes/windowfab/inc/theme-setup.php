@@ -23,7 +23,7 @@ require get_template_directory() . '/inc/utility/wpcpt-setup.php';
 /**
  * Advanced Custom Fields
  */
-if ( WP_ENV !== 'development' ) {
+if ( !WP_LOCAL_DEV ) {
   include get_template_directory() . '/inc/utility/acf-fields.php';
 
   if ( wp_get_current_user()->user_login !== 'sean' ) {
