@@ -6,17 +6,18 @@
 Typography
  */
 /* Variables */
-$oxygen: 'Oxygen', sans-serif;
-$satisfy: 'Satisfy', cursive;
+$sans-serif: 'Oxygen', Helvetica, sans-serif;
+$serif: Georgia, serif;
+$cursive: 'Satisfy', cursive;
 
 /* Definitions */
-$body-font: $oxygen;
-$heading-font: $satisfy;
+$body-font: $sans-serif;
+$heading-font: $cursive;
 
 /* Sizes */
-$font-size--xs: 14px !default;
-$font-size--sm: 15px !default;
-$font-size--lg: 16px !default;
+$font-size-xs: 14px !default;
+$font-size-sm: 15px !default;
+$font-size-lg: 16px !default;
 
 /*
 Colors
@@ -38,13 +39,12 @@ $brand-colors: (
 );
 
 /* Definitions */
-$border-color: brand-color('gray-light');
 $text-color: brand-color('gray-brown');
-
-$link-color: brand-color('teal');
-$button-color: $link-color;
-
 $heading-color: brand-color('teal-blue');
+$link-color: brand-color('teal');
+
+$border-color: brand-color('gray-light');
+$button-color: $link-color;
 
 /* Social */
 $facebook: #415696;

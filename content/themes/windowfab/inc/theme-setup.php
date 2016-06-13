@@ -36,4 +36,4 @@ if ( !WP_LOCAL_DEV ) {
  *
  * @link http://codex.wordpress.org/Function_Reference/add_image_size
  */
-// add_image_size( 'hero', 1600, 640, true );
+add_image_size( 'hero', 1600, 640, true );
