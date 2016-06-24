@@ -21,6 +21,11 @@ require get_template_directory() . '/inc/utility/tgmpa-setup.php';
 require get_template_directory() . '/inc/utility/wpcpt-setup.php';
 
 /**
+ * Customizer Fields
+ */
+require get_template_directory() . '/inc/utility/customizer-fields.php';
+
+/**
  * Advanced Custom Fields
  */
 if ( !WP_LOCAL_DEV ) {

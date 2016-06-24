@@ -3,6 +3,20 @@
  */
 
 /*
+Buttons
+ */
+.button { @include button; }
+
+/*
+Fonts
+ */
+.f--body { font-family: $body-font; }
+.f--heading { font-family: $heading-font; }
+
+.fw--300 { font-weight: 300 !important; }
+.fw--700 { font-weight: 700 !important; }
+
+/*
 Media Queries
  */
 @media (max-width: $break-sm) {
@@ -43,3 +57,9 @@ Mixins
 .screen-reader-text {
   @include sr-only;
 }
+
+/*
+Text
+ */
+.txt--left { text-align: left; }
+.txt--right { text-align: right; }

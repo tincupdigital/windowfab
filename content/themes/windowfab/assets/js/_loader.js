@@ -21,7 +21,16 @@ var Roots = {
   },
   /* Home */
   home: {
-    init: function() {}
+    init: function() {
+      /* Glide.js */
+      $('.section-slider').glide({
+        type: "carousel",
+        autoheight: false,
+        keyboard: true,
+        autoplay: 7000,
+        animationDuration: 1000
+      });
+    }
   }
 };
 

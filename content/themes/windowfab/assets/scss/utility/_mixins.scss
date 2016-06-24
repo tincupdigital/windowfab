@@ -13,6 +13,27 @@ Animation
 }
 
 /*
+Buttons
+ */
+@mixin button($color: white, $bg-color: $link-color) {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  color: $color;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.0;
+  background-color: $bg-color;
+  text-transform: uppercase;
+  @include animate(background-color);
+
+  &:focus,
+  &:hover {
+    color: $color;
+    background-color: darken($bg-color, 7.5%);
+  }
+}
+
+/*
 Clearfix
  */
 @mixin clearfix() {

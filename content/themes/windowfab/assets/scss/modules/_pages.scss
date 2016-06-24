@@ -5,4 +5,59 @@
 /*
 Home
  */
-.home {}
+.home-section {
+  padding: 2rem 0;
+
+  @include break-sm {
+    padding: 2.5rem 0;
+  }
+}
+
+/*
+Home: Headline
+ */
+.headline-section__text {
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+/*
+Home: Testimonials
+ */
+.testimonial-slider__bullets {
+  button {
+    display: inline-block;
+    padding: 0;
+    margin: 0 0.125rem;
+    height: 0.75rem;
+    width: 0.75rem;
+    border: 3px solid brand-color('gold');
+    background-color: transparent;
+    line-height: 1.0;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      outline: 0;
+      cursor: pointer;
+    }
+
+    &:hover,
+    &.active {
+      border-color: darken(brand-color('gold'), 7.5%);
+    }
+  }
+}
+.testimonial-slider__text {
+  p {
+    font-size: 1.44rem;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

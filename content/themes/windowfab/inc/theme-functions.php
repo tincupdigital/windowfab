@@ -89,3 +89,27 @@ function _s_get_feat_img_url( $size ) {
   $img_url = $img_array[0];
   return $img_url;
 }
+
+/**
+ * Add brand logo at end of nav
+ *
+ * @param used by wp_nav_menu() function
+ */
+function _s_nav_logo_end() {
+  if ( get_theme_mod( 'brand_logo' ) ) {
+    $img = get_theme_mod( 'brand_logo' );
+    $lnk = esc_url( home_url( '/' ) );
+    $alt = get_bloginfo( 'name' );
+
+    // set up the nav wrapper
+    $wrap = '<ul id="%1$s" class="%2$s">';
+    $wrap .= '%3$s';
+    $wrap .= '<li class="site-logo"><a class="site-logo--img" href="'. $lnk .'">';
+    $wrap .= '<img src="' . $img . '" alt="'. $alt .'" />';
+    $wrap .= '</a></li>';
+    $wrap .= '</ul>';
+  } else {
+    $wrap = '<ul id="%1$s" class="%2$s">%3$s</ul>';
+  }
+  return $wrap;
+}

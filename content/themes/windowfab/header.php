@@ -35,21 +35,35 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<!-- Top -->
+		<div class="site-header__top">
+		  <div class="container">
+		    <div class="row">
+		      <div class="col-xs-12 col-sm-11">
 
-			<?php
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+		      	<!-- Top nav -->
+						<nav id="top-navigation" class="top-navigation" role="navigation">
+							<?php wp_nav_menu( array( 'theme_location' => 'top-nav', 'menu_id' => 'top-nav__menu', 'container_class' => 'top-nav__container' ) ); ?>
+						</nav><!-- #site-navigation -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_s' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav__menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+		      </div><!-- .col-# -->
+		    </div><!-- .row -->
+		  </div><!-- .container -->
+		</div>
+
+		<!-- Bottom -->
+		<div class="site-header__bottom">
+		  <div class="container">
+		    <div class="row center-xs">
+		      <div class="col-xs-12 col-sm-11">
+
+						<nav id="site-navigation" class="main-navigation" role="navigation">
+							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_s' ); ?></button>
+							<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav__menu', 'container_class' => 'main-nav__container', 'items_wrap' => _s_nav_logo_end() ) ); ?>
+						</nav><!-- #site-navigation -->
+
+		      </div><!-- .col-# -->
+		    </div><!-- .row -->
+		  </div><!-- .container -->
+		</div>
 	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">

@@ -14,19 +14,23 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+  <div id="content" class="site-content">
 
-			<?php
-			while ( have_posts() ) : the_post();
+  	<div id="primary" class="content-area">
+  		<main id="main" class="site-main" role="main">
 
-				get_template_part( 'templates/content', 'page' );
+  			<?php
+  			while ( have_posts() ) : the_post();
 
-			endwhile; // End of the loop.
-			?>
+  				get_template_part( 'templates/content', 'page' );
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+  			endwhile; // End of the loop.
+  			?>
+
+  		</main><!-- #main -->
+  	</div><!-- #primary -->
+
+  </div><!-- #content -->
 
 <?php
 get_sidebar();

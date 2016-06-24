@@ -14,6 +14,13 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+body {
+  border-top: 2px solid $link-color;
+
+  @include break-sm {
+    border-top-width: 4px;
+  }
+}
 
 /*
 Links
