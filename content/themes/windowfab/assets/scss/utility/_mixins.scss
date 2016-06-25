@@ -15,21 +15,40 @@ Animation
 /*
 Buttons
  */
-@mixin button($color: white, $bg-color: $link-color) {
+@mixin button {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  color: $color;
+  padding: 0.625rem 1.5rem;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   line-height: 1.0;
+}
+@mixin button-color($color: white, $bg-color: $link-color) {
+  @include button;
+
+  color: $color !important;
   background-color: $bg-color;
   text-transform: uppercase;
+  border: none;
   @include animate(background-color);
 
   &:focus,
   &:hover {
-    color: $color;
+    cursor: pointer;
     background-color: darken($bg-color, 7.5%);
+  }
+}
+@mixin button-outline($color: $text-color, $border-color: brand-color('gold')) {
+  @include button;
+
+  color: $color !important;
+  border: 2px solid $border-color;
+  text-transform: uppercase;
+  @include animate(border-color);
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    border-color: darken($border-color, 10%);
   }
 }
 

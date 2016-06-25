@@ -13,6 +13,7 @@
       <div class="col-xs-12 col-sm-10 col-md-9">
 
         <?php /* Testimonials */
+        // swap the slider plugin used below.
         $posts = get_sub_field( 'testimonials' );
 
         if ( $posts ) { ?>
@@ -30,7 +31,8 @@
                     <?php the_content(); ?>
                   </li>
 
-                <?php } ?>
+                <?php }
+                wp_reset_postdata(); ?>
               </ul>
             </div>
 

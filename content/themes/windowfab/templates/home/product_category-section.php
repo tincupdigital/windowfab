@@ -14,13 +14,13 @@
 
         <?php /* Product Categories */
         if ( have_rows( 'product_categories' ) ) { ?>
-          <div class="section-products category-section__products">
+          <div class="product-section category-section__products">
             <div class="row">
 
               <?php // loop through categories
               while ( have_rows( 'product_categories' ) ): the_row(); ?>
                 <div class="col-xs-12 col-sm-6 col-md-3">
-                  <div class="section-category section-products__category">
+                  <div class="section-category product-section__category">
                     <?php
                     /* Image */
                     if ( get_sub_field( 'category_icon' ) ) {
@@ -46,7 +46,7 @@
                       // field returns page ID
                       $pid = get_sub_field( 'category_link' ); ?>
 
-                      <a class="category-button section-category__button button" href="<?php the_permalink( $pid ); ?>">Click here</a>
+                      <a class="category-button section-category__button button button-color" href="<?php the_permalink( $pid ); ?>">Click here</a>
                     <?php } ?>
                   </div>
                 </div>
