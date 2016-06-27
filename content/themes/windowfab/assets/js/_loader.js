@@ -30,6 +30,14 @@ var Roots = {
         autoplay: 7000,
         animationDuration: 1000
       });
+
+      /* Lightbox */
+      if ( lightbox ) {
+        lightbox.option({
+          'fadeDuration': 375,
+          'resizeDuration': 500
+        });
+      }
     }
   }
 };

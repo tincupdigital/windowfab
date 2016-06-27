@@ -56,7 +56,7 @@ Media Queries
 /*
 Mixins
  */
-.screen-reader-text {
+.screen-reader-text, .sr-only {
   @include sr-only;
 }
 

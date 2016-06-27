@@ -6,7 +6,7 @@
  */
 ?>
 
-<section class="home-section testimonial-section home-section--testimonials">
+<section class="home-section home-section--testimonials">
 
   <div class="container">
     <div class="row center-xs">
@@ -19,21 +19,23 @@
         if ( $posts ) { ?>
 
           <!-- Slider -->
-          <div class="testimonial-slider section-slider testimonial-section__slider glide">
-            <!-- Wrapper -->
-            <div class="glide__wrapper">
-              <ul class="glide__track p0 m0">
-                <?php // loop through posts
-                foreach ( $posts as $post ) {
-                  setup_postdata( $post ); ?>
+          <div class="testimonial-section home-testimonial-section">
+            <div class="testimonial-slider glide">
+              <!-- Wrapper -->
+              <div class="glide__wrapper">
+                <ul class="glide__track p0 m0">
+                  <?php // loop through posts
+                  foreach ( $posts as $post ) {
+                    setup_postdata( $post ); ?>
 
-                  <li class="testimonial-slider__text glide__slide f--heading fw--700">
-                    <?php the_content(); ?>
-                  </li>
+                    <li class="testimonial-slider__text glide__slide f--heading fw--700">
+                      <?php the_content(); ?>
+                    </li>
 
-                <?php }
-                wp_reset_postdata(); ?>
-              </ul>
+                  <?php }
+                  wp_reset_postdata(); ?>
+                </ul>
+              </div><!-- .glide -->
             </div>
 
             <!-- Bullets -->

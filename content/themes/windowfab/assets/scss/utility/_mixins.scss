@@ -37,7 +37,7 @@ Buttons
     background-color: darken($bg-color, 7.5%);
   }
 }
-@mixin button-outline($color: $text-color, $border-color: brand-color('gold')) {
+@mixin button-outline($color: $text-color, $border-color: $accent-color) {
   @include button;
 
   color: $color !important;

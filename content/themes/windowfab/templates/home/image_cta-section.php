@@ -6,7 +6,7 @@
  */
 ?>
 
-<section class="home-section imgcta-section home-section--imgctas">
+<section class="home-section home-section--imgcta">
 
   <div class="container">
     <div class="row">
@@ -14,7 +14,7 @@
 
         <?php /* Image CTAs */
         if ( have_rows( 'cta_items' ) ) { ?>
-          <div class="cta-section imgcta-section__ctas">
+          <div class="imgcta-section home-imgcta-section">
             <div class="row">
 
               <?php // loop through categories
