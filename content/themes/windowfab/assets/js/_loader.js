@@ -23,7 +23,7 @@ var Roots = {
   home: {
     init: function() {
       /* Glide.js */
-      $('.section-slider').glide({
+      $('.testimonial-slider').glide({
         type: "carousel",
         autoheight: false,
         keyboard: true,

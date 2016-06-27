@@ -13,12 +13,20 @@ get_header(); ?>
   		<main id="main" class="site-main" role="main">
 
   			<?php
-  			while ( have_posts() ) : the_post();
+  			while ( have_posts() ) : the_post(); ?>
 
-  				get_template_part( 'templates/content', 'page' );
+          <div class="container">
+            <div class="row center-xs">
+              <div class="col-xs-12 col-sm-10 col-md-9">
 
-  			endwhile; // End of the loop.
-  			?>
+  				      <?php get_template_part( 'templates/content', 'page' ); ?>
+
+              </div><!-- .col-# -->
+            </div><!-- .row -->
+          </div><!-- .container -->
+
+  			<?php
+        endwhile; // End of the loop. ?>
 
   		</main><!-- #main -->
   	</div><!-- #primary -->

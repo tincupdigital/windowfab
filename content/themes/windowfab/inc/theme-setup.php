@@ -44,9 +44,9 @@ if ( !WP_LOCAL_DEV ) {
 add_image_size( 'hero', 1600, 640, true );
 
 update_option( 'large_size_w', 1024 );
-update_option( 'large_size_h', 768 );
-update_option( 'large_crop', 0 );
+update_option( 'large_size_h', 600 );
+update_option( 'large_crop', 1 );
 
-update_option( 'medium_size_w', 500 );
-update_option( 'medium_size_h', 500 );
+update_option( 'medium_size_w', 600 );
+update_option( 'medium_size_h', 600 );
 update_option( 'medium_crop', 1 );

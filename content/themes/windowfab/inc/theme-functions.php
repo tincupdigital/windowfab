@@ -113,3 +113,16 @@ function _s_nav_logo_end() {
   }
   return $wrap;
 }
+
+/**
+ * Custom page title display
+ */
+function _s_page_title() {
+  // check for custom page title field
+  if ( get_field( 'custom_page_title' ) ) {
+    $p_ttl = get_field( 'custom_page_title' );
+  } else {
+    $p_ttl = get_the_title();
+  }
+  return $p_ttl;
+}

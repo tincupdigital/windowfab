@@ -9,13 +9,20 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'txt--left' ); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<h1 class="entry-title txt--center">
+			<?php echo _s_page_title(); ?>
+		</h1>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content mt3">
 		<?php
+			/* Image */
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail( 'large' );
+			}
+
 			the_content();
 
 			wp_link_pages( array(
@@ -24,18 +31,4 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', '_s' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-		?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

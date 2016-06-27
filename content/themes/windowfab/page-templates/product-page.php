@@ -17,7 +17,7 @@ get_header(); ?>
 
           <div class="container">
             <div class="row center-xs">
-              <div class="col-xs-12">
+              <div class="col-xs-12 col-sm-11">
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                   <header class="entry-header">
@@ -26,7 +26,7 @@ get_header(); ?>
 
                   <div class="entry-content">
                     <div class="row center-xs">
-                      <div class="col-xs-12 col-sm-9">
+                      <div class="col-xs-12 col-sm-10">
                         <?php the_content(); ?>
                       </div>
                     </div>
