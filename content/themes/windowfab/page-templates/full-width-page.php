@@ -16,10 +16,32 @@ get_header(); ?>
   			while ( have_posts() ) : the_post(); ?>
 
           <div class="container">
-            <div class="row center-xs">
-              <div class="col-xs-12 col-sm-10 col-md-9">
+            <div class="row">
+              <div class="col-xs-12">
 
-  				      <?php get_template_part( 'templates/content', 'page' ); ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class( 'txt--left' ); ?>>
+                  <header class="entry-header">
+                    <h1 class="entry-title txt--center">
+                      <?php echo _s_page_title(); ?>
+                    </h1>
+                  </header><!-- .entry-header -->
+
+                  <div class="entry-content mt3">
+                    <?php
+                      /* Image */
+                      if ( has_post_thumbnail() ) {
+                        the_post_thumbnail( 'large' );
+                      }
+
+                      the_content();
+
+                      wp_link_pages( array(
+                        'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
+                        'after'  => '</div>',
+                      ) );
+                    ?>
+                  </div><!-- .entry-content -->
+                </article><!-- #post-## -->
 
               </div><!-- .col-# -->
             </div><!-- .row -->

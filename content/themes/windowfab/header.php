@@ -39,7 +39,7 @@
 		<div class="site-header__top">
 		  <div class="container">
 		    <div class="row">
-		      <div class="col-xs-12 col-sm-11">
+		      <div class="col-xs-12">
 
 						<nav id="top-navigation" class="top-navigation" role="navigation">
 							<?php wp_nav_menu( array( 'theme_location' => 'top-nav', 'menu_id' => 'top-nav__menu', 'container_class' => 'top-nav__container' ) ); ?>
@@ -53,8 +53,8 @@
 		<!-- Bottom -->
 		<div class="site-header__bottom">
 		  <div class="container">
-		    <div class="row center-xs">
-		      <div class="col-xs-12 col-sm-11">
+		    <div class="row">
+		      <div class="col-xs-12">
 
 						<nav id="site-navigation" class="main-navigation" role="navigation">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_s' ); ?></button>

@@ -16,8 +16,8 @@ get_header(); ?>
   			while ( have_posts() ) : the_post(); ?>
 
           <div class="container">
-            <div class="row center-xs">
-              <div class="col-xs-12 col-sm-11">
+            <div class="row">
+              <div class="col-xs-12">
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'txt--left' ); ?>>
                   <header class="entry-header">

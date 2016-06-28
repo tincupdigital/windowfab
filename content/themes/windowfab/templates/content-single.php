@@ -11,16 +11,24 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
 		<div class="entry-meta">
 			<?php _s_posted_on(); ?>
 		</div><!-- .entry-meta -->
+
+		<h1 class="entry-title">
+			<?php echo _s_page_title(); ?>
+		</h1>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content(); ?>
 		<?php
+			/* Image */
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail( 'large' );
+			}
+
+			the_content();
+
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
 				'after'  => '</div>',

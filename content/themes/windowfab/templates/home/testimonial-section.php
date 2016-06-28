@@ -10,7 +10,7 @@
 
   <div class="container">
     <div class="row center-xs">
-      <div class="col-xs-12 col-sm-10 col-md-9">
+      <div class="col-xs-12 col-lg-10">
 
         <?php /* Testimonials */
         // swap the slider plugin used below.

@@ -9,17 +9,17 @@
 <section class="home-section home-section--pcats">
 
   <div class="container">
-    <div class="row center-xs">
-      <div class="col-xs-12 col-sm-11">
+    <div class="row">
+      <div class="col-xs-12">
 
         <?php /* Product Categories */
         if ( have_rows( 'product_categories' ) ) { ?>
           <div class="pcats-section home-pcats-section">
-            <div class="row">
+            <div class="row center-xs">
 
               <?php // loop through categories
               while ( have_rows( 'product_categories' ) ): the_row(); ?>
-                <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="col-xs-12 col-md-6 col-lg-3">
                   <div class="section-category pcats-section__category">
                     <?php
                     /* Image */
