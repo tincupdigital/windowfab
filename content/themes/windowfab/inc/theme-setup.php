@@ -50,3 +50,10 @@ update_option( 'large_crop', 1 );
 update_option( 'medium_size_w', 600 );
 update_option( 'medium_size_h', 600 );
 update_option( 'medium_crop', 1 );
+
+/**
+ * Custom Widgets
+ */
+require get_template_directory() . '/inc/widgets/bio_image-widget.php';
+require get_template_directory() . '/inc/widgets/cta_link-widget.php';
+require get_template_directory() . '/inc/widgets/recent_posts-widget.php';

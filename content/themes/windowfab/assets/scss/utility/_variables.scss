@@ -29,10 +29,11 @@ Colors
 
 /* Variables */
 $brand-colors: (
+  'cream': #F2F1EC,
   'gold': #BF9B3F,
   'gray-brown': #3A3738,
   'gray-light': #DDD,
-  'sand': #D4D2C7,
+  'sand': #DDDBD3,
   'teal': #4C9B8F,
   'teal-blue': #3B7589,
   'teal-light': #60ADA7
@@ -44,8 +45,10 @@ $heading-color: brand-color('teal-blue');
 $link-color: brand-color('teal');
 
 $accent-color: brand-color('gold');
-$border-color: brand-color('gray-light');
+$border-color: brand-color('sand');
 $button-color: $link-color;
+
+$site-bg-color: brand-color('cream');
 
 /* Social */
 $facebook: #415696;

@@ -21,10 +21,28 @@ $testimonial_options = array(
   'public' => true,
   'has_archive' => false,
   'rewrite' => false,
-  'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' ),
+  'supports' => array( 'editor', 'revisions', 'title' ),
   'menu_icon' => 'dashicons-testimonial'
 );
 $testimonial = new CPT( $testimonial_labels, $testimonial_options );
+
+/**
+ * CPT: CTAs
+ */
+$cta_labels = array(
+  'post_type_name' => 'cta',
+  'singular' => 'CTA',
+  'plural' => 'CTAs',
+  'slug' => 'cta'
+);
+$cta_options = array(
+  'public' => true,
+  'has_archive' => false,
+  'rewrite' => false,
+  'supports' => array( 'editor', 'title' ),
+  'menu_icon' => 'dashicons-megaphone'
+);
+$cta = new CPT( $cta_labels, $cta_options );
 
 /**
  * Featured image column
