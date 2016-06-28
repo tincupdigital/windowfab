@@ -29,12 +29,20 @@ function _s_customizer_add_sections( $wp_customize ) {
     'priority' => 1
   ) );
 
+  /* Social Media */
+  $wp_customize->add_section( 'social_media', array(
+    'title' => __( 'Social Media', '_s' ),
+    'description' => __( 'Social media links can be added here.', '_s' ),
+    'panel' => 'client_setup',
+    'priority' => 2
+  ) );
+
   /* Miscellaneous */
   $wp_customize->add_section( 'miscellaneous', array(
     'title' => __( 'Miscellaneous', '_s' ),
     'description' => __( 'Miscellaneous items can be configured here.', '_s' ),
     'panel' => 'client_setup',
-    'priority' => 5
+    'priority' => 3
   ) );
 }
 add_action( 'customize_register', '_s_customizer_add_sections' );
@@ -53,6 +61,29 @@ function _s_customizer_add_fields( $wp_customize ) {
       'settings' => 'brand_logo'
     ) )
   );
+
+  /* Social Media */
+  $wp_customize->add_setting( 'facebook_url' );
+  $wp_customize->add_control( 'facebook_url', array(
+    'label' => __( 'Facebook URL', '_s' ),
+    'description' => __( 'Add a link to your Facebook page.', '_s' ),
+    'section' => 'social_media',
+    'type' => 'url'
+  ) );
+  $wp_customize->add_setting( 'instagram_url' );
+  $wp_customize->add_control( 'instagram_url', array(
+    'label' => __( 'Instagram URL', '_s' ),
+    'description' => __( 'Add a link to your Instagram page.', '_s' ),
+    'section' => 'social_media',
+    'type' => 'url'
+  ) );
+  $wp_customize->add_setting( 'pinterest_url' );
+  $wp_customize->add_control( 'pinterest_url', array(
+    'label' => __( 'Pinterest URL', '_s' ),
+    'description' => __( 'Add a link to your Pinterest page.', '_s' ),
+    'section' => 'social_media',
+    'type' => 'url'
+  ) );
 
   /* Miscellaneous */
   $wp_customize->add_setting( 'analytics_id' );

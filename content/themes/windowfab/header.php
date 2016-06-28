@@ -41,7 +41,6 @@
 		    <div class="row">
 		      <div class="col-xs-12 col-sm-11">
 
-		      	<!-- Top nav -->
 						<nav id="top-navigation" class="top-navigation" role="navigation">
 							<?php wp_nav_menu( array( 'theme_location' => 'top-nav', 'menu_id' => 'top-nav__menu', 'container_class' => 'top-nav__container' ) ); ?>
 						</nav><!-- #site-navigation -->
@@ -59,7 +58,7 @@
 
 						<nav id="site-navigation" class="main-navigation" role="navigation">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_s' ); ?></button>
-							<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav__menu', 'container_class' => 'main-nav__container', 'items_wrap' => _s_nav_logo_end() ) ); ?>
+							<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav__menu', 'container_class' => 'main-nav__container', 'items_wrap' => _s_main_nav_wrap() ) ); ?>
 						</nav><!-- #site-navigation -->
 
 		      </div><!-- .col-# -->

@@ -15,13 +15,12 @@
 
     <div class="container">
       <div class="row center-xs">
-        <div class="col-xs-12">
+				<div class="col-xs-12">
 
-      		<div class="site-footer__info small py1">
-      			<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' ); ?></a>
-      			<span class="sep"> | </span>
-      			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', '_s' ), '_s', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
-      		</div><!-- .site-info -->
+					<!-- Nav -->
+					<nav id="footer-navigation" class="footer-navigation site-footer__nav py1" role="navigation">
+						<?php wp_nav_menu( array( 'theme_location' => 'footer-nav', 'menu_id' => 'footer-nav__menu', 'container_class' => 'footer-nav__container', 'items_wrap' => _s_footer_nav_wrap() ) ); ?>
+					</nav><!-- #site-navigation -->					
 
         </div><!-- .col-# -->
       </div><!-- .row -->

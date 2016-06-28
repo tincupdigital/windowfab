@@ -91,11 +91,9 @@ function _s_get_feat_img_url( $size ) {
 }
 
 /**
- * Add brand logo at end of nav
- *
- * @param used by wp_nav_menu() function
+ * Main nav wrap to add logo
  */
-function _s_nav_logo_end() {
+function _s_main_nav_wrap() {
   if ( get_theme_mod( 'brand_logo' ) ) {
     $img = get_theme_mod( 'brand_logo' );
     $lnk = esc_url( home_url( '/' ) );
@@ -111,6 +109,20 @@ function _s_nav_logo_end() {
   } else {
     $wrap = '<ul id="%1$s" class="%2$s">%3$s</ul>';
   }
+  return $wrap;
+}
+
+/**
+ * Footer nav wrap to add site credits
+ */
+function _s_footer_nav_wrap() {
+  // get the site name
+  $name = get_bloginfo( 'name' );
+  $credits = '&copy;&nbsp;' . date( 'Y' ) . '&nbsp;' . $name . '. All rights reserved.';
+  // set up the wrapper
+  $wrap = '<ul id="%1$s" class="%2$s">';
+  $wrap = '<li class="site-info">' . $credits . '</li>';
+  $wrap .= '%3$s';
   return $wrap;
 }
 
