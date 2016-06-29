@@ -28,7 +28,7 @@
                   foreach ( $posts as $post ) {
                     setup_postdata( $post ); ?>
 
-                    <li class="testimonial-slider__text glide__slide f--heading fw--700">
+                    <li class="testimonial-slider__text glide__slide fnt--heading fw--700">
                       <?php the_content(); ?>
                     </li>
 

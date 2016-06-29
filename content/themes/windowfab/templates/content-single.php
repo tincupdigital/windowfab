@@ -11,11 +11,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<div class="entry-meta">
+		<div class="entry-meta mb2">
 			<?php _s_posted_on(); ?>
 		</div><!-- .entry-meta -->
 
-		<h1 class="entry-title">
+		<h1 class="entry-title mt0 mb3">
 			<?php echo _s_page_title(); ?>
 		</h1>
 	</header><!-- .entry-header -->
@@ -35,9 +35,5 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php _s_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 

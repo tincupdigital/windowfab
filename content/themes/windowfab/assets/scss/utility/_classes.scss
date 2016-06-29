@@ -10,10 +10,16 @@ Buttons
 .button-outline { @include button-outline; }
 
 /*
+Colors
+ */
+.col--text { color: $text-color !important; }
+.col--heading { color: $text-color !important; }
+
+/*
 Fonts
  */
-.f--body { font-family: $body-font; }
-.f--heading { font-family: $heading-font; }
+.fnt--body { font-family: $body-font; }
+.fnt--heading { font-family: $heading-font; }
 
 .fw--300 { font-weight: 300 !important; }
 .fw--700 { font-weight: 700 !important; }

@@ -96,7 +96,7 @@ if ( post_password_required() ) {
   $args = array(
     'fields' => apply_filters( 'comment_form_default_fields', $fields ),
     'comment_field' => $comment_field,
-    'class_submit' => 'btn btn-primary'
+    'class_submit' => 'button button-color'
   );
   comment_form( $args );
   ?>

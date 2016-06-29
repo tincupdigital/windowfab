@@ -16,45 +16,62 @@ get_header(); ?>
 
 	<div id="content" class="site-content">
 
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
 
-			<?php
-			if ( have_posts() ) :
+					<div id="primary" class="content-area">
+						<main id="main" class="site-main" role="main">
 
-				if ( is_home() && ! is_front_page() ) : ?>
-					<header>
-						<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-					</header>
+						<?php
+						if ( have_posts() ) :
 
-				<?php
-				endif;
+							if ( is_home() && !is_front_page() ) : ?>
+								<header>
+									<h1 class="page-title txt--center col--text h2 mt0 mb3"><?php bloginfo( 'name' ); ?> Blog</h1>
+								</header>
 
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
+							<?php endif; ?>
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'templates/content', get_post_format() );
+							<div class="row center-lg">
 
-				endwhile;
+								<?php
+								/* Start the Loop */
+								while ( have_posts() ) : the_post(); ?>
 
-				the_posts_navigation();
+									<div class="col-xs-12 col-lg-4">
 
-			else :
+										<?php
+										/*
+										 * Include the Post-Format-specific template for the content.
+										 * If you want to override this in a child theme, then include a file
+										 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+										 */
+										get_template_part( 'templates/content', get_post_format() ); ?>
 
-				get_template_part( 'templates/content', 'none' );
+									</div><!-- .col-# -->
 
-			endif; ?>
+								<?php endwhile; ?>
 
-			</main><!-- #main -->
-		</div><!-- #primary -->
+							</div><!-- .row -->
+
+							<?php
+							the_posts_navigation();
+
+						else :
+
+							get_template_part( 'templates/content', 'none' );
+
+						endif; ?>
+
+						</main><!-- #main -->
+					</div><!-- #primary -->
+
+				</div><!-- .col-# -->
+			</div><!-- .row -->
+		</div><!-- .container -->
 
 	</div><!-- #content -->
 
 <?php
-get_sidebar()
 get_footer();
