@@ -1,6 +1,6 @@
 {
-  "name" : "seankmchenry/_s-starter",
-  "description" : "WordPress theme built with _s and @mrmrs tools",
+  "name" : "tincupdigital/windowfab",
+  "description" : "WordPress project for WindowFab site",
   "type" : "project",
   "license" : "MIT",
   "config": {

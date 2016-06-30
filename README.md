@@ -1,5 +1,5 @@
 # WindowFab
-WP project for WindowFab site
+WordPress project for WindowFab site
 
 ## To-Do
 * Replace grunt-livereload with browsersync
