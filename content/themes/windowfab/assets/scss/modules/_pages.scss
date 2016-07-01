@@ -83,14 +83,24 @@ Category Page
 /*
 Product Page
  */
-.product-section__item {
-  display: block;
-  float: left;
-  width: 33.3%;
+.product-section__inner {
+  margin: -5px -5px 0 -5px;
 
-  img {
-    display: block;
-    max-width: 100%;
-    padding: 0.5rem;
+  .column {
+    float: left;
+
+    img {
+      display: block;
+      padding: 5px;
+    }
   }
 }
+.product-section__inner::before {
+  content: "2 .column.size-1of2";
+
+  @include break-md {
+    content: "3 .column.size-1of3";
+  }
+}
+.size-1of2 { width: 50%; }
+.size-1of3 { width: 33.333%; }

@@ -38,16 +38,18 @@ get_header(); ?>
                   if ( $images ) { ?>
 
                     <div class="product-section page-products-section mt2">
-                      <?php // loop through images
-                      foreach ( $images as $image ) { ?>
+                      <div class="section-inner product-section__inner" data-columns>
+                        <?php // loop through images
+                        foreach ( $images as $image ) { ?>
 
-                        <div class="product-item product-section__item">
-                          <a href="<?php echo $image['url']; ?>" data-lightbox="products" data-title="<?php echo $image['title']; ?>">
-                            <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
-                          </a>
-                        </div>
+                          <div class="product-item product-section__item column">
+                            <a href="<?php echo $image['url']; ?>" data-lightbox="products" data-title="<?php echo $image['title']; ?>">
+                              <img src="<?php echo $image['sizes']['product-thumb']; ?>" alt="<?php echo $image['alt']; ?>" />
+                            </a>
+                          </div>
 
-                      <?php } ?>
+                        <?php } ?>
+                      </div>
                     </div>
 
                   <?php } ?>

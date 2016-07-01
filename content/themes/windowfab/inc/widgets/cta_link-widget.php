@@ -25,14 +25,21 @@ class CTA_Link_Widget extends WP_Widget {
     // @link https://goo.gl/X1HGhg
     $wid = 'widget_' . $args['widget_id']; ?>
 
-    <section class="widget widget-cta-link">
-      <div class="widget-inner">
+    <section class="widget wf-cta-link">
+      <?php /* Headline */
+      if ( get_field( 'widget_headline', $wid ) ) { ?>
+        <h2 class="widget-title wf-cta-link__title wbt">
+          <?php the_field( 'widget_headline', $wid ); ?>
+        </h2>
+      <?php } ?>
+
+      <div class="widget-inner wf-cta-link__inner">
         <?php
-        /* Headline */
-        if ( get_field( 'widget_headline', $wid ) ) { ?>
-          <h2 class="widget-title widget-cta-link__title">
-            <?php the_field( 'widget_headline', $wid ); ?>
-          </h2>
+        /* Text */
+        if ( get_field( 'widget_text', $wid ) ) { ?>
+          <div class="widget-text wf-cta-link__text">
+            <?php echo wpautop( get_field( 'widget_text', $wid ) ); ?>
+          </div>
         <?php }
         ?>
       </div>

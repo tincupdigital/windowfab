@@ -42,17 +42,18 @@ if ( !WP_LOCAL_DEV ) {
  * @link http://codex.wordpress.org/Function_Reference/add_image_size
  */
 add_image_size( 'hero', 1600, 640, true );
+add_image_size( 'product-thumb', 600, 475, false );
 
-update_option( 'large_size_w', 1024 );
-update_option( 'large_size_h', 600 );
+update_option( 'large_size_w', 800 );
+update_option( 'large_size_h', 450 );
 update_option( 'large_crop', 1 );
 
 update_option( 'medium_size_w', 600 );
-update_option( 'medium_size_h', 600 );
+update_option( 'medium_size_h', 475 );
 update_option( 'medium_crop', 1 );
 
-update_option( 'thumbnail_size_w', 225 );
-update_option( 'thumbnail_size_h', 225 );
+update_option( 'thumbnail_size_w', 200 );
+update_option( 'thumbnail_size_h', 200 );
 update_option( 'thumbnail_crop', 1 );
 
 /**
@@ -61,3 +62,4 @@ update_option( 'thumbnail_crop', 1 );
 require get_template_directory() . '/inc/widgets/bio_image-widget.php';
 require get_template_directory() . '/inc/widgets/cta_link-widget.php';
 require get_template_directory() . '/inc/widgets/recent_posts-widget.php';
+require get_template_directory() . '/inc/widgets/categories-widget.php';

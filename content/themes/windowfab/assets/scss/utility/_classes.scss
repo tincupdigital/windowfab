@@ -9,6 +9,8 @@ Buttons
 .button-color { @include button-color; }
 .button-outline { @include button-outline; }
 
+.button-text { @include button-text; }
+
 /*
 Colors
  */
@@ -61,4 +63,12 @@ Mixins
  */
 .screen-reader-text, .sro {
   @include screen-reader-text;
+}
+
+/*
+Widgets
+ */
+// class for widget button text
+.wbt {
+  @include button-text(1rem);
 }

@@ -12,9 +12,9 @@ class Recent_Posts_Widget extends WP_Widget {
   public function __construct() {
     $widget_args = array(
       'classname' => 'widget-recent-posts',
-      'description' => __( 'Recent posts widget with featured image.', '_s' )
+      'description' => __( 'Custom recent posts widget.', '_s' )
     );
-    parent::__construct( 'recent_posts_widget', __( 'Recent Posts Widget', '_s' ), $widget_args );
+    parent::__construct( 'recent_posts_widget', __( 'WF Recent Posts Widget', '_s' ), $widget_args );
   }
 
   /**
@@ -25,16 +25,16 @@ class Recent_Posts_Widget extends WP_Widget {
     // @link https://goo.gl/X1HGhg
     $wid = 'widget_' . $args['widget_id']; ?>
 
-    <section class="widget rposts-widget widget-recent-posts">
-      <div class="widget-inner">
-        <?php
-        /* Headline */
-        if ( get_field( 'widget_headline', $wid ) ) { ?>
-          <h2 class="widget-title widget-recent-posts__title">
-            <?php the_field( 'widget_headline', $wid ); ?>
-          </h2>
-        <?php }
+    <section class="widget widget-recent-posts wf-recent-posts">
+      <?php /* Headline */
+      if ( get_field( 'widget_headline', $wid ) ) { ?>
+        <h2 class="widget-title wf-recent-posts__title wbt">
+          <?php the_field( 'widget_headline', $wid ); ?>
+        </h2>
+      <?php } ?>
 
+      <div class="widget-inner wf-recent-posts__inner">
+        <?php
         /* Posts */
         if ( get_field( 'number_of_posts', $wid ) ) {
           $p_num = get_field( 'number_of_posts', $wid );
@@ -57,14 +57,14 @@ class Recent_Posts_Widget extends WP_Widget {
         // check for posts
         if ( $my_query->have_posts() ): ?>
 
-          <table class="rposts-table widget-recent-posts__table left-align">
+          <table class="recent-posts-table wf-recent-posts__table left-align">
             <?php // loop through posts
             while ( $my_query->have_posts() ) {
               $my_query->the_post(); ?>
 
               <tr>
-                <td class="post-image rposts-table__image"><?php the_post_thumbnail( 'thumbnail' ); ?></td>
-                <td class="post-title rposts-table__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
+                <td class="recent-posts-image wf-recent-posts__image"><?php the_post_thumbnail( 'thumbnail' ); ?></td>
+                <td class="recent-posts-title wf-recent-posts__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
               </tr>
 
             <?php } ?>

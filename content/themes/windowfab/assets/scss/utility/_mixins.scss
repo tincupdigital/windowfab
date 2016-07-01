@@ -15,15 +15,16 @@ Animation
 /*
 Buttons
  */
-@mixin button-text {
+@mixin button-text($font-size: 0.8125rem) {
+  font-size: $font-size;
   font-weight: 700;
-  font-size: 0.8125rem;
+  text-transform: uppercase;
+  font-family: $body-font;
 }
 @mixin button {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   line-height: 1.0;
-  text-transform: uppercase;
   @include button-text;
 }
 @mixin button-color($color: white, $bg-color: $link-color) {

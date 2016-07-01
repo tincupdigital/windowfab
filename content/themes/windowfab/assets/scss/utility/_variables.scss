@@ -34,15 +34,15 @@ $brand-colors: (
   'gray-brown': #3A3738,
   'gray-light': #DDD,
   'sand': #DDDBD3,
-  'teal': #4C9B8F,
-  'teal-blue': #3B7589,
-  'teal-light': #60ADA7
+  'aqua': #4C9B8F,
+  'aqua-blue': #3B7589,
+  'aqua-light': #60ADA7
 );
 
 /* Definitions */
 $text-color: brand-color('gray-brown');
-$heading-color: brand-color('teal-blue');
-$link-color: brand-color('teal');
+$heading-color: brand-color('aqua-blue');
+$link-color: brand-color('aqua');
 
 $accent-color: brand-color('gold');
 $border-color: brand-color('sand');

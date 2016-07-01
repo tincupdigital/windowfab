@@ -25,31 +25,29 @@ class Bio_Image_Widget extends WP_Widget {
     // @link https://goo.gl/X1HGhg
     $wid = 'widget_' . $args['widget_id']; ?>
 
-    <section class="widget widget-bio-image center">
-      <div class="widget-inner">
-        <?php
-        /* Image */
-        if ( get_field( 'bio_image', $wid ) ) {
-          $b_img = get_field( 'bio_image', $wid ); ?>
+    <section class="widget wf-bio-image">
+      <?php
+      /* Image */
+      if ( get_field( 'bio_image', $wid ) ) {
+        $b_img = get_field( 'bio_image', $wid ); ?>
 
-          <img class="widget-image widget-bio-image__image mx-auto" src="<?php echo $b_img['sizes']['thumbnail']; ?>" alt="" />
-        <?php }
+        <img class="widget-image wf-bio-image__image" src="<?php echo $b_img['sizes']['thumbnail']; ?>" alt="" />
+      <?php }
 
-        /* Headline */
-        if ( get_field( 'widget_headline', $wid ) ) { ?>
-          <h2 class="widget-title widget-bio-image__title">
-            <?php the_field( 'widget_headline', $wid ); ?>
-          </h2>
-        <?php }
+      /* Headline */
+      if ( get_field( 'widget_headline', $wid ) ) { ?>
+        <h2 class="widget-title wf-bio-image__title">
+          <?php the_field( 'widget_headline', $wid ); ?>
+        </h2>
+      <?php }
 
-        /* Text */
-        if ( get_field( 'widget_text', $wid ) ) { ?>
-          <div class="widget-text widget-bio-image__text">
-            <?php echo wpautop( get_field( 'widget_text', $wid ) ); ?>
-          </div>
-        <?php }
-        ?>
-      </div>
+      /* Text */
+      if ( get_field( 'widget_text', $wid ) ) { ?>
+        <div class="widget-text wf-bio-image__text">
+          <?php echo wpautop( get_field( 'widget_text', $wid ) ); ?>
+        </div>
+      <?php }
+      ?>
     </section>
   <?php }
 

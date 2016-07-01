@@ -9,10 +9,13 @@ Sidebar
   .widget {
     margin-bottom: 2rem;
 
+    .widget-title {
+      margin-top: 0;
+    }
     ul, table {
       margin: 0;
     }
-    ul {
+    ul, li {
       list-style-type: none;
       padding: 0;
     }
@@ -28,21 +31,19 @@ Sidebar
 /*
 Widgets
  */
-.widget_categories,
-.widget-recent-posts {
-  padding: 0 1.25rem 1.25rem;
-  text-align: center;
-  border: 1px solid $border-color;
-  border-radius: 2px;
-
+.wf-categories,
+.wf-recent-posts {
   .widget-inner {
-    margin-top: -0.75rem;
+    margin-top: -0.825rem;
+    text-align: center;
+    border: 1px solid $border-color;
+    border-radius: 2px;
   }
 
   .widget-title {
     display: inline-block;
-    margin: 0 0 1rem;
     padding: 0 1.5rem;
+    margin-bottom: 0;
     color: $text-color;
     font-size: 1rem;
     font-weight: bold;
@@ -53,7 +54,23 @@ Widgets
     background-color: $site-bg-color;
   }
 }
-.widget-recent-posts {
+
+/*
+Widget: Categories
+ */
+.wf-categories {
+  .widget-inner {
+    padding: 1.5rem 1.25rem 1rem;
+  }
+}
+
+/*
+Widget: Recent Posts
+ */
+.wf-recent-posts {
+  .widget-inner {
+    padding: 1.675rem 1.25rem 1.25rem;
+  }
   tr:last-of-type td {
     padding-bottom: 0;
   }
@@ -62,15 +79,15 @@ Widgets
     padding-bottom: 0.75rem;
   }
 }
-.rposts-table__image {
+.wf-recent-posts__image {
   max-width: 60px;
 }
-.rposts-table__title {
+.wf-recent-posts__title {
   padding-left: 0.5rem;
 }
 
 /*
-Sidebar: Search
+Widget: Search
  */
 .widget-area .searchform {
   position: relative;
@@ -99,4 +116,42 @@ Sidebar: Search
   &:hover {
     cursor: pointer;
   }
+}
+
+/*
+Widget: CTA Link
+ */
+.widget-area .wf-cta-link {
+  position: relative;
+  padding: 2rem 1rem;
+  background: url('../img/bg-aqua.png' ) left top repeat;
+
+  .widget-inner {
+    color: white;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: url('../img/horz-line-tan.png') left top repeat-x;
+  }
+  &:before {
+    top: 0;
+    margin-top: -4px;
+  }
+  &:after {
+    bottom: 0;
+    margin-bottom: -4px;
+  }
+}
+
+/*
+Widget: Bio Image
+ */
+.wf-bio-image__image {
+  margin: 0 auto 1.5rem;
 }
