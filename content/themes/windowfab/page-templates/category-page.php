@@ -19,9 +19,9 @@ get_header(); ?>
             <div class="row">
               <div class="col-xs-12">
 
-                <article id="post-<?php the_ID(); ?>" <?php post_class( 'txt--left' ); ?>>
+                <article id="post-<?php the_ID(); ?>" <?php post_class( 'left-align' ); ?>>
                   <header class="entry-header">
-                    <?php the_title( '<h1 class="entry-title sr-only">', '</h1>' ); ?>
+                    <?php the_title( '<h1 class="entry-title sro">', '</h1>' ); ?>
                   </header><!-- .entry-header -->
 
                   <div class="entry-content">

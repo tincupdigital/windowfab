@@ -54,8 +54,7 @@ Header: Top
   }
   a {
     color: white;
-    font-size: 0.875rem;
-    // add hover here
+    @include button-text;
   }
 }
 

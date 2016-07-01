@@ -7,7 +7,7 @@ Sidebar
  */
 .widget-area {
   .widget {
-    margin-bottom: $margin-p;
+    margin-bottom: 2rem;
 
     ul, table {
       margin: 0;
@@ -19,6 +19,9 @@ Sidebar
     img {
       display: block;
     }
+    p:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -28,7 +31,6 @@ Widgets
 .widget_categories,
 .widget-recent-posts {
   padding: 0 1.25rem 1.25rem;
-  margin-bottom: 1.5rem;
   text-align: center;
   border: 1px solid $border-color;
   border-radius: 2px;
@@ -49,7 +51,7 @@ Widgets
     line-height: 1.0;
     text-transform: uppercase;
     background-color: $site-bg-color;
-  }  
+  }
 }
 .widget-recent-posts {
   tr:last-of-type td {
@@ -65,4 +67,36 @@ Widgets
 }
 .rposts-table__title {
   padding-left: 0.5rem;
+}
+
+/*
+Sidebar: Search
+ */
+.widget-area .searchform {
+  position: relative;
+
+  .searchform__input {
+    padding-right: 40px;
+    @include button-text;
+  }
+  .searchform__button {
+    position: absolute;
+    top: 0; right: 0;
+    height: 40px;
+    width: 40px;
+    line-height: 1.0;
+  }
+  ::-webkit-input-placeholder {
+    color: darken($border-color, 45%);
+    text-transform: uppercase;
+  }
+}
+.searchform__button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

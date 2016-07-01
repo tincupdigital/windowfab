@@ -30,7 +30,7 @@ get_header(); ?>
                   </div><!-- .entry-content -->
                 </div><!-- .col-# -->
 
-                <div class="col-xs-12 txt--left">
+                <div class="col-xs-12 left-align">
                   <?php /* Gallery */
                   $images = get_field( 'category_gallery' );
 
@@ -59,10 +59,10 @@ get_header(); ?>
                     ) );
                   ?>
                 </div><!-- .col-# -->
-                
+
               </div><!-- .row -->
             </div><!-- .container -->
-                
+
           </article><!-- #post-## -->
 
         <?php

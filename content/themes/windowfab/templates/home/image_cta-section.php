@@ -31,7 +31,7 @@
 
                     /* Headline */
                     if ( get_sub_field( 'cta_headline' ) ) { ?>
-                      <h3 class="cta-title section-cta__title h4 fnt--body fw--700"><?php the_sub_field( 'cta_headline' ); ?></h3>
+                      <h3 class="cta-title section-cta__title h4 fnt--body bold"><?php the_sub_field( 'cta_headline' ); ?></h3>
                     <?php }
 
                     /* Text */

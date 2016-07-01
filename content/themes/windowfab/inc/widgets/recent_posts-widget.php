@@ -57,7 +57,7 @@ class Recent_Posts_Widget extends WP_Widget {
         // check for posts
         if ( $my_query->have_posts() ): ?>
 
-          <table class="rposts-table widget-recent-posts__table txt--left">
+          <table class="rposts-table widget-recent-posts__table left-align">
             <?php // loop through posts
             while ( $my_query->have_posts() ) {
               $my_query->the_post(); ?>

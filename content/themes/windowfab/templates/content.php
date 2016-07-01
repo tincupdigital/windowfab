@@ -29,7 +29,7 @@
 		<?php the_excerpt(); ?>
 
 		<!-- More -->
-		<a class="button button-outline">Read more</a>
+		<a class="button button-outline" href="<?php the_permalink(); ?>">Read more</a>
 
 		<?php
 		wp_link_pages( array(

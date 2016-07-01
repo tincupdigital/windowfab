@@ -51,6 +51,10 @@ update_option( 'medium_size_w', 600 );
 update_option( 'medium_size_h', 600 );
 update_option( 'medium_crop', 1 );
 
+update_option( 'thumbnail_size_w', 225 );
+update_option( 'thumbnail_size_h', 225 );
+update_option( 'thumbnail_crop', 1 );
+
 /**
  * Custom Widgets
  */

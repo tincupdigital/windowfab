@@ -15,19 +15,21 @@ Animation
 /*
 Buttons
  */
+@mixin button-text {
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
 @mixin button {
   display: inline-block;
   padding: 0.625rem 1.5rem;
-  font-weight: 700;
-  font-size: 0.8125rem;
   line-height: 1.0;
+  text-transform: uppercase;
+  @include button-text;
 }
 @mixin button-color($color: white, $bg-color: $link-color) {
   @include button;
-
   color: $color !important;
   background-color: $bg-color;
-  text-transform: uppercase;
   border: none;
   @include animate(background-color);
 
@@ -39,10 +41,8 @@ Buttons
 }
 @mixin button-outline($color: $text-color, $border-color: $accent-color) {
   @include button;
-
   color: $color !important;
   border: 2px solid $border-color;
-  text-transform: uppercase;
   @include animate(border-color);
 
   &:focus,
@@ -121,7 +121,7 @@ Media queries
 /*
 Screen reader
  */
-@mixin sr-only {
+@mixin screen-reader-text {
   position: absolute !important;
   height: 1px;
   width: 1px;

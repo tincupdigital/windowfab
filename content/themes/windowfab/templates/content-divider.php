@@ -6,7 +6,7 @@
  */
 ?>
 
-<section class="divider-container txt--center">
+<section class="divider-container center">
   <div class="divider divider-fancy">
     <div class="divider-inner">
       <div class="divider-inner">

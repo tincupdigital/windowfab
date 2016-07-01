@@ -21,9 +21,6 @@ Fonts
 .fnt--body { font-family: $body-font; }
 .fnt--heading { font-family: $heading-font; }
 
-.fw--300 { font-weight: 300 !important; }
-.fw--700 { font-weight: 700 !important; }
-
 /*
 Media Queries
  */
@@ -62,13 +59,6 @@ Media Queries
 /*
 Mixins
  */
-.screen-reader-text, .sr-only {
-  @include sr-only;
+.screen-reader-text, .sro {
+  @include screen-reader-text;
 }
-
-/*
-Text
- */
-.txt--center { text-align: center; }
-.txt--left { text-align: left; }
-.txt--right { text-align: right; }

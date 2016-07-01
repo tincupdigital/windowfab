@@ -19,9 +19,9 @@ get_header(); ?>
             <div class="row">
               <div class="col-xs-12">
 
-                <article id="post-<?php the_ID(); ?>" <?php post_class( 'txt--left' ); ?>>
+                <article id="post-<?php the_ID(); ?>" <?php post_class( 'left-align' ); ?>>
                   <header class="entry-header">
-                    <h1 class="entry-title txt--center">
+                    <h1 class="entry-title center">
                       <?php echo _s_page_title(); ?>
                     </h1>
                   </header><!-- .entry-header -->

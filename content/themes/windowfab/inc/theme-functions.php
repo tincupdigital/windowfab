@@ -143,9 +143,14 @@ function _s_page_title() {
  * Require featured image
  */
 function _s_require_feat_img( $post_id ) {
+  if ( get_post_type( $post_id ) !== 'post' ) {
+    return;
+  }
   if ( !has_post_thumbnail( $post_id ) ) {
+    $link =  wp_get_referer();
+
     $message = 'You must upload a featured image in order to save the post. ';
-    $message .= 'Click <a href="#" onclick="window.history.back()">here</a> to go back.';
+    $message .= 'Click <a href="' . $link . '">here</a> to go back.';
     wp_die( $message );
   }
 }
