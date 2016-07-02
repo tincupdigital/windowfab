@@ -10,6 +10,44 @@ Site
 }
 .site-content {
   padding: 2rem 0;
+
+  @include break-sm {
+    padding: 3rem 0;
+  }
+  @include break-lg {
+    padding: 4rem 0;
+  }
+}
+.site-content--bg {
+  position: relative;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  // gradient to help visibility
+  &:after {
+    position: absolute;
+    display: block;
+    top: 0; left: 0;
+    content: "";
+    background: $site-bg-color;
+    background: linear-gradient(transparent, $site-bg-color 300px);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  & > div {
+    position: relative;
+    z-index: 2;
+  }
+
+  // shadow on page title/content
+  .entry-title,
+  .entry-content p {
+    text-shadow: 0 0 10px white, 0 0 20px white,
+    0 0 30px white, 0 0 40px white, 0 0 70px white,
+    0 0 80px white, 0 0 100px white, 0 0 150px white;
+  }
 }
 
 /*

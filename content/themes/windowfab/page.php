@@ -14,7 +14,8 @@
 
 get_header(); ?>
 
-  <div id="content" class="site-content">
+  <!-- #content -->
+  <?php get_template_part( 'templates/global/site_content', 'open' ); ?>
 
 		<div class="container">
 			<div class="row">
