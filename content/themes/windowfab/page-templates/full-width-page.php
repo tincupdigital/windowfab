@@ -17,7 +17,7 @@ get_header(); ?>
 
           <div class="container">
             <div class="row">
-              <div class="col-xs-12">
+              <div class="col-xs-12 col-sm-10 col-sm-offset-1">
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'left-align' ); ?>>
                   <header class="entry-header">

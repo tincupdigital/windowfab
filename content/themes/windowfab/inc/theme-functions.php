@@ -102,8 +102,8 @@ function _s_main_nav_wrap() {
     // set up the nav wrapper
     $wrap = '<ul id="%1$s" class="%2$s">';
     $wrap .= '%3$s';
-    $wrap .= '<li class="site-logo"><a class="site-logo--img" href="'. $lnk .'">';
-    $wrap .= '<img src="' . $img . '" alt="'. $alt .'" />';
+    $wrap .= '<li class="site-logo"><a href="'. $lnk .'">';
+    $wrap .= '<img class="site-logo__image" src="' . $img . '" alt="'. $alt .'" />';
     $wrap .= '</a></li>';
     $wrap .= '</ul>';
   } else {

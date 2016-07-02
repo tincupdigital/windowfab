@@ -43,6 +43,7 @@ Buttons
 @mixin button-outline($color: $text-color, $border-color: $accent-color) {
   @include button;
   color: $color !important;
+  background-color: transparent;
   border: 2px solid $border-color;
   @include animate(border-color);
 
