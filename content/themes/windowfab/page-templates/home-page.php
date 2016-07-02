@@ -7,7 +7,8 @@
 
 get_header(); ?>
 
-  <div id="content" class="site-content p0">
+  <!-- #content -->
+  <?php get_template_part( 'templates/global/site_content', 'open' ); ?>
 
   	<div id="primary" class="content-area">
   		<main id="main" class="site-main" role="main">

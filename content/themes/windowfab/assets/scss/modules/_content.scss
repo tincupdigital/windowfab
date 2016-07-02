@@ -18,12 +18,13 @@ Site
     padding: 4rem 0;
   }
 }
+
+// page background setup
 .site-content--bg {
   position: relative;
   background-size: 100% auto;
   background-repeat: no-repeat;
 
-  // gradient to help visibility
   &:after {
     position: absolute;
     display: block;
@@ -39,14 +40,6 @@ Site
   & > div {
     position: relative;
     z-index: 2;
-  }
-
-  // shadow on page title/content
-  .entry-title,
-  .entry-content p {
-    text-shadow: 0 0 10px white, 0 0 20px white,
-    0 0 30px white, 0 0 40px white, 0 0 70px white,
-    0 0 80px white, 0 0 100px white, 0 0 150px white;
   }
 }
 

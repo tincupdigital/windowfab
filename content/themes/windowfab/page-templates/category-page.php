@@ -45,7 +45,7 @@ get_header(); ?>
                               $c_ttl = get_sub_field( 'category_title' );
 
                               if ( $c_img && $c_ttl ) { ?>
-                                <div class="image-tile category-area__tile" style="background-image: url('<?php echo $c_img['sizes']['large']; ?>');">
+                                <div class="image-tile category-area__tile center" style="background-image: url('<?php echo $c_img['sizes']['large']; ?>');">
                                   <div class="tile-inner image-tile__inner">
                                     <!-- Title -->
                                     <h2 class="tile-title image-tile__title h1"><?php echo $c_ttl; ?></h2>
@@ -58,7 +58,7 @@ get_header(); ?>
 
                               // check for testimonial
                               if ( $posts ) { ?>
-                                <div class="testimonial-tile category-area__tile">
+                                <div class="testimonial-tile category-area__tile center">
                                   <div class="tile-inner testimonial-tile__inner">
                                     <?php // loop through testimonials
                                     foreach ( $posts as $post ) {
