@@ -12,21 +12,21 @@ $pi_url = get_theme_mod( 'pinterest_url' );
 
 // check for icons
 if ( $fb_url || $ig_url || $pi_url ) { ?>
-	<ul class="social-icons social-icons__list">
+	<ul class="social-icons social-icon-area list-style-none">
 		<?php
 		/* Facebook */
 		if ( $fb_url ) { ?>
-			<li><a class="icon-facebook-circled facebook" href="<?php echo $fb_url; ?>" target="_blank"></a></li>
+			<li class="inline-block"><a class="icon-facebook-circled facebook" href="<?php echo $fb_url; ?>" target="_blank"></a></li>
 		<?php }
 
 		/* Instagram */
 		if ( $ig_url ) { ?>
-			<li><a class="icon-instagram-circled instagram" href="<?php echo $ig_url; ?>" target="_blank"></a></li>
+			<li class="inline-block"><a class="icon-instagram-circled instagram" href="<?php echo $ig_url; ?>" target="_blank"></a></li>
 		<?php }
 
 		/* Pinterest */
 		if ( $pi_url ) { ?>
-			<li><a class="icon-pinterest-circled pinterest" href="<?php echo $pi_url; ?>" target="_blank"></a></li>
+			<li class="inline-block"><a class="icon-pinterest-circled pinterest" href="<?php echo $pi_url; ?>" target="_blank"></a></li>
 		<?php } ?>
 	</ul>
 <?php }

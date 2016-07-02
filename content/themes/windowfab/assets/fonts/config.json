@@ -15,19 +15,31 @@
     {
       "uid": "0a16125788558bcc5d70ae3f10effce5",
       "css": "instagram-circled",
-      "code": 59394,
+      "code": 59393,
       "src": "mfglabs"
     },
     {
       "uid": "ce1d525f3f31024c6a6b38f5e9a88953",
       "css": "facebook-circled",
-      "code": 59393,
+      "code": 59394,
       "src": "entypo"
     },
     {
       "uid": "7222571caa5c15f83dcfd447c58d68d9",
       "css": "search",
       "code": 59395,
+      "src": "entypo"
+    },
+    {
+      "uid": "592717bd601645d61517d2a584d04127",
+      "css": "left-open-mini",
+      "code": 59396,
+      "src": "entypo"
+    },
+    {
+      "uid": "37f6cfbb4062ed0d01b351ec35c334ff",
+      "css": "right-open-mini",
+      "code": 59397,
       "src": "entypo"
     }
   ]

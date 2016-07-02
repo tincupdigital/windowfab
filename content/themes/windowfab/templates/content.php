@@ -19,9 +19,9 @@
 		<?php }
 
 		if ( is_single() ) {
-			the_title( '<h1 class="entry-title h2 mt0 mb1">', '</h1>' );
+			the_title( '<h1 class="entry-title m0 wbt">', '</h1>' );
 		} else {
-			the_title( '<h2 class="entry-title h2 mt0 mb1"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2 class="entry-title m0 wbt"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		} ?>
 	</header><!-- .entry-header -->
 
@@ -29,7 +29,7 @@
 		<?php the_excerpt(); ?>
 
 		<!-- More -->
-		<a class="button button-outline" href="<?php the_permalink(); ?>">Read more</a>
+		<a class="button bo--ba" href="<?php the_permalink(); ?>">Read more</a>
 
 		<?php
 		wp_link_pages( array(

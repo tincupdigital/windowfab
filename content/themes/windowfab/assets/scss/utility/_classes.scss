@@ -7,9 +7,14 @@ Buttons
  */
 .button { @include button; }
 .button-color { @include button-color; }
+.button-text { @include button-text; }
+
 .button-outline { @include button-outline; }
 
-.button-text { @include button-text; }
+// classes -- color on color
+.bo--bg { @include button-outline($text-color, $accent-color); }
+.bo--ba { @include button-outline($text-color, $link-color); }
+.bo--bw { @include button-outline($text-color, white); }
 
 /*
 Colors
@@ -64,11 +69,14 @@ Mixins
 .screen-reader-text, .sro {
   @include screen-reader-text;
 }
+.val {
+  @include vertical-align;
+}
 
 /*
 Widgets
  */
 // class for widget button text
 .wbt {
-  @include button-text(1rem);
+  @include button-text(1.125rem);
 }

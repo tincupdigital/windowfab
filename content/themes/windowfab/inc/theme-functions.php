@@ -155,3 +155,11 @@ function _s_require_feat_img( $post_id ) {
   }
 }
 add_action( 'pre_post_update', '_s_require_feat_img' );
+
+/**
+ * Update excerpt text length
+ */
+function _s_excerpt_length( $length ) {
+  return 30;
+}
+add_filter( 'excerpt_length', '_s_excerpt_length' );

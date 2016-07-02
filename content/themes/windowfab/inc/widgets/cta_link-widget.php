@@ -41,6 +41,14 @@ class CTA_Link_Widget extends WP_Widget {
             <?php echo wpautop( get_field( 'widget_text', $wid ) ); ?>
           </div>
         <?php }
+
+        /* Link */
+        if ( get_field( 'cta_link', $wid ) ) {
+          // field returns page ID
+          $pid = get_field( 'cta_link', $wid ); ?>
+
+          <a class="wf-cta-link__button button bo--bw" href="<?php the_permalink( $pid ); ?>">Button</a>
+        <?php }
         ?>
       </div>
     </section>

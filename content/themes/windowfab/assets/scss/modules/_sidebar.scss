@@ -130,6 +130,10 @@ Widget: CTA Link
     color: white;
   }
 
+  p:last-of-type {
+    margin-bottom: $margin-p;
+  }
+
   &:before,
   &:after {
     content: "";

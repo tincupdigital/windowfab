@@ -55,10 +55,15 @@ get_header(); ?>
 
 							</div><!-- .row -->
 
-							<?php
-							the_posts_navigation();
+							<div class="blog-content-bottom">
+								<div class="blog-content-social center mt4 mb2">
+									<?php get_template_part( 'templates/global/social', 'icons' ); ?>
+								</div>
 
-						else :
+								<?php the_posts_navigation(); ?>
+							</div>
+
+						<?php else :
 
 							get_template_part( 'templates/content', 'none' );
 

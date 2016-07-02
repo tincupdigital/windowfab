@@ -3,7 +3,7 @@
  */
 
 /*
-Top-Level
+Global
  */
 html {
   box-sizing: border-box;
@@ -44,4 +44,24 @@ Elements
  */
 hr, ul, ol, dd, table {
   margin-bottom: $margin-p;
+}
+
+/*
+Social Icons
+ */
+.social-icon-area {
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0 0.125rem;
+  }
+  a {
+    display: block;
+    line-height: 1.0;
+
+    &:before {
+      margin: 0;
+    }
+  }
 }
