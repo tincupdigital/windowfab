@@ -14,7 +14,7 @@
 
         <?php /* Product Categories */
         if ( have_rows( 'product_categories' ) ) { ?>
-          <div class="pcats-section home-pcats-section">
+          <div class="pcats-section home-pcats-section mxn3-lg">
 
             <?php // loop through categories
             while ( have_rows( 'product_categories' ) ): the_row(); ?>

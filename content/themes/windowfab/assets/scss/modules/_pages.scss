@@ -53,7 +53,7 @@ Home: Headline
 Home: Categories
  */
 .home-pcats-section {
-  @include break-sm {
+  @include break-xs {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -69,7 +69,7 @@ Home: Categories
   flex-direction: column;
   align-items: center;
 
-  @include break-sm {
+  @include break-xs {
     padding-left: 1rem;
     padding-right: 1rem;
 
@@ -351,7 +351,6 @@ Product Page
     float: left;
 
     img {
-      display: block;
       padding: 5px;
     }
   }

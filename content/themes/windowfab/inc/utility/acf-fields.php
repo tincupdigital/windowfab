@@ -147,6 +147,53 @@ acf_add_local_field_group(array (
 ));
 
 acf_add_local_field_group(array (
+	'key' => 'group_5776cb4951a0a',
+	'title' => 'CTA Fields',
+	'fields' => array (
+		array (
+			'key' => 'field_5776cb4ee25e3',
+			'label' => 'CTA Link',
+			'name' => 'cta_link',
+			'type' => 'post_object',
+			'instructions' => 'Select a page for the CTA to link to.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'post_type' => array (
+				0 => 'page',
+			),
+			'taxonomy' => array (
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'return_format' => 'id',
+			'ui' => 1,
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'cta',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array (
 	'key' => 'group_574500170290d',
 	'title' => 'Home Page Fields',
 	'fields' => array (
@@ -992,8 +1039,53 @@ acf_add_local_field_group(array (
 ));
 
 acf_add_local_field_group(array (
+	'key' => 'group_5776e53f29ebb',
+	'title' => 'Widget: WF Categories',
+	'fields' => array (
+		array (
+			'key' => 'field_5776e53f2e71b',
+			'label' => 'Widget Headline',
+			'name' => 'widget_headline',
+			'type' => 'text',
+			'instructions' => 'Enter a headline for the widget.',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'widget',
+				'operator' => '==',
+				'value' => 'category_widget',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array (
 	'key' => 'group_5772c421ef814',
-	'title' => 'Widget: Recent Posts',
+	'title' => 'Widget: WF Recent Posts',
 	'fields' => array (
 		array (
 			'key' => 'field_5772c421f215e',
@@ -1064,30 +1156,6 @@ acf_add_local_field_group(array (
 	'title' => 'Page Fields',
 	'fields' => array (
 		array (
-			'key' => 'field_576d8511e74e5',
-			'label' => 'Page Background',
-			'name' => 'page_background',
-			'type' => 'image',
-			'instructions' => 'Upload an image to use as the page\'s background.',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'array',
-			'preview_size' => 'thumbnail',
-			'library' => 'all',
-			'min_width' => 1600,
-			'min_height' => 640,
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => 'jpg,jpeg,webp',
-		),
-		array (
 			'key' => 'field_5772d987fc5f1',
 			'label' => 'Page CTA',
 			'name' => 'page_cta',
@@ -1146,6 +1214,11 @@ acf_add_local_field_group(array (
 				'param' => 'post_type',
 				'operator' => '==',
 				'value' => 'page',
+			),
+			array (
+				'param' => 'page_template',
+				'operator' => '!=',
+				'value' => 'page-templates/home-page.php',
 			),
 		),
 	),

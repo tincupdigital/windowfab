@@ -25,10 +25,10 @@
             // check for link
             if ( $b_lnk ) { ?>
               <a href="<?php echo get_permalink( $b_lnk ); ?>">
-                <img class="section-icon banner-section__icon" src="<?php echo $b_ico['sizes']['thumbnail']; ?>" />
+                <img class="section-icon banner-section__icon block mx-auto mb2" src="<?php echo $b_ico['sizes']['thumbnail']; ?>" />
               </a>
             <?php } else { ?>
-              <img class="section-icon banner-section__icon" src="<?php echo $b_ico['sizes']['thumbnail']; ?>" />
+              <img class="section-icon banner-section__icon block mx-auto mb2" src="<?php echo $b_ico['sizes']['thumbnail']; ?>" />
             <?php }
           }
 

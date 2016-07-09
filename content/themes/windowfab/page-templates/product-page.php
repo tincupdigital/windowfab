@@ -45,7 +45,7 @@ get_header(); ?>
 
                           <div class="product-item product-section__item column">
                             <a href="<?php echo $image['url']; ?>" data-lightbox="products" data-title="<?php echo $image['title']; ?>">
-                              <img src="<?php echo $image['sizes']['product-thumb']; ?>" alt="<?php echo $image['alt']; ?>" />
+                              <img class="product-item__img block" src="<?php echo $image['sizes']['product-thumb']; ?>" alt="<?php echo $image['alt']; ?>" />
                             </a>
                           </div>
 
