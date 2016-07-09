@@ -124,6 +124,81 @@ Home: Testimonials
 }
 
 /*
+Home: Image CTAs
+ */
+.cta-section__cta {
+  margin-bottom: 1.5rem;
+
+  .cta-section--img {
+    min-height: 250px;
+  }
+
+  &:nth-of-type(odd) {
+    .cta-section--txt {
+      background: url('../img/bg-gold.png') left top repeat;
+    }
+  }
+  &:nth-of-type(even) {
+    .cta-section--txt {
+      background: url('../img/bg-aqua.png') left top repeat;
+    }
+  }
+
+  @include break-md {
+    display: flex;
+    flex-direction: row;
+
+    section {
+      width: 50%;
+    }
+
+    .cta-section--txt:before,
+    .cta-section--txt:after {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 8px;
+      height: 100%;
+      background: url('../img/vert-line-tan.png') left top repeat-x;
+      z-index: 999;
+    }
+
+    &:nth-of-type(odd) {
+      .cta-section--txt {
+        order: 1;
+
+        &:after {
+          content: "";
+          right: 0;
+          margin-right: -4px;
+        }
+      }
+      .cta-section--img {
+        order: 2;
+      }
+    }
+    &:nth-of-type(even) {
+      .cta-section--txt:before {
+        content: "";
+        left: 0;
+        margin-left: -4px;
+      }
+    }
+  }
+}
+.section-cta__inner {
+  position: relative;
+  padding: 2rem;
+
+  @include break-md {
+    padding: 3rem 2rem;
+  }
+}
+.section-cta__title {
+  @include button-text(1.125rem);
+}
+
+/*
 Home: Banner
  */
 .home-banner-section {
