@@ -70,7 +70,7 @@ Lightslider
     &.active a,
     a:focus,
     a:hover {
-      background-color: $border-color;
+      background-color: $border-color--dark;
     }
   }
   a {
@@ -79,7 +79,7 @@ Lightslider
     width: 0.625rem;
     height: 0.625rem;
     background-color: transparent;
-    border: 2px solid $border-color;
+    border: 2px solid $border-color--dark;
     border-radius: 50%;
     @include animate(background-color);
   }

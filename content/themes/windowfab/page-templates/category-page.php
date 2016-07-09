@@ -22,7 +22,7 @@ get_header(); ?>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'left-align' ); ?>>
                   <header class="entry-header">
-                    <?php the_title( '<h1 class="entry-title sro">', '</h1>' ); ?>
+                    <?php the_title( '<h1 class="entry-title srt">', '</h1>' ); ?>
                   </header><!-- .entry-header -->
 
                   <div class="entry-content">

@@ -15,45 +15,42 @@
         <?php /* Product Categories */
         if ( have_rows( 'product_categories' ) ) { ?>
           <div class="pcats-section home-pcats-section">
-            <div class="row center-xs">
 
-              <?php // loop through categories
-              while ( have_rows( 'product_categories' ) ): the_row(); ?>
-                <div class="col-xs-12 col-md-6 col-lg-3">
-                  <div class="section-category pcats-section__category">
-                    <?php
-                    /* Image */
-                    if ( get_sub_field( 'category_icon' ) ) {
-                      $c_ico = get_sub_field( 'category_icon' ); ?>
+            <?php // loop through categories
+            while ( have_rows( 'product_categories' ) ): the_row(); ?>
 
-                      <img class="category-icon section-category__icon" src="<?php echo $c_ico['sizes']['medium']; ?>" alt="<?php echo $c_ico['alt']; ?>" />
-                    <?php }
+              <div class="section-category pcats-section__category center">
+                <?php
+                /* Image */
+                if ( get_sub_field( 'category_icon' ) ) {
+                  $c_ico = get_sub_field( 'category_icon' ); ?>
 
-                    /* Title */
-                    if ( get_sub_field( 'category_title' ) ) { ?>
-                      <h3 class="category-title section-category__title h4 fnt--body bold"><?php the_sub_field( 'category_title' ); ?></h3>
-                    <?php }
+                  <img class="category-icon section-category__icon mb2" src="<?php echo $c_ico['sizes']['medium']; ?>" alt="<?php echo $c_ico['alt']; ?>" />
+                <?php }
 
-                    /* Text */
-                    if ( get_sub_field( 'category_text' ) ) { ?>
-                      <div class="category-text section-category__text">
-                        <?php echo wpautop( get_sub_field( 'category_text' ) ); ?>
-                      </div>
-                    <?php }
+                /* Title */
+                if ( get_sub_field( 'category_title' ) ) { ?>
+                  <h3 class="category-title section-category__title h4 mb0 fnt--body bold"><?php the_sub_field( 'category_title' ); ?></h3>
+                <?php }
 
-                    /* Button */
-                    if ( get_sub_field( 'category_link' ) ) {
-                      // field returns page ID
-                      $pid = get_sub_field( 'category_link' ); ?>
-
-                      <a class="category-button section-category__button button button-color" href="<?php the_permalink( $pid ); ?>">Click here</a>
-                    <?php } ?>
+                /* Text */
+                if ( get_sub_field( 'category_text' ) ) { ?>
+                  <div class="category-text section-category__text">
+                    <?php echo wpautop( get_sub_field( 'category_text' ) ); ?>
                   </div>
-                </div>
+                <?php }
 
-              <?php endwhile; ?>
+                /* Button */
+                if ( get_sub_field( 'category_link' ) ) {
+                  // field returns page ID
+                  $pid = get_sub_field( 'category_link' ); ?>
 
-            </div><!-- .row -->
+                  <a class="category-button section-category__button button button-color" href="<?php the_permalink( $pid ); ?>">Click here</a>
+                <?php } ?>
+              </div>
+
+            <?php endwhile; ?>
+
           </div>
         <?php } ?>
 

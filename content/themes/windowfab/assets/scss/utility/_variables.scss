@@ -33,7 +33,8 @@ $brand-colors: (
   'gold': #BF9B3F,
   'gray-brown': #3A3738,
   'gray-light': #DDD,
-  'sand': #BCB696,
+  'sand': #DDDBD3,
+  'sand-dark': #BCB696,
   'aqua': #4C9B8F,
   'aqua-blue': #3B7589,
   'aqua-light': #60ADA7
@@ -45,10 +46,11 @@ $heading-color: brand-color('aqua-blue');
 $link-color: brand-color('aqua');
 
 $accent-color: brand-color('gold');
-$border-color: brand-color('sand');
 $button-color: $link-color;
-
 $site-bg-color: brand-color('cream');
+
+$border-color: brand-color('sand');
+$border-color--dark: brand-color('sand-dark');
 
 /* Social */
 $facebook: #415696;
