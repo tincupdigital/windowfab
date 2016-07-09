@@ -9,13 +9,13 @@ Site
   background-color: $site-bg-color;
 }
 .site-content {
-  padding: 2rem 0;
+  padding: 3rem 0 2rem;
 
   @include break-sm {
-    padding: 3rem 0;
+    padding-top: 4rem;
   }
   @include break-lg {
-    padding: 4rem 0;
+    padding-top: 5rem;
   }
 }
 
@@ -31,7 +31,7 @@ Site
     top: 0; left: 0;
     content: "";
     background: $site-bg-color;
-    background: linear-gradient(transparent, $site-bg-color 300px);
+    background: linear-gradient(transparent, $site-bg-color 150px);
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -40,6 +40,13 @@ Site
   & > div {
     position: relative;
     z-index: 2;
+  }
+
+  @include break-sm {
+    background: linear-gradient(transparent, $site-bg-color 200px);
+  }
+  @include break-lg {
+    background: linear-gradient(transparent, $site-bg-color 300px);
   }
 }
 

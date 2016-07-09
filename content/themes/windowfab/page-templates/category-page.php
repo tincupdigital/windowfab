@@ -32,12 +32,12 @@ get_header(); ?>
                       /* Products */
                       if ( have_rows( 'product_categories' ) ) { ?>
 
-                        <div class="category-section page-category-section">
+                        <div class="page-category-section category-area">
 
                           <?php // loop through categories
                           while ( have_rows( 'product_categories' ) ): the_row(); ?>
 
-                            <div class="category-area category-section__area">
+                            <div class="category-section category-area__section">
                               <?php
                               /* Image Tile */
                               // set fields to variables
@@ -45,12 +45,10 @@ get_header(); ?>
                               $c_ttl = get_sub_field( 'category_title' );
 
                               if ( $c_img && $c_ttl ) { ?>
-                                <div class="image-tile category-area__tile center" style="background-image: url('<?php echo $c_img['sizes']['large']; ?>');">
-                                  <div class="tile-inner image-tile__inner">
-                                    <!-- Title -->
-                                    <h2 class="tile-title image-tile__title h1"><?php echo $c_ttl; ?></h2>
-                                  </div>
-                                </div>
+                                <section class="category-tile category-tile--img category-area__tile center" style="background-image: url('<?php echo $c_img['sizes']['large']; ?>');">
+                                  <!-- Title -->
+                                  <h2 class="tile-title category-tile__title h1"><?php echo $c_ttl; ?></h2>
+                                </section>
                               <?php }
 
                               /* Testimonial */
@@ -58,31 +56,29 @@ get_header(); ?>
 
                               // check for testimonial
                               if ( $posts ) { ?>
-                                <div class="testimonial-tile category-area__tile center">
-                                  <div class="tile-inner testimonial-tile__inner">
-                                    <?php // loop through testimonials
-                                    foreach ( $posts as $post ) {
-                                      setup_postdata( $post ); ?>
+                                <section class="category-tile category-tile--txt category-area__tile center">
+                                  <?php // loop through testimonials
+                                  foreach ( $posts as $post ) {
+                                    setup_postdata( $post ); ?>
 
-                                      <!-- Text -->
-                                      <div class="tile-text testimonial-tile__text">
-                                        <?php the_content(); ?>
-                                      </div>
+                                    <!-- Text -->
+                                    <div class="tile-text category-tile__text">
+                                      <?php the_content(); ?>
+                                    </div>
 
-                                      <!-- Author -->
-                                      <div class="tile-credits testimonial-tile__author">
-                                        <span class="tile-author tile-credits__author"><?php the_title(); ?>
+                                    <!-- Author -->
+                                    <div class="tile-credits category-tile__author">
+                                      <span class="tile-author tile-credits__author"><?php the_title(); ?>
 
-                                        <?php // check for testimonial location
-                                        if ( get_field( 'author_location' ) ) { ?>
-                                          <span class="tile-credits__sep">|</span>
-                                          <span class="tile-locale tile-credits__locale"><?php the_field( 'author_location' ); ?></span>
-                                        <?php } ?>
-                                      </div>
-                                    <?php }
-                                    wp_reset_postdata(); ?>
-                                  </div>
-                                </div>
+                                      <?php // check for testimonial location
+                                      if ( get_field( 'author_location' ) ) { ?>
+                                        <span class="tile-credits__sep">|</span>
+                                        <span class="tile-locale tile-credits__locale"><?php the_field( 'author_location' ); ?></span>
+                                      <?php } ?>
+                                    </div>
+                                  <?php }
+                                  wp_reset_postdata(); ?>
+                                </section>
                               <?php } ?>
                             </div>
 

@@ -7,20 +7,27 @@ Home
  */
 .home {
   .site-content {
-    padding-top: 2.5rem;
-    padding-bottom: 0;
-
-    @include break-sm {
-      padding-top: 3.5rem;
-    }
-    @include break-lg {
-      padding-top: 5rem;
-    }
+    padding: 2.5rem 0;
   }
 
   // page background setup
-  .site-content--bg {
-    &:after {
+  .site-content--bg:after {
+    background: linear-gradient(transparent, $site-bg-color 150px);
+  }
+
+  @include break-sm {
+    .site-content {
+      padding-top: 3.5rem;
+    }
+    .site-content--bg:after {
+      background: linear-gradient(transparent, $site-bg-color 375px);
+    }
+  }
+  @include break-lg {
+    .site-content {
+      padding-top: 5rem;
+    }
+    .site-content--bg:after {
       background: linear-gradient(transparent, $site-bg-color 600px);
     }
   }
@@ -210,22 +217,56 @@ Category Page
 .page-category-section {
   margin-top: 3rem;
 }
-.category-section__area {
-  display: flex;
-  flex-direction: row;
-  min-height: 300px;
+.category-area__section {
+  margin-bottom: 2rem;
+
+  @include break-md {
+    display: flex;
+    flex-direction: row;
+    min-height: 300px;
+    margin-bottom: 0;
+
+    &:nth-of-type(odd) {
+      .category-tile--txt:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 8px;
+        height: 100%;
+        background: url('../img/vert-line-tan.png') left top repeat-x;
+        margin-left: -4px;
+        z-index: 999;
+      }
+    }
+    &:nth-of-type(even) {
+      .category-tile--txt {
+        order: 1;
+      }
+      .category-tile--img {
+        order: 2;
+      }
+      .category-tile--img:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 8px;
+        height: 100%;
+        background: url('../img/vert-line-tan.png') left top repeat-x;
+        margin-left: -4px;
+        z-index: 999;
+      }
+    }
+  }
 }
-.category-area__tile {
+.category-tile {
   position: relative;
-  display: flex;
   padding: 2rem;
-  width: 50%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
   &:after {
-    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -236,12 +277,34 @@ Category Page
     margin-bottom: -4px;
     z-index: 999;
   }
+  &.category-tile--img:after {
+    content: "";
+  }
+
+  @include break-md {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.category-tile--txt:after {
+      content: "";
+    }
+    .category-tile__author {
+      // margin-top: auto;
+    }
+  }
 }
-.tile-inner {
-  // height: 100%;
-}
-.image-tile {
+.category-tile--img {
   position: relative;
+  min-height: 250px;
+
+  // flexbox stuff
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 
   &:before {
     top: 0;
@@ -250,40 +313,30 @@ Category Page
     height: 100%;
     background-color: rgba(black, 0.1);
   }
+
+  @include break-md {
+    display: inherit;
+  }
 }
-.image-tile__title {
+.category-tile__title {
   color: white;
   font-size: 4.75rem;
   line-height: 1.0;
   text-shadow: 0.125em 0.125em 1em black;
 }
-.testimonial-tile {
+.category-tile--txt {
   background-color: $border-color;
   font-weight: bold;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 8px;
-    height: 100%;
-    background: url('../img/vert-line-tan.png') left top repeat-x;
-    margin-left: -4px;
-    z-index: 999;
-  }
 }
-.testimonial-tile__text {
+.category-tile__text {
   font-family: $heading-font;
 
   p {
+    margin: 0 0 1rem;
     font-size: 1.125rem;
   }
 }
-.testimonial-tile__author {
-  align-self: flex-end;
-  margin-top: auto;
+.category-tile__author {
   @include button-text;
 }
 
