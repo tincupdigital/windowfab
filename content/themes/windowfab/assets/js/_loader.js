@@ -22,13 +22,15 @@ var Roots = {
   /* Home */
   home: {
     init: function() {
-      /* Glide.js */
-      $('.testimonial-slider').glide({
-        type: "carousel",
-        autoheight: false,
-        keyboard: true,
-        autoplay: 7000,
-        animationDuration: 1000
+      /* lightSlider */
+      $('.lightslider').lightSlider({
+        item: 1,
+        mode: "fade",
+        speed: 725,
+        pause: 6000,
+        keyPress: true,
+        controls: false,
+        pager: true
       });
 
       /* Lightbox */

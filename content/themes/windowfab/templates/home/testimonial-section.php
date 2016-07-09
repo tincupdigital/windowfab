@@ -20,26 +20,20 @@
 
           <!-- Slider -->
           <div class="testimonial-section home-testimonial-section">
-            <div class="testimonial-slider glide">
-              <!-- Wrapper -->
-              <div class="glide__wrapper">
-                <ul class="glide__track p0 m0">
-                  <?php // loop through posts
-                  foreach ( $posts as $post ) {
-                    setup_postdata( $post ); ?>
+            <ul class="testimonial-slider lightslider">
 
-                    <li class="testimonial-slider__text glide__slide fnt--heading bold">
-                      <?php the_content(); ?>
-                    </li>
+              <?php // loop through posts
+              foreach ( $posts as $post ) {
+                setup_postdata( $post ); ?>
 
-                  <?php }
-                  wp_reset_postdata(); ?>
-                </ul>
-              </div><!-- .glide -->
-            </div>
+                <li class="testimonial-slider__text glide__slide fnt--heading bold">
+                  <?php the_content(); ?>
+                </li>
 
-            <!-- Bullets -->
-            <div class="testimonial-slider__bullets glide__bullets mt1"></div>
+              <?php }
+              wp_reset_postdata(); ?>
+
+            </ul><!-- .lightslider -->
           </div>
 
         <?php } ?>
