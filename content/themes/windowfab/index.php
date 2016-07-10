@@ -28,7 +28,7 @@ get_header(); ?>
 
 							if ( is_home() && !is_front_page() ) : ?>
 								<header>
-									<h1 class="page-title center mt0 mb3"><?php bloginfo( 'name' ); ?> Blog</h1>
+									<h1 class="page-title center mb4"><?php bloginfo( 'name' ); ?> Blog</h1>
 								</header>
 
 							<?php endif; ?>

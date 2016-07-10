@@ -10,49 +10,29 @@ get_header(); ?>
   <!-- #content -->
   <?php get_template_part( 'templates/global/site_content', 'open' ); ?>
 
-  	<div id="primary" class="content-area">
-  		<main id="main" class="site-main" role="main">
+    <div class="container">
+      <div class="row">
 
-  			<?php
-  			while ( have_posts() ) : the_post(); ?>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        	<div id="primary" class="content-area">
+        		<main id="main" class="site-main" role="main">
 
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+              <?php
+              while ( have_posts() ) : the_post();
 
-                <article id="post-<?php the_ID(); ?>" <?php post_class( 'left-align' ); ?>>
-                  <header class="entry-header">
-                    <h1 class="entry-title center">
-                      <?php echo _s_page_title(); ?>
-                    </h1>
-                  </header><!-- .entry-header -->
+                get_template_part( 'templates/content', 'page' );
 
-                  <div class="entry-content mt3">
-                    <?php
-                      /* Image */
-                      if ( has_post_thumbnail() ) {
-                        the_post_thumbnail( 'large' );
-                      }
+                get_template_part( 'templates/pages/page', 'footer' );
 
-                      the_content();
+              endwhile; // End of the loop.
+              ?>
 
-                      wp_link_pages( array(
-                        'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
-                        'after'  => '</div>',
-                      ) );
-                    ?>
-                  </div><!-- .entry-content -->
-                </article><!-- #post-## -->
+        		</main><!-- #main -->
+        	</div><!-- #primary -->
+        </div><!-- .col-# -->
 
-              </div><!-- .col-# -->
-            </div><!-- .row -->
-          </div><!-- .container -->
-
-  			<?php
-        endwhile; // End of the loop. ?>
-
-  		</main><!-- #main -->
-  	</div><!-- #primary -->
+      </div><!-- .row -->
+    </div><!-- .container -->
 
   </div><!-- #content -->
 

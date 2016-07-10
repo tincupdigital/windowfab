@@ -3,6 +3,16 @@
  */
 
 /*
+Global
+ */
+.page {
+  .entry-title,
+  .page-title {
+    font-weight: 700;
+  }
+}
+
+/*
 Home
  */
 .home {
@@ -373,4 +383,69 @@ Sitemap Page
     margin: 0;
     list-style-type: circle;
   }
+}
+
+/*
+Full-Width Page
+ */
+.page-template-full-width-page {
+  .entry-content {
+    h2, h3, h4 {
+      font-family: $body-font;
+      @include button-text;
+    }
+    h2 {
+      font-size: 1.266rem;
+    }
+    h3 {
+      font-size: 1.125rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+  }
+}
+
+/*
+Page Footer
+ */
+.page-footer {}
+.page-footer--cta {
+  padding: 2rem;
+  background: url('../img/bg-aqua.png') left top repeat;
+  overflow: hidden;
+}
+.page-footer--testimonial {
+  position: relative;
+  padding: 2rem 1rem;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    background: url('../img/horz-line-gold.png') left top repeat-x;
+    width: 100%;
+    height: 8px;
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
+  }
+}
+.tst-area__text {
+  font-family: $heading-font;
+  font-weight: 700;
+
+  p {
+    margin: 0 0 1rem;
+    font-size: 1.375rem;
+  }
+}
+.tst-area__author {
+  margin-top: 1.875rem;
+  @include button-text;
 }

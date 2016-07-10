@@ -1,3 +1,4 @@
+
 /**
  * _sidebar.scss
  */
@@ -94,7 +95,14 @@ Widget: Search
 
   .searchform__input {
     padding-right: 40px;
+    background-color: $site-bg-color;
     @include button-text;
+    @include animate(background-color);
+
+    &:active,
+    &:focus {
+      background-color: white;
+    }
   }
   .searchform__button {
     position: absolute;
@@ -158,4 +166,5 @@ Widget: Bio Image
  */
 .wf-bio-image__image {
   margin: 0 auto 1.5rem;
+  border: 1px solid $border-color--dark;
 }

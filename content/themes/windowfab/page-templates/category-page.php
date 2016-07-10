@@ -68,13 +68,7 @@ get_header(); ?>
 
                                     <!-- Author -->
                                     <div class="tile-credits category-tile__author">
-                                      <span class="tile-author tile-credits__author"><?php the_title(); ?>
-
-                                      <?php // check for testimonial location
-                                      if ( get_field( 'author_location' ) ) { ?>
-                                        <span class="tile-credits__sep">|</span>
-                                        <span class="tile-locale tile-credits__locale"><?php the_field( 'author_location' ); ?></span>
-                                      <?php } ?>
+                                      <?php echo _s_get_tst_author_text( get_the_title(), $post->ID ); ?>
                                     </div>
                                   <?php }
                                   wp_reset_postdata(); ?>

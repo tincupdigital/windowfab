@@ -16,7 +16,7 @@
           <?php
           /* Headline */
           if ( get_sub_field( 'section_headline' ) ) { ?>
-            <h2 class="section-title headline-section__title h1"><?php the_sub_field( 'section_headline' ); ?></h2>
+            <h2 class="section-title headline-section__title h1 bold"><?php the_sub_field( 'section_headline' ); ?></h2>
           <?php }
 
           /* Text */

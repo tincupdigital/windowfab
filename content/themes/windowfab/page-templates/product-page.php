@@ -38,7 +38,7 @@ get_header(); ?>
                   // check for images
                   if ( $images ) { ?>
 
-                    <div class="product-section page-products-section mt2">
+                    <div class="product-section page-products-section mt3">
                       <div class="section-inner product-section__inner" data-columns>
                         <?php // loop through images
                         foreach ( $images as $image ) { ?>

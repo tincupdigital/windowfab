@@ -163,3 +163,22 @@ function _s_excerpt_length( $length ) {
   return 30;
 }
 add_filter( 'excerpt_length', '_s_excerpt_length' );
+
+/**
+ * Testimonial author text
+ */
+function _s_get_tst_author_text( $title, $post_id ) {
+  global $post;
+
+  $text = '<span>';
+  $text .= $title;
+
+  if ( get_field( 'author_location', $post_id ) ) {
+    $text .= ' | ';
+    $text .= get_field( 'author_location', $post_id );
+  }
+
+  $text .= '</span>';
+  // return the span text
+  return $text;
+}

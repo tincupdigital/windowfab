@@ -29,6 +29,9 @@ get_header(); ?>
 
 								get_template_part( 'templates/content', 'page' );
 
+								// move this outside into 12 column area
+								get_template_part( 'templates/pages/page', 'footer' );
+
 							endwhile; // End of the loop.
 							?>
 

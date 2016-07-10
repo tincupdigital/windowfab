@@ -37,10 +37,10 @@
             // check for link
             if ( $b_lnk ) { ?>
               <a href="<?php echo get_permalink( $b_lnk ); ?>">
-                <h2 class="section-headline banner-section__headline h1"><?php the_sub_field( 'banner_headline' ); ?></h2>
+                <h2 class="section-headline banner-section__headline h1 bold"><?php the_sub_field( 'banner_headline' ); ?></h2>
               </a>
             <?php } else { ?>
-              <h2 class="section-headline banner-section__headline h1"><?php the_sub_field( 'banner_headline' ); ?></h2>
+              <h2 class="section-headline banner-section__headline h1 bold"><?php the_sub_field( 'banner_headline' ); ?></h2>
             <?php }
           } ?>
         </div>
