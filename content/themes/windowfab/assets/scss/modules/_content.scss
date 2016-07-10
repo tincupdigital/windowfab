@@ -25,6 +25,7 @@ Site
   background-size: 100% auto;
   background-repeat: no-repeat;
 
+  // help with legibility
   &:after {
     position: absolute;
     display: block;
@@ -47,6 +48,22 @@ Site
   & > div {
     position: relative;
     z-index: 2;
+  }
+
+  // help with text glow also
+  .home-section:first-of-type {
+    .section-title,
+    .section-text {
+      @include text-glow;
+    }
+  }
+}
+
+// text glow on pages other than home
+body:not(.home) .site-content--bg {
+  .hentry .entry-title,
+  .hentry .entry-content p:first-of-type {
+    @include text-glow;
   }
 }
 

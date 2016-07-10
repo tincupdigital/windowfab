@@ -5,6 +5,11 @@
  * @package _s
  */
 
+// check for footer content field
+if ( !get_field( 'cta_or_testimonial' ) ) {
+	return;
+}
+
 // check the content to display (CTA vs. testimonial)
 $pf_content = get_field( 'cta_or_testimonial' );
 
