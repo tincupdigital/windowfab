@@ -8,7 +8,7 @@
 /**
  * Register the required plugins for this theme.
  */
-function my_theme_register_required_plugins() {
+function _s_register_required_plugins() {
   /**
    * Local plugins
    */
@@ -108,4 +108,4 @@ function my_theme_register_required_plugins() {
 
 	tgmpa( $plugins, $config );
 }
-add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
+add_action( 'tgmpa_register', '_s_register_required_plugins' );

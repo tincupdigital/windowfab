@@ -18,10 +18,33 @@ get_header(); ?>
         		<main id="main" class="site-main" role="main">
 
               <?php
-              while ( have_posts() ) : the_post();
+              while ( have_posts() ) : the_post(); ?>
 
-                get_template_part( 'templates/content', 'page' );
+                <article id="post-<?php the_ID(); ?>" <?php post_class( 'left-align' ); ?>>
+                  <header class="entry-header">
+                    <h1 class="entry-title center">
+                      <?php echo _s_page_title(); ?>
+                    </h1>
+                  </header><!-- .entry-header -->
 
+                  <div class="entry-content mt3">
+                    <?php
+                      /* Image */
+                      if ( has_post_thumbnail() ) {
+                        the_post_thumbnail( 'large' );
+                      }
+
+                      the_content();
+
+                      wp_link_pages( array(
+                        'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
+                        'after'  => '</div>',
+                      ) );
+                    ?>
+                  </div><!-- .entry-content -->
+                </article><!-- #post-## -->
+                
+                <?php
                 get_template_part( 'templates/pages/page', 'footer' );
 
               endwhile; // End of the loop.
