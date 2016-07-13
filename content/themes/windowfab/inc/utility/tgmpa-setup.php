@@ -33,6 +33,12 @@ function _s_register_required_plugins() {
       'force_activation' => true
     ),
     array(
+      'name' => 'Ninja Forms',
+      'slug' => 'ninja-forms',
+      'required' => true,
+      'force_activation' => true
+    ),    
+    array(
       'name' => 'Simple Page Sidebars',
       'slug' => 'simple-page-sidebars',
       'required' => true,
@@ -45,12 +51,6 @@ function _s_register_required_plugins() {
       'required' => true,
       'force_activation' => true,
       'external_url' => 'https://github.com/roots/soil.git'
-    ),
-    array(
-      'name' => 'Tiled Galleries Carousel Without Jetpack',
-      'slug' => 'tiled-gallery-carousel-without-jetpack',
-      'required' => true,
-      'force_activation' => true
     )
   );
 
@@ -70,6 +70,12 @@ function _s_register_required_plugins() {
       'required' => true,
       'force_activation' => true
     ),
+    array(
+      'name' => 'Ninja Forms',
+      'slug' => 'ninja-forms',
+      'required' => true,
+      'force_activation' => false
+    ),    
     array(
       'name' => 'WP Super Cache',
       'slug' => 'wp-super-cache',

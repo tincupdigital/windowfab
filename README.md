@@ -6,3 +6,4 @@ WordPress project for WindowFab site
 * Update basscss setup
 * Upate flexboxgrid plugin
 * Add mixin for pattern line bg image?
+* Update classes in products/category page templates
