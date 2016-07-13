@@ -26,12 +26,12 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
   Content directories
    */
   define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
-  define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
+  define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/sitename/content' );
 
   /**
    * Database table prefix
    */
-  $table_prefix  = 'wp_';  
+  $table_prefix  = 'xyz_';
 }
 
 /**
@@ -50,5 +50,5 @@ define('NONCE_SALT',       'put your unique phrase here');
  * Load WordPress
  */
 if ( !defined( 'ABSPATH' ) )
-	define( 'ABSPATH', dirname(__FILE__) . '/wp/' );
+  define( 'ABSPATH', dirname(__FILE__) . '/wp/' );
 require_once( ABSPATH . 'wp-settings.php' );
