@@ -69,17 +69,6 @@ function _s_trim_trailing_whitespace( $content ) {
 add_filter( 'the_content', '_s_trim_trailing_whitespace', 0 );
 
 /**
- * Remove double space after period
- */
-function _s_remove_double_space( $data ) {
-  $data['post_content'] = preg_replace(
-    "~( \x{C2}\x{A0}|\x{C2}\x{A0} )~m", " ", $data['post_content']
-  );
-  return $data;
-}
-add_filter( 'wp_insert_post_data', '_s_remove_double_space', 20 );
-
-/**
  * Get featured image URL
  */
 function _s_get_feat_img_url( $size ) {

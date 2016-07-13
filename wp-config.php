@@ -49,6 +49,7 @@ define('NONCE_SALT',       'put your unique phrase here');
 /**
  * Load WordPress
  */
-if ( !defined( 'ABSPATH' ) )
+if ( !defined( 'ABSPATH' ) ) {
   define( 'ABSPATH', dirname(__FILE__) . '/wp/' );
+}
 require_once( ABSPATH . 'wp-settings.php' );

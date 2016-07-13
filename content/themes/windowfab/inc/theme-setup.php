@@ -5,10 +5,10 @@
  * @package _s
  */
 
- /**
-  * Soil Setup
-  */
- require get_template_directory() . '/inc/utility/soil-setup.php';
+/**
+ * Soil Setup
+ */
+require get_template_directory() . '/inc/utility/soil-setup.php';
 
 /**
  * TGM Plugin Activation

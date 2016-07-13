@@ -9,7 +9,9 @@
  * Panels
  */
 function _s_customizer_add_panels( $wp_customize ) {
-  /* Client Setup */
+  /*
+  Client Setup
+   */
   $wp_customize->add_panel( 'client_setup', array(
     'capability' => 'edit_theme_options',
     'title' => __( 'Client Setup', '_s' ),
@@ -21,7 +23,9 @@ add_action( 'customize_register', '_s_customizer_add_panels' );
  * Sections
  */
 function _s_customizer_add_sections( $wp_customize ) {
-  /* Appearance */
+  /*
+  Appearance
+   */
   $wp_customize->add_section( 'appearance', array(
     'title' => __( 'Appearance', '_s' ),
     'description' => __( 'Customize the appearance of the site here.', '_s' ),
@@ -29,7 +33,9 @@ function _s_customizer_add_sections( $wp_customize ) {
     'priority' => 1
   ) );
 
-  /* Social Media */
+  /*
+  Social Media
+   */
   $wp_customize->add_section( 'social_media', array(
     'title' => __( 'Social Media', '_s' ),
     'description' => __( 'Social media links can be added here.', '_s' ),
@@ -37,7 +43,9 @@ function _s_customizer_add_sections( $wp_customize ) {
     'priority' => 2
   ) );
 
-  /* Miscellaneous */
+  /*
+  Miscellaneous
+   */
   $wp_customize->add_section( 'miscellaneous', array(
     'title' => __( 'Miscellaneous', '_s' ),
     'description' => __( 'Miscellaneous items can be configured here.', '_s' ),
@@ -51,7 +59,9 @@ add_action( 'customize_register', '_s_customizer_add_sections' );
  * Fields
  */
 function _s_customizer_add_fields( $wp_customize ) {
-  /* Appearance */
+  /*
+  Appearance
+   */
   $wp_customize->add_setting( 'brand_logo' );
   $wp_customize->add_control( new WP_Customize_Image_Control(
     $wp_customize, 'brand_logo', array(
@@ -62,7 +72,9 @@ function _s_customizer_add_fields( $wp_customize ) {
     ) )
   );
 
-  /* Social Media */
+  /*
+  Social Media
+   */
   $wp_customize->add_setting( 'facebook_url' );
   $wp_customize->add_control( 'facebook_url', array(
     'label' => __( 'Facebook URL', '_s' ),
@@ -85,7 +97,9 @@ function _s_customizer_add_fields( $wp_customize ) {
     'type' => 'url'
   ) );
 
-  /* Miscellaneous */
+  /*
+  Miscellaneous
+   */
   $wp_customize->add_setting( 'analytics_id' );
   $wp_customize->add_control( 'analytics_id', array(
     'label' => __( 'Analytics ID', '_s' ),
