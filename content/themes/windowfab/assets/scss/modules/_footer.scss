@@ -10,23 +10,23 @@ Footer
 /*
 Footer: Nav
  */
- .site-footer__nav {
-   font-size: 0.875rem;
+.site-footer__nav {
+  font-size: 0.875rem;
 
-   ul {
-     list-style-type: none;
-   }
-   li {
-     display: inline-block;
-     line-height: 1.0;
-     padding: 0 0.5rem;
-     border-right: 1px solid $text-color;
+  ul {
+    list-style-type: none;
+  }
+  li {
+    display: inline-block;
+    line-height: 1.0;
+    padding: 0 0.5rem;
+    border-right: 1px solid $text-color;
 
-     &:last-of-type {
-       border-right: none;
-     }
-   }
- }
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+}
 
 /*
 Sticky Footer

@@ -31,7 +31,7 @@ get_header(); ?>
                     <?php
                       /* Image */
                       if ( has_post_thumbnail() ) {
-                        the_post_thumbnail( 'large' );
+                        the_post_thumbnail( 'large', array( 'class' => 'aligncenter' ) );
                       }
 
                       the_content();
@@ -43,7 +43,7 @@ get_header(); ?>
                     ?>
                   </div><!-- .entry-content -->
                 </article><!-- #post-## -->
-                
+
                 <?php
                 get_template_part( 'templates/pages/page', 'footer' );
 

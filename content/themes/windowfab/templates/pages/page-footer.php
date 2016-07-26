@@ -52,7 +52,7 @@ if ( $pf_content == 'cta' ) {
 	$pid = $tst_po->ID; ?>
 
 	<div class="page-footer page-footer--testimonial mt4">
-		<div class="tst-area pf-tst-area">
+		<div class="tst-area pf-tst-area center">
 			<!-- Text -->
 			<div class="tst-text tst-area__text">
 				<?php echo wpautop( $tst_po->post_content ); ?>
