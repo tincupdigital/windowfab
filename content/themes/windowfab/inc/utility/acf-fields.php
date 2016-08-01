@@ -1224,13 +1224,37 @@ acf_add_local_field_group(array (
   'title' => 'Page Fields',
   'fields' => array (
     array (
-      'key' => 'field_5781676ac7c18',
-      'label' => 'CTA or Testimonial?',
-      'name' => 'cta_or_testimonial',
-      'type' => 'radio',
-      'instructions' => 'Check one of the following boxes if you\'d like to display a CTA or testimonial at the bottom of the page.',
+      'key' => 'field_579ec0e2245e6',
+      'label' => 'Display CTA or testimonials?',
+      'name' => 'display_cta_or_testimonials',
+      'type' => 'true_false',
+      'instructions' => 'Check this box if you\'d like to include a CTA or testimonial.',
       'required' => 0,
       'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'message' => '',
+      'default_value' => 0,
+    ),
+    array (
+      'key' => 'field_579ec124245e7',
+      'label' => 'CTA / Testimonial Setup',
+      'name' => 'cta_testimonial_setup',
+      'type' => 'select',
+      'instructions' => 'Select the item you\'d like to display.',
+      'required' => 1,
+      'conditional_logic' => array (
+        array (
+          array (
+            'field' => 'field_579ec0e2245e6',
+            'operator' => '==',
+            'value' => '1',
+          ),
+        ),
+      ),
       'wrapper' => array (
         'width' => '',
         'class' => '',
@@ -1239,12 +1263,18 @@ acf_add_local_field_group(array (
       'choices' => array (
         'cta' => 'CTA',
         'testimonial' => 'Testimonial',
+        'testimonial_slider' => 'Testimonial Slider',
       ),
-      'allow_null' => 1,
-      'other_choice' => 0,
-      'save_other_choice' => 0,
-      'default_value' => '',
-      'layout' => 'vertical',
+      'default_value' => array (
+        0 => 'cta',
+      ),
+      'allow_null' => 0,
+      'multiple' => 0,
+      'ui' => 0,
+      'ajax' => 0,
+      'placeholder' => '',
+      'disabled' => 0,
+      'readonly' => 0,
     ),
     array (
       'key' => 'field_5772d987fc5f1',
@@ -1252,11 +1282,16 @@ acf_add_local_field_group(array (
       'name' => 'page_cta',
       'type' => 'post_object',
       'instructions' => 'Select a CTA to display at the bottom of the page.',
-      'required' => 0,
+      'required' => 1,
       'conditional_logic' => array (
         array (
           array (
-            'field' => 'field_5781676ac7c18',
+            'field' => 'field_579ec0e2245e6',
+            'operator' => '==',
+            'value' => '1',
+          ),
+          array (
+            'field' => 'field_579ec124245e7',
             'operator' => '==',
             'value' => 'cta',
           ),
@@ -1283,11 +1318,16 @@ acf_add_local_field_group(array (
       'name' => 'page_testimonial',
       'type' => 'post_object',
       'instructions' => 'Select a testimonial to display at the bottom of the page.',
-      'required' => 0,
+      'required' => 1,
       'conditional_logic' => array (
         array (
           array (
-            'field' => 'field_5781676ac7c18',
+            'field' => 'field_579ec0e2245e6',
+            'operator' => '==',
+            'value' => '1',
+          ),
+          array (
+            'field' => 'field_579ec124245e7',
             'operator' => '==',
             'value' => 'testimonial',
           ),
@@ -1307,6 +1347,45 @@ acf_add_local_field_group(array (
       'multiple' => 0,
       'return_format' => 'object',
       'ui' => 1,
+    ),
+    array (
+      'key' => 'field_579ec1cb245e8',
+      'label' => 'Page Testimonials',
+      'name' => 'page_testimonials',
+      'type' => 'relationship',
+      'instructions' => 'Select the testimonials you\'d like to include.',
+      'required' => 1,
+      'conditional_logic' => array (
+        array (
+          array (
+            'field' => 'field_579ec0e2245e6',
+            'operator' => '==',
+            'value' => '1',
+          ),
+          array (
+            'field' => 'field_579ec124245e7',
+            'operator' => '==',
+            'value' => 'testimonial_slider',
+          ),
+        ),
+      ),
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'post_type' => array (
+        0 => 'testimonial',
+      ),
+      'taxonomy' => array (
+      ),
+      'filters' => array (
+        0 => 'search',
+      ),
+      'elements' => '',
+      'min' => '',
+      'max' => '',
+      'return_format' => 'object',
     ),
   ),
   'location' => array (
@@ -1322,108 +1401,6 @@ acf_add_local_field_group(array (
         'value' => 'page-templates/home-page.php',
       ),
     ),
-  ),
-  'menu_order' => 1,
-  'position' => 'normal',
-  'style' => 'default',
-  'label_placement' => 'top',
-  'instruction_placement' => 'label',
-  'hide_on_screen' => '',
-  'active' => 1,
-  'description' => '',
-));
-
-acf_add_local_field_group(array (
-  'key' => 'group_5781687a92c0b',
-  'title' => 'Post Fields',
-  'fields' => array (
-    array (
-      'key' => 'field_5781687a95d98',
-      'label' => 'CTA or Testimonial?',
-      'name' => 'cta_or_testimonial',
-      'type' => 'radio',
-      'instructions' => 'Check one of the following boxes if you\'d like to display a CTA or testimonial at the bottom of the post.',
-      'required' => 0,
-      'conditional_logic' => 0,
-      'wrapper' => array (
-        'width' => '',
-        'class' => '',
-        'id' => '',
-      ),
-      'choices' => array (
-        'cta' => 'CTA',
-        'testimonial' => 'Testimonial',
-      ),
-      'allow_null' => 1,
-      'other_choice' => 0,
-      'save_other_choice' => 0,
-      'default_value' => '',
-      'layout' => 'vertical',
-    ),
-    array (
-      'key' => 'field_5781687a95e3b',
-      'label' => 'Post CTA',
-      'name' => 'post_cta',
-      'type' => 'post_object',
-      'instructions' => 'Select a CTA to display at the bottom of the post.',
-      'required' => 0,
-      'conditional_logic' => array (
-        array (
-          array (
-            'field' => 'field_5781687a95d98',
-            'operator' => '==',
-            'value' => 'cta',
-          ),
-        ),
-      ),
-      'wrapper' => array (
-        'width' => '',
-        'class' => '',
-        'id' => '',
-      ),
-      'post_type' => array (
-        0 => 'cta',
-      ),
-      'taxonomy' => array (
-      ),
-      'allow_null' => 0,
-      'multiple' => 0,
-      'return_format' => 'object',
-      'ui' => 1,
-    ),
-    array (
-      'key' => 'field_5781687a95ec4',
-      'label' => 'Post Testimonial',
-      'name' => 'post_testimonial',
-      'type' => 'post_object',
-      'instructions' => 'Select a testimonial to display at the bottom of the post.',
-      'required' => 0,
-      'conditional_logic' => array (
-        array (
-          array (
-            'field' => 'field_5781687a95d98',
-            'operator' => '==',
-            'value' => 'testimonial',
-          ),
-        ),
-      ),
-      'wrapper' => array (
-        'width' => '',
-        'class' => '',
-        'id' => '',
-      ),
-      'post_type' => array (
-        0 => 'testimonial',
-      ),
-      'taxonomy' => array (
-      ),
-      'allow_null' => 0,
-      'multiple' => 0,
-      'return_format' => 'object',
-      'ui' => 1,
-    ),
-  ),
-  'location' => array (
     array (
       array (
         'param' => 'post_type',

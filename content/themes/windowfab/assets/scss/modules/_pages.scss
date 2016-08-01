@@ -415,7 +415,8 @@ Page Footer
   background: url('../img/bg-aqua.png') left top repeat;
   overflow: hidden;
 }
-.page-footer--testimonial {
+.page-footer--testimonial,
+.page-footer--slider {
   position: relative;
   padding: 2rem 1rem;
 
@@ -448,4 +449,9 @@ Page Footer
 .tst-area__author {
   margin-top: 1.875rem;
   @include button-text;
+}
+
+// plugin adds unnecessary padding
+.pf-testimonials[style] {
+  padding-bottom: 0 !important;
 }

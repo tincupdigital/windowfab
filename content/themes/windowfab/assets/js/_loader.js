@@ -17,7 +17,22 @@
 var Roots = {
   /* Common */
   common: {
-    init: function() {}
+    init: function() {
+      /* lightSlider */
+      if ( $('.pf-testimonials').length > 0 ) {
+        $('.pf-testimonials').lightSlider({
+          item: 1,
+          mode: "fade",
+          speed: 725,
+          auto: true,
+          pause: 6000,
+          keyPress: true,
+          controls: true,
+          adaptiveHeight: true,
+          pager: false
+        });
+      }
+    }
   },
   /* Home */
   home: {

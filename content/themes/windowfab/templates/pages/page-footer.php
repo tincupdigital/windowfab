@@ -5,64 +5,26 @@
  * @package _s
  */
 
-// check for footer content field
-if ( !get_field( 'cta_or_testimonial' ) ) {
+// check for footer CTA or testimonial
+if ( !get_field( 'display_cta_or_testimonials' ) ) {
 	return;
 }
 
-// check the content to display (CTA vs. testimonial)
-$pf_content = get_field( 'cta_or_testimonial' );
+// cta/testimonial setup is stored in a
+// select field, so let's get the values
+$cta_tst_setup = get_field( 'cta_testimonial_setup' );
 
-if ( $pf_content == 'cta' ) {
+// check for each CTA/testimonial setup
+if ( $cta_tst_setup == 'cta' ) {
 
-	// set CTA post object to variable
-	$cta_po = get_field( 'page_cta' );
+	get_template_part( 'templates/pages/page', 'footer_cta' );
 
-	// set post ID
-	$pid = $cta_po->ID; ?>
+} elseif ( $cta_tst_setup == 'testimonial' ) {
 
-	<div class="page-footer page-footer--cta mt4">
-		<div class="cta-area pf-cta-area white">
-			<!-- Title -->
-			<h3 class="cta-title cta-area__title h1 mt0">
-				<?php echo $cta_po->post_title; ?>
-			</h3>
+	get_template_part( 'templates/pages/page', 'footer_testimonial' );
 
-			<!-- Text -->
-			<div class="cta-text cta-area__text bold">
-				<?php echo wpautop( $cta_po->post_content ); ?>
-			</div>
+} elseif ( $cta_tst_setup == 'testimonial_slider' ) {
 
-			<?php /* Link */
-			if ( get_field( 'cta_link', $pid ) ) {
-				// CTA link field returns post ID
-				$cta_id = get_field( 'cta_link', $pid ); ?>
+	get_template_part( 'templates/pages/page', 'footer_slider' );
 
-				<a class="cta-button cta-area__button bo--bw right" href="<?php the_permalink( $cta_id ); ?>">Button</a>
-			<?php } ?>
-		</div>
-	</div>
-
-<?php } else {
-
-	// set testimonial post object to variable
-	$tst_po = get_field( 'page_testimonial' );
-
-	// set post ID
-	$pid = $tst_po->ID; ?>
-
-	<div class="page-footer page-footer--testimonial mt4">
-		<div class="tst-area pf-tst-area center">
-			<!-- Text -->
-			<div class="tst-text tst-area__text">
-				<?php echo wpautop( $tst_po->post_content ); ?>
-			</div>
-
-			<!-- Author -->
-			<div class="tst-author tst-area__author">
-				<?php echo _s_get_tst_author_text( $tst_po->post_title, $pid ); ?>
-			</div>
-		</div>
-	</div>
-
-<?php }
+}
