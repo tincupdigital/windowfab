@@ -58,6 +58,46 @@ acf_add_local_field_group(array (
 ));
 
 acf_add_local_field_group(array (
+  'key' => 'group_57a019372572d',
+  'title' => 'Contact Page Fields',
+  'fields' => array (
+    array (
+      'key' => 'field_57a0194ed7777',
+      'label' => 'Contact Form',
+      'name' => 'contact_form',
+      'type' => 'ninja_forms_field',
+      'instructions' => 'Select a form to display on the page.',
+      'required' => 1,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'allow_null' => 0,
+      'allow_multiple' => 0,
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'page_template',
+        'operator' => '==',
+        'value' => 'page-templates/contact-page.php',
+      ),
+    ),
+  ),
+  'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+  'active' => 1,
+  'description' => '',
+));
+
+acf_add_local_field_group(array (
   'key' => 'group_5776cb4951a0a',
   'title' => 'CTA Fields',
   'fields' => array (

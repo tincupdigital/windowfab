@@ -25,14 +25,14 @@ add_filter( 'wpseo_metabox_prio', '_s_move_yoast_seo_meta' );
  * Hide update notices for all but me
  */
 function _s_hide_update_notices_all() {
-  global $wp_version;
-  return(object) array( 'last_checked' => time(), 'version_checked' => $wp_version );
+  if ( wp_get_current_user()->user_login !== 'sean' ) {
+    global $wp_version;
+    return(object) array( 'last_checked' => time(), 'version_checked' => $wp_version );
+  }
 }
-if ( wp_get_current_user()->user_login !== 'sean' ) {
-  add_filter( 'pre_site_transient_update_core', '_s_hide_update_notices_all' );
-  add_filter( 'pre_site_transient_update_plugins', '_s_hide_update_notices_all' );
-  add_filter( 'pre_site_transient_update_themes', '_s_hide_update_notices_all' );
-}
+add_filter( 'pre_site_transient_update_core', '_s_hide_update_notices_all' );
+add_filter( 'pre_site_transient_update_plugins', '_s_hide_update_notices_all' );
+add_filter( 'pre_site_transient_update_themes', '_s_hide_update_notices_all' );
 
 /**
  * Remove dashboard widgets
@@ -43,6 +43,24 @@ function _s_remove_dash_widgets() {
   unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
 }
 add_action( 'wp_dashboard_setup', '_s_remove_dash_widgets' );
+
+/**
+ * Add sidebar edit access for editors
+ */
+function _s_editor_add_sidebar_edit() {
+  $role = get_role( 'editor' );
+  $role->add_cap( 'edit_theme_options' );
+}
+add_action( 'after_switch_theme', '_s_editor_add_sidebar_edit' );
+
+function _s_disable_theme_change() {
+  if ( wp_get_current_user()->user_login !== 'sean' ) {
+    global $submenu;
+    unset( $submenu['themes.php'][5] );
+    unset( $submenu['themes.php'][15] );
+  }
+}
+add_action( 'admin_init', '_s_disable_theme_change' );
 
 /**
  * Custom welcome panel

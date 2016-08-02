@@ -9,16 +9,16 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'left-align' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title center"><?php echo _s_get_the_title(); ?></h1>
+		<h1 class="entry-title center mb3"><?php echo _s_get_the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content mt3">
+	<div class="entry-content">
 		<?php
 			/* Image */
 			if ( has_post_thumbnail() ) {
-				the_post_thumbnail( 'large' );
+				the_post_thumbnail( 'large', array( 'class' => 'aligncenter mb3' ) );
 			}
 
 			the_content();

@@ -14,6 +14,14 @@ function _s_register_required_plugins() {
    */
   $plugins = array(
     array(
+      'name' => 'ACF Ninja Forms Field',
+      'slug' => 'acf-ninja-forms',
+      'source' => 'https://github.com/bostondv/acf-ninja-forms/archive/master.zip',
+      'required' => true,
+      'force_activation' => true,
+      'external_url' => 'https://github.com/bostondv/acf-ninja-forms'
+    ),
+    array(
       'name' => 'Advanced Custom Fields Pro',
       'slug' => 'advanced-custom-fields-pro',
       'source' => 'https://bitbucket.org/ecmdesign/advanced-custom-fields-pro/get/39e8d0f4d856.zip',
@@ -50,7 +58,7 @@ function _s_register_required_plugins() {
       'source' => 'https://github.com/roots/soil/archive/master.zip',
       'required' => true,
       'force_activation' => true,
-      'external_url' => 'https://github.com/roots/soil.git'
+      'external_url' => 'https://github.com/roots/soil'
     )
   );
 

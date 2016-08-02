@@ -49,7 +49,7 @@ get_header(); ?>
                     <div class="row">
                       <div class="col-xs-12">
 
-                        <div class="page-category-section category-area">
+                        <div class="page-category-section category-area mt3">
 
                           <?php // loop through categories
                           while ( have_rows( 'product_categories' ) ): the_row(); ?>
