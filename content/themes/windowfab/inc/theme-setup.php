@@ -44,8 +44,8 @@ if ( !WP_LOCAL_DEV ) {
 add_image_size( 'hero', 1600, 640, true );
 add_image_size( 'product-thumb', 600, 475, false );
 
-update_option( 'large_size_w', 800 );
-update_option( 'large_size_h', 450 );
+update_option( 'large_size_w', 850 );
+update_option( 'large_size_h', 425 );
 update_option( 'large_crop', 1 );
 
 update_option( 'medium_size_w', 600 );
