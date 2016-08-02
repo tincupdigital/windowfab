@@ -20,17 +20,34 @@ get_header(); ?>
             <div class="row">
               <div class="col-xs-12">
 
-                <article id="post-<?php the_ID(); ?>" <?php post_class( 'left-align' ); ?>>
-                  <header class="entry-header">
-                    <?php the_title( '<h1 class="entry-title srt">', '</h1>' ); ?>
-                  </header><!-- .entry-header -->
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                  <div class="entry-content">
-                    <?php
-                      the_content();
+                  <div class="row center-xs">
+                    <div class="col-xs-12 col-lg-10">
 
-                      /* Products */
-                      if ( have_rows( 'product_categories' ) ) { ?>
+                      <header class="entry-header">
+                        <h1 class="entry-title center"><?php echo _s_get_the_title(); ?></h1>
+                      </header><!-- .entry-header -->
+
+                      <div class="entry-content">
+                        <?php
+                          the_content();
+
+                          wp_link_pages( array(
+                            'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
+                            'after'  => '</div>',
+                          ) );
+                        ?>
+                      </div><!-- .entry-content -->
+
+                    </div>
+                  </div><!-- .row -->
+
+                  <?php /* Products */
+                  if ( have_rows( 'product_categories' ) ) { ?>
+
+                    <div class="row">
+                      <div class="col-xs-12">
 
                         <div class="page-category-section category-area">
 
@@ -88,17 +105,17 @@ get_header(); ?>
 
                         </div>
 
-                      <?php }
+                      </div>
+                    </div><!-- .row -->
 
-                      wp_link_pages( array(
-                        'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
-                        'after'  => '</div>',
-                      ) );
-                    ?>
-                  </div><!-- .entry-content -->
+                  <?php } ?>
+
                 </article><!-- #post-## -->
 
-              </div><!-- .col-# -->
+                <?php /* Page footer */
+                get_template_part( 'templates/pages/page', 'footer' ); ?>
+
+              </div>
             </div><!-- .row -->
           </div><!-- .container -->
 

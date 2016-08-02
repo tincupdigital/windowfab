@@ -12,8 +12,8 @@ get_header(); ?>
 
     <div class="container">
       <div class="row">
-
         <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+
         	<div id="primary" class="content-area">
         		<main id="main" class="site-main" role="main">
 
@@ -22,9 +22,7 @@ get_header(); ?>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'left-align' ); ?>>
                   <header class="entry-header">
-                    <h1 class="entry-title center">
-                      <?php echo _s_page_title(); ?>
-                    </h1>
+                    <h1 class="entry-title center"><?php echo _s_get_the_title(); ?></h1>
                   </header><!-- .entry-header -->
 
                   <div class="entry-content mt3">
@@ -52,8 +50,8 @@ get_header(); ?>
 
         		</main><!-- #main -->
         	</div><!-- #primary -->
-        </div><!-- .col-# -->
 
+        </div>
       </div><!-- .row -->
     </div><!-- .container -->
 

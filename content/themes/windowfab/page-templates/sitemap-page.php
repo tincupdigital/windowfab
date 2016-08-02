@@ -10,19 +10,19 @@ get_header(); ?>
   <!-- #content -->
   <?php get_template_part( 'templates/global/site_content', 'open' ); ?>
 
-  	<div id="primary" class="content-area">
-  		<main id="main" class="site-main" role="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
 
-  			<?php
-  			while ( have_posts() ) : the_post(); ?>
+          <div id="primary" class="content-area">
+            <main id="main" class="site-main" role="main">
 
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12">
+              <?php
+              while ( have_posts() ) : the_post(); ?>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                   <header class="entry-header">
-                    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                    <h1 class="entry-title center"><?php echo _s_get_the_title(); ?></h1>
                   </header><!-- .entry-header -->
 
                   <div class="entry-content">
@@ -30,7 +30,7 @@ get_header(); ?>
                       the_content();
 
                       /* Sitemap */
-                      // set up args array
+                      // set up sitemap args
                       $args = array(
                         'echo' => true,
                         'post_type' => 'page',
@@ -51,15 +51,18 @@ get_header(); ?>
                   </div><!-- .entry-content -->
                 </article><!-- #post-## -->
 
-              </div><!-- .col-# -->
-            </div><!-- .row -->
-          </div><!-- .container -->
+                <?php /* Page footer */
+                get_template_part( 'templates/pages/page', 'footer' ); ?>
 
-        <?php
-  			endwhile; // End of the loop. ?>
+              <?php
+              endwhile; // End of the loop. ?>
 
-  		</main><!-- #main -->
-  	</div><!-- #primary -->
+            </main><!-- #main -->
+          </div><!-- #primary -->
+
+        </div>
+      </div><!-- .row -->
+    </div><!-- .container -->
 
   </div><!-- #content -->
 

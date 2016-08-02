@@ -37,11 +37,11 @@ get_header(); ?>
 
 						</main><!-- #main -->
 					</div><!-- #primary -->
-				</div><!-- .col-# -->
+				</div>
 
 				<div class="col-xs-12 col-lg-4">
 					<?php get_sidebar(); ?>
-				</div><!-- .col-# -->
+				</div>
 
 			</div><!-- .row -->
 		</div><!-- .container -->

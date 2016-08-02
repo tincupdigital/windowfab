@@ -728,7 +728,7 @@ acf_add_local_field_group(array (
       ),
       array (
         'param' => 'page_template',
-        'operator' => '==',
+        'operator' => '!=',
         'value' => 'page-templates/home-page.php',
       ),
     ),

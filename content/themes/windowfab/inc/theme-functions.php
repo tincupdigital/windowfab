@@ -116,19 +116,6 @@ function _s_footer_nav_wrap() {
 }
 
 /**
- * Custom page title display
- */
-function _s_page_title() {
-  // check for custom page title field
-  if ( get_field( 'custom_page_title' ) ) {
-    $p_ttl = get_field( 'custom_page_title' );
-  } else {
-    $p_ttl = get_the_title();
-  }
-  return $p_ttl;
-}
-
-/**
  * Require featured image
  */
 function _s_require_feat_img( $post_id ) {
@@ -170,4 +157,16 @@ function _s_get_tst_author_text( $title, $post_id ) {
   $text .= '</span>';
   // return the span text
   return $text;
+}
+
+/**
+ * Custom page title display
+ */
+function _s_get_the_title() {
+  if ( get_field( 'custom_page_title' ) ) {
+    $title = get_field( 'custom_page_title' );
+  } else {
+    $title = get_the_title();
+  }
+  return $title;
 }
