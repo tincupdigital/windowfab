@@ -63,3 +63,4 @@ require get_template_directory() . '/inc/widgets/bio_image-widget.php';
 require get_template_directory() . '/inc/widgets/cta_link-widget.php';
 require get_template_directory() . '/inc/widgets/recent_posts-widget.php';
 require get_template_directory() . '/inc/widgets/categories-widget.php';
+require get_template_directory() . '/inc/widgets/business_info-widget.php';

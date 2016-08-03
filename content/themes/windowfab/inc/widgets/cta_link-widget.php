@@ -14,7 +14,7 @@ class CTA_Link_Widget extends WP_Widget {
       'classname' => 'widget-cta-link',
       'description' => __( 'CTA widget with title, text and link.', '_s' )
     );
-    parent::__construct( 'cta_link_widget', __( 'CTA Link Widget', '_s' ), $widget_args );
+    parent::__construct( 'cta_link_widget', __( 'WF CTA Link Widget', '_s' ), $widget_args );
   }
 
   /**

@@ -439,12 +439,11 @@ Page Footer
   font-weight: 700;
 
   p {
-    margin: 0 0 1rem;
+    margin-top: 0;
     font-size: 1.375rem;
   }
 }
 .tst-area__author {
-  margin-top: 1.875rem;
   @include button-text;
 }
 

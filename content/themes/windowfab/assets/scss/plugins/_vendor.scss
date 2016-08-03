@@ -87,6 +87,24 @@ Lightslider
 .lSPager[style] {
   margin: 1.5em 0 0 !important;
 }
+.lSAction {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  .lSPrev,
+  .lSNext {
+    cursor: pointer;
+    @include vertical-align;
+  }
+  .lSPrev {
+    float: left;
+  }
+  .lSNext {
+    float: right;
+  }
+}
 
 /*
 Lightbox.js

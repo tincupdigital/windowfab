@@ -27,7 +27,8 @@ var Roots = {
           auto: true,
           pause: 6000,
           keyPress: true,
-          controls: true,
+          loop: true,
+          controls: false,
           adaptiveHeight: true,
           pager: false
         });

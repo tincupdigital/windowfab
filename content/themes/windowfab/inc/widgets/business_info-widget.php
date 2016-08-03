@@ -14,7 +14,7 @@ class Business_Info_Widget extends WP_Widget {
       'classname' => 'widget-business-info',
       'description' => __( 'Business info widget (hours and contact info).', '_s' )
     );
-    parent::__construct( 'business_info_widget', __( 'Business Info Widget', '_s' ), $widget_args );
+    parent::__construct( 'business_info_widget', __( 'WF Business Info Widget', '_s' ), $widget_args );
   }
 
   /**

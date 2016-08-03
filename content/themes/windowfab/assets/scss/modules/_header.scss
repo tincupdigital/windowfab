@@ -60,6 +60,16 @@ Header: Bottom
 .main-nav__container {
   li {
     padding: 0 0.5rem;
+
+    @include break-sm {
+      padding: 0 1rem;
+    }
+    @include break-md {
+      padding: 0 1.25rem;
+    }
+    @include break-lg {
+      padding: 0 1.75rem;
+    }
   }
   a {
     color: $text-color;
@@ -68,17 +78,6 @@ Header: Bottom
   li.current_page_item a,
   li.current_page_parent a {
     color: $link-color;
-  }
-
-  @include break-sm {
-    li {
-      padding: 0 1rem;
-    }
-  }
-  @include break-lg {
-    li {
-      padding: 0 1.25rem;
-    }
   }
 }
 
@@ -116,6 +115,11 @@ Navigation
     }
     .site-logo__image {
       display: block;
+    }
+  }
+  @include break-lg {
+    .site-logo {
+      padding: 0 2rem;
     }
   }
 }

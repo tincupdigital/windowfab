@@ -8,6 +8,20 @@ Footer
 .site-footer {}
 
 /*
+Footer: Top
+ */
+.site-footer__top {
+  .widget-title {
+    margin-top: 0;
+  }
+}
+
+/*
+Footer: Bottom
+ */
+.site-footer__bottom {}
+
+/*
 Footer: Nav
  */
 .site-footer__nav {

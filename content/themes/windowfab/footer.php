@@ -8,25 +8,42 @@
  *
  * @package _s
  */
-
 ?>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+  <footer id="colophon" class="site-footer" role="contentinfo">
+    <!-- Top -->
+    <div class="footer-top site-footer__top mb4">
+      <div class="container">
+        <div class="row center-xs">
+          <div class="col-xs-12 col-sm-6">
+            <?php dynamic_sidebar( 'footer-widget-area-1' ); ?>
+          </div>
 
-    <div class="container">
-      <div class="row center-xs">
-				<div class="col-xs-12">
+          <div class="col-xs-12 col-sm-6">
+            <?php dynamic_sidebar( 'footer-widget-area-2' ); ?>
+          </div>
+        </div>
+      </div>
+    </div>
 
-					<!-- Nav -->
-					<nav id="footer-navigation" class="footer-navigation site-footer__nav py1" role="navigation">
-						<?php wp_nav_menu( array( 'theme_location' => 'footer-nav', 'menu_id' => 'footer-nav__menu', 'container_class' => 'footer-nav__container', 'items_wrap' => _s_footer_nav_wrap() ) ); ?>
-					</nav><!-- #site-navigation -->					
+    <!-- Bottom -->
+    <div class="footer-bottom site-footer__bottom">
+      <div class="container">
+        <div class="row center-xs">
 
-        </div><!-- .col-# -->
-      </div><!-- .row -->
-    </div><!-- .container -->
+          <div class="col-xs-12">
+            <!-- Nav -->
+            <nav id="footer-navigation" class="footer-navigation site-footer__nav py1" role="navigation">
+              <?php wp_nav_menu( array( 'theme_location' => 'footer-nav', 'menu_id' => 'footer-nav__menu', 'container_class' => 'footer-nav__container', 'items_wrap' => _s_footer_nav_wrap() ) ); ?>
+            </nav><!-- #site-navigation -->
 
-	</footer><!-- #colophon -->
+          </div><!-- .col-# -->
+
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </div>
+
+  </footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

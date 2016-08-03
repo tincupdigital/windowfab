@@ -14,7 +14,7 @@ class Bio_Image_Widget extends WP_Widget {
       'classname' => 'widget-bio-image',
       'description' => __( 'Bio image widget with text.', '_s' )
     );
-    parent::__construct( 'bio_image_widget', __( 'Bio Image Widget', '_s' ), $widget_args );
+    parent::__construct( 'bio_image_widget', __( 'WF Bio Image Widget', '_s' ), $widget_args );
   }
 
   /**
