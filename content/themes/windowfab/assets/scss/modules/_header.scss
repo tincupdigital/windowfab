@@ -38,15 +38,19 @@ Header: Top
   float: right;
 }
 .top-nav__container {
-  background-color: $link-color;
-  padding: 0 0.75rem 0.25rem;
-
   li {
-    padding: 0 0.375rem;
+    margin: 0 -0.125rem;
   }
   a {
+    padding: 0.425rem 0.875rem;
     color: white;
+    background-color: $heading-color;
+    @include animate(background-color);
     @include button-text;
+  }
+  a:hover, a:focus,
+  li.current_page_item a {
+    background-color: $link-color;
   }
 }
 
@@ -59,7 +63,11 @@ Header: Bottom
   }
   a {
     color: $text-color;
-    // add hover here
+  }
+  a:hover, a:focus,
+  li.current_page_item a,
+  li.current_page_parent a {
+    color: $link-color;
   }
 
   @include break-sm {

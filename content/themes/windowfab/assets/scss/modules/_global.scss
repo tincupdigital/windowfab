@@ -15,10 +15,15 @@ html {
   box-sizing: inherit;
 }
 body {
-  border-top: 2px solid $link-color;
+  border-top: 2px solid $heading-color;
 
   @include break-sm {
     border-top-width: 4px;
+  }
+
+  &.blog,
+  &.gift-certificates {
+    border-top-color: $link-color;
   }
 }
 

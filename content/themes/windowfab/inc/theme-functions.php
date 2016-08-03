@@ -188,3 +188,31 @@ function _s_get_the_title() {
   }
   return $title;
 }
+
+/**
+ * Add excerpt to testimonial relationship field
+ */
+function _s_add_excerpt_to_rel_field( $title, $post, $field, $post_id ) {
+  // check for location field
+  if ( get_field( 'author_location', $post->ID ) ) {
+    // set location and excerpt variables
+    $a_loc = get_field( 'author_location', $post->ID );
+    $p_exc = wp_trim_words( $post->post_content, 20, ' [...]' );
+    $title .= ' &ndash; ' . $a_loc . '<br>';
+    $title .= '<small>' . $p_exc . '</small>';
+  }
+  return $title;
+}
+add_filter( 'acf/fields/relationship/result/name=testimonials', '_s_add_excerpt_to_rel_field', 10, 4 );
+add_filter( 'acf/fields/relationship/result/name=category_testimonial', '_s_add_excerpt_to_rel_field', 10, 4 );
+add_filter( 'acf/fields/relationship/result/name=page_testimonials', '_s_add_excerpt_to_rel_field', 10, 4 );
+
+/**
+ * Add excerpt to testimonial post object field
+ */
+function _s_add_excerpt_to_obj_field( $title, $post, $field, $post_id ) {
+  $p_exc = wp_trim_words( $post->post_content, 25, ' [...]' );
+  $title .= ' &ndash; ' . $p_exc;
+  return $title;
+}
+add_filter( 'acf/fields/post_object/result/name=page_testimonial', '_s_add_excerpt_to_obj_field', 10, 4 );
