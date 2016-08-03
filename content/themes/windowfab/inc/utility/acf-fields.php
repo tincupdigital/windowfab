@@ -969,7 +969,7 @@ acf_add_local_field_group(array (
 
 acf_add_local_field_group(array (
   'key' => 'group_5772d907d3eb4',
-  'title' => 'Widget: Bio Image',
+  'title' => 'Widget: WF Bio Image',
   'fields' => array (
     array (
       'key' => 'field_5772dc537621e',
@@ -1058,8 +1058,98 @@ acf_add_local_field_group(array (
 ));
 
 acf_add_local_field_group(array (
+  'key' => 'group_57a16e0c25e83',
+  'title' => 'Widget: WF Business Info',
+  'fields' => array (
+    array (
+      'key' => 'field_57a16e0c2f8f0',
+      'label' => 'Widget Headline',
+      'name' => 'widget_headline',
+      'type' => 'text',
+      'instructions' => 'Enter a headline for the widget.',
+      'required' => 1,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'widget',
+        'operator' => '==',
+        'value' => 'business_info_widget',
+      ),
+    ),
+  ),
+  'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+  'active' => 1,
+  'description' => '',
+));
+
+acf_add_local_field_group(array (
+  'key' => 'group_5776e53f29ebb',
+  'title' => 'Widget: WF Categories',
+  'fields' => array (
+    array (
+      'key' => 'field_5776e53f2e71b',
+      'label' => 'Widget Headline',
+      'name' => 'widget_headline',
+      'type' => 'text',
+      'instructions' => 'Enter a headline for the widget.',
+      'required' => 1,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'widget',
+        'operator' => '==',
+        'value' => 'category_widget',
+      ),
+    ),
+  ),
+  'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+  'active' => 1,
+  'description' => '',
+));
+
+acf_add_local_field_group(array (
   'key' => 'group_5772b850207ba',
-  'title' => 'Widget: CTA Link',
+  'title' => 'Widget: WF CTA Link',
   'fields' => array (
     array (
       'key' => 'field_5772ba1564506',
@@ -1133,51 +1223,6 @@ acf_add_local_field_group(array (
         'param' => 'widget',
         'operator' => '==',
         'value' => 'cta_link_widget',
-      ),
-    ),
-  ),
-  'menu_order' => 0,
-  'position' => 'normal',
-  'style' => 'default',
-  'label_placement' => 'top',
-  'instruction_placement' => 'label',
-  'hide_on_screen' => '',
-  'active' => 1,
-  'description' => '',
-));
-
-acf_add_local_field_group(array (
-  'key' => 'group_5776e53f29ebb',
-  'title' => 'Widget: WF Categories',
-  'fields' => array (
-    array (
-      'key' => 'field_5776e53f2e71b',
-      'label' => 'Widget Headline',
-      'name' => 'widget_headline',
-      'type' => 'text',
-      'instructions' => 'Enter a headline for the widget.',
-      'required' => 1,
-      'conditional_logic' => 0,
-      'wrapper' => array (
-        'width' => '',
-        'class' => '',
-        'id' => '',
-      ),
-      'default_value' => '',
-      'placeholder' => '',
-      'prepend' => '',
-      'append' => '',
-      'maxlength' => '',
-      'readonly' => 0,
-      'disabled' => 0,
-    ),
-  ),
-  'location' => array (
-    array (
-      array (
-        'param' => 'widget',
-        'operator' => '==',
-        'value' => 'category_widget',
       ),
     ),
   ),
