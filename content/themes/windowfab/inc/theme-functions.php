@@ -22,6 +22,29 @@ function _s_move_yoast_seo_meta() {
 add_filter( 'wpseo_metabox_prio', '_s_move_yoast_seo_meta' );
 
 /**
+ * Add and update image sizes
+ */
+function _s_custom_image_sizes() {
+  update_option( 'large_size_w', 850 );
+  update_option( 'large_size_h', 425 );
+  update_option( 'large_crop', 1 );
+
+  update_option( 'medium_size_w', 600 );
+  update_option( 'medium_size_h', 475 );
+  update_option( 'medium_crop', 1 );
+
+  update_option( 'thumbnail_size_w', 200 );
+  update_option( 'thumbnail_size_h', 200 );
+  update_option( 'thumbnail_crop', 1 );
+
+  // hero size
+  add_image_size( 'hero', 1600, 640, true );
+  // product thumb
+  add_image_size( 'product-thumb', 600, 475, false );
+}
+add_action( 'init', '_s_custom_image_sizes' );
+
+/**
  * Hide update notices for all but me
  */
 function _s_hide_update_notices_all() {
@@ -45,6 +68,37 @@ function _s_remove_dash_widgets() {
 add_action( 'wp_dashboard_setup', '_s_remove_dash_widgets' );
 
 /**
+ * Custom welcome panel
+ */
+function _s_custom_welcome_panel() {
+  $html =  '<div class="welcome-panel-content" style="padding-bottom: 23px;">';
+  $html .= '<h2 style="margin-bottom: 5px;">Welcome to your site!</h2>';
+  $html .= '<p style="font-size: 16px; margin: 0;">Click anywhere on the left-hand side to get started.</p>';
+  $html .= '</div>';
+  echo $html;
+}
+remove_action( 'welcome_panel', 'wp_welcome_panel' );
+add_action( 'welcome_panel', '_s_custom_welcome_panel' );
+
+/**
+ * Google analytics setup
+ */
+function _s_google_analytics() {
+  if ( get_theme_mod( 'analytics_id' ) ) { ?>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '<?php echo get_theme_mod( 'analytics_id' ); ?>', 'auto');
+      ga('send', 'pageview');
+    </script>
+  <?php }
+}
+add_action( 'wp_head', '_s_google_analytics' );
+
+/**
  * Add sidebar edit access for editors
  */
 function _s_editor_add_sidebar_edit() {
@@ -63,17 +117,23 @@ function _s_disable_theme_change() {
 add_action( 'admin_init', '_s_disable_theme_change' );
 
 /**
- * Custom welcome panel
+ * Featured image column for posts
+ *
+ * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/manage_posts_columns
  */
-function _s_custom_welcome_panel() {
-  $html =  '<div class="welcome-panel-content" style="padding-bottom: 23px;">';
-  $html .= '<h2 style="margin-bottom: 5px;">Welcome to your site!</h2>';
-  $html .= '<p style="font-size: 16px; margin: 0;">Click anywhere on the left-hand side to get started.</p>';
-  $html .= '</div>';
-  echo $html;
+function _s_add_feat_img_column( $columns ) {
+  return array_merge( $columns,
+    array( 'feat_img' => __( 'Featured Image' ) )
+  );
 }
-remove_action( 'welcome_panel', 'wp_welcome_panel' );
-add_action( 'welcome_panel', '_s_custom_welcome_panel' );
+add_filter( 'manage_posts_columns', '_s_add_feat_img_column' );
+
+function _s_feat_img_column( $column, $post_id ) {
+  if ( ( $column === 'feat_img' ) && has_post_thumbnail( $post_id ) ) {
+    the_post_thumbnail( array( 64, 64 ) );
+  }
+}
+add_action( 'manage_posts_custom_column', '_s_feat_img_column', 10, 2 );
 
 /**
  * Strip &nbsp; from end of posts
@@ -85,6 +145,15 @@ function _s_trim_trailing_whitespace( $content ) {
   return $content;
 }
 add_filter( 'the_content', '_s_trim_trailing_whitespace', 0 );
+
+/**
+ * Allow SVG upload through media library
+ */
+function _s_allow_svg_upload( $mimes = array() ) {
+  $mimes['svg'] = 'mime/type';
+  return $mimes;
+}
+add_filter( 'upload_mimes', '_s_allow_svg_upload' );
 
 /**
  * Get featured image URL

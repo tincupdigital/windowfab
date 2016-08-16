@@ -37,26 +37,6 @@ if ( !WP_LOCAL_DEV ) {
 }
 
 /**
- * Add custom image sizes
- *
- * @link http://codex.wordpress.org/Function_Reference/add_image_size
- */
-add_image_size( 'hero', 1600, 640, true );
-add_image_size( 'product-thumb', 600, 475, false );
-
-update_option( 'large_size_w', 850 );
-update_option( 'large_size_h', 425 );
-update_option( 'large_crop', 1 );
-
-update_option( 'medium_size_w', 600 );
-update_option( 'medium_size_h', 475 );
-update_option( 'medium_crop', 1 );
-
-update_option( 'thumbnail_size_w', 200 );
-update_option( 'thumbnail_size_h', 200 );
-update_option( 'thumbnail_crop', 1 );
-
-/**
  * Custom Widgets
  */
 require get_template_directory() . '/inc/widgets/bio_image-widget.php';
