@@ -3,7 +3,7 @@
  */
 
 /*
-Lightslider
+lightSlider
  */
 .lSSlideOuter {
   overflow: hidden;
@@ -76,8 +76,8 @@ Lightslider
   a {
     display: block;
     text-indent: -9999px;
-    width: 0.625rem;
-    height: 0.625rem;
+    width: 10px;
+    height: 10px;
     background-color: transparent;
     border: 2px solid $border-color--dark;
     border-radius: 50%;
