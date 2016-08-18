@@ -25,8 +25,8 @@ add_filter( 'wpseo_metabox_prio', '_s_move_yoast_seo_meta' );
  * Add and update image sizes
  */
 function _s_custom_image_sizes() {
-  update_option( 'large_size_w', 850 );
-  update_option( 'large_size_h', 425 );
+  update_option( 'large_size_w', 800 );
+  update_option( 'large_size_h', 600 );
   update_option( 'large_crop', 1 );
 
   update_option( 'medium_size_w', 600 );
@@ -39,6 +39,7 @@ function _s_custom_image_sizes() {
 
   // hero size
   add_image_size( 'hero', 1600, 640, true );
+
   // product thumb
   add_image_size( 'product-thumb', 600, 475, false );
 }
