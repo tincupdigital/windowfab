@@ -1,6 +1,6 @@
 <?php
 /**
- * wpcpt-setup.php
+ * cpt-setup.php
  *
  * @package _s
  */

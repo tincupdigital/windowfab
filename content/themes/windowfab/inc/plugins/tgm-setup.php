@@ -1,6 +1,6 @@
 <?php
 /**
- * tgmpa-setup.php
+ * tgm-setup.php
  *
  * @package _s
  */

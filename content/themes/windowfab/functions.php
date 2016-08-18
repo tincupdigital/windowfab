@@ -8,159 +8,55 @@
  */
 
 /**
- * Theme setup
+ * Core setup
  */
-require get_template_directory() . '/inc/theme-setup.php';
+require get_template_directory() . '/inc/core-setup.php';
 
 /**
- * Theme functions
+ * Core functions
  */
-require get_template_directory() . '/inc/theme-functions.php';
-
-if ( ! function_exists( '_s_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function _s_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on _s, use a find and replace
-	 * to change '_s' to the name of your theme in all the template files.
-	 */
-	load_theme_textdomain( '_s', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-	 */
-	add_theme_support( 'post-thumbnails' );
-
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'main-nav' => esc_html__( 'Main Nav', '_s' ),
-		'top-nav' => esc_html__( 'Top Nav', '_s' ),
-		'footer-nav' => esc_html__( 'Footer Nav', '_s' )
-	) );
-
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
-
-	/*
-	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
-    'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-}
-endif;
-add_action( 'after_setup_theme', '_s_setup' );
+require get_template_directory() . '/inc/core-functions.php';
 
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function _s_content_width() {
-	$GLOBALS['content_width'] = apply_filters( '_s_content_width', 640 );
-}
-add_action( 'after_setup_theme', '_s_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function _s_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Main Sidebar', '_s' ),
-		'id'            => 'main-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', '_s' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title h3">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget Area 1', '_s' ),
-		'id'            => 'footer-widget-area-1',
-		'description'   => esc_html__( 'Add widgets here.', '_s' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title h3">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget Area 2', '_s' ),
-		'id'            => 'footer-widget-area-2',
-		'description'   => esc_html__( 'Add widgets here.', '_s' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title h3">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', '_s_widgets_init' );
-
-/**
- * Enqueue scripts and styles.
- */
-function _s_scripts() {
-	if ( WP_LOCAL_DEV ) {
-		wp_enqueue_style( '_s-style', get_template_directory_uri() . '/assets/css/main.css', false, filemtime(get_stylesheet_directory() . '/assets/css/main.css' ) );
-    wp_enqueue_script( '_s-scripts', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '', true );
-  } else {
-		wp_enqueue_style( '_s-style', get_template_directory_uri() . '/assets/css/main.min.css', false, filemtime(get_stylesheet_directory() . '/assets/css/main.min.css' ) );
-    wp_enqueue_script( '_s-scripts', get_template_directory_uri() . '/assets/js/main.min.js', array( 'jquery' ), '', true );
-  }
-
-  /* Modernizr */
-  wp_enqueue_script( '_s-modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.8.3.min.js', array(), '', false );
-
-	/* Comment reply */
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', '_s_scripts' );
-
-/**
- * Custom template tags for this theme.
+ * Custom template tags
  */
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Custom functions that act independently of the theme templates.
+ * Extra functions
  */
 require get_template_directory() . '/inc/extras.php';
 
 /**
- * Customizer additions.
+ * Customizer additions and fields
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Soil setup
+ */
+require get_template_directory() . '/inc/plugins/soil-setup.php';
+
+/**
+ * TGM setup
+ */
+require get_template_directory() . '/inc/plugins/tgm-setup.php';
+
+/**
+ * WP CPT setup
+ */
+require get_template_directory() . '/inc/plugins/cpt-setup.php';
+
+/**
+ * Advanced Custom Fields
+ */
+require get_template_directory() . '/inc/plugins/acf-setup.php';
+
+/**
+ * Custom Widgets
+ */
+require get_template_directory() . '/inc/widgets/bio_image-widget.php';
+require get_template_directory() . '/inc/widgets/cta_link-widget.php';
+require get_template_directory() . '/inc/widgets/recent_posts-widget.php';
+require get_template_directory() . '/inc/widgets/categories-widget.php';
+require get_template_directory() . '/inc/widgets/business_info-widget.php';

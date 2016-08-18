@@ -5,6 +5,14 @@
  * @package _s
  */
 
+if ( !WP_LOCAL_DEV ) {
+
+// hide field group menu from users
+if ( wp_get_current_user()->user_login !== 'sean' ) {
+  define( 'ACF_LITE' , true );
+}
+
+// insert field export code here:
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
@@ -1505,3 +1513,5 @@ acf_add_local_field_group(array (
 ));
 
 endif;
+
+}
