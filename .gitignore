@@ -9,8 +9,9 @@ Thumbs.db
 # .htaccess file
 .htaccess
 
-# Local config file
-local-config.php
+# Config files
+dev-config.php
+prd-config.php
 
 # WordPress source
 wp/
