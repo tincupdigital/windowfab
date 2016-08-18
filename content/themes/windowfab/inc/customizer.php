@@ -49,12 +49,20 @@ function _s_customizer_add_sections( $wp_customize ) {
     'priority' => 1
   ) );
 
+  /* Contact Info */
+  $wp_customize->add_section( 'contact_info', array(
+    'title' => __( 'Contact Info', '_s' ),
+    'description' => __( 'Contact information can be added here.', '_s' ),
+    'panel' => 'client_setup',
+    'priority' => 2
+  ) );
+
   /* Social Media */
   $wp_customize->add_section( 'social_media', array(
     'title' => __( 'Social Media', '_s' ),
     'description' => __( 'Social media links can be added here.', '_s' ),
     'panel' => 'client_setup',
-    'priority' => 2
+    'priority' => 3
   ) );
 
   /* Miscellaneous */
@@ -62,7 +70,7 @@ function _s_customizer_add_sections( $wp_customize ) {
     'title' => __( 'Miscellaneous', '_s' ),
     'description' => __( 'Miscellaneous items can be configured here.', '_s' ),
     'panel' => 'client_setup',
-    'priority' => 3
+    'priority' => 4
   ) );
 }
 add_action( 'customize_register', '_s_customizer_add_sections' );
@@ -81,6 +89,15 @@ function _s_customizer_add_fields( $wp_customize ) {
       'settings' => 'brand_logo'
     ) )
   );
+
+  /* Contact Info */
+  $wp_customize->add_setting( 'phone_number' );
+  $wp_customize->add_control( 'phone_number', array(
+    'label' => __( 'Phone Number', '_s' ),
+    'description' => __( 'Add the phone number of the business.', '_s' ),
+    'section' => 'contact_info',
+    'type' => 'text'
+  ) );
 
   /* Social Media */
   $wp_customize->add_setting( 'facebook_url' );

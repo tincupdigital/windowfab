@@ -1,6 +1,6 @@
 <?php
 /**
- * acf-fields.php
+ * acf-setup.php
  *
  * @package _s
  */
