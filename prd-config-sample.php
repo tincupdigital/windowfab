@@ -4,6 +4,11 @@ Define variables for production setup
 */
 
 /**
+ * Development variable
+ */
+define( 'WP_LOCAL_DEV', false );
+
+/**
  * MySQL configuration
  */
 define( 'DB_NAME', 'database_name_here' );
