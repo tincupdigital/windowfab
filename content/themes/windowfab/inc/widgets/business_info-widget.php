@@ -36,18 +36,17 @@ class Business_Info_Widget extends WP_Widget {
       <div class="widget-inner wf-business-info__inner">
         <?php
         /* Text */
-        if ( get_field( 'widget_text', $wid ) ) { ?>
+        if ( get_field( 'business_info', $wid ) ) { ?>
           <div class="widget-text wf-business-info__text">
-            <?php echo wpautop( get_field( 'widget_text', $wid ) ); ?>
+            <?php echo wpautop( get_field( 'business_info', $wid ) ); ?>
           </div>
         <?php }
 
-        /* Link */
-        if ( get_field( 'cta_link', $wid ) ) {
-          // field returns page ID
-          $pid = get_field( 'cta_link', $wid ); ?>
-
-          <a class="wf-business-info__button button bo--bw" href="<?php the_permalink( $pid ); ?>">Button</a>
+        /* Fine Print */
+        if ( get_field( 'fine_print_text', $wid ) ) { ?>
+          <div class="widget-text wf-business-info__fprint button-text col--heading mt1">
+            <?php the_field( 'fine_print_text', $wid ); ?>
+          </div>
         <?php }
         ?>
       </div>

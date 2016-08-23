@@ -147,10 +147,11 @@ Text shadow (glow)
 Widget Title
  */
 // used for footer widgets
-@mixin widget-title {
+@mixin widget-title($color: $heading-color) {
   font-family: $heading-font;
   font-size: 1.728rem;
-  color: $heading-color;
+  font-weight: 700;
+  color: $color;
   text-transform: none;
 }
 

@@ -92,7 +92,7 @@ get_header(); ?>
                                     </div>
 
                                     <!-- Author -->
-                                    <div class="tile-credits category-tile__author">
+                                    <div class="tile-credits category-tile__author button-text">
                                       <?php echo _s_get_tst_author_text( get_the_title(), $post->ID ); ?>
                                     </div>
                                   <?php }

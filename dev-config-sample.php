@@ -28,16 +28,16 @@ define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/starter/content'
 $table_prefix  = 'wp_';
 
 /**
+ * Debugging stuff
+ */
+// define( 'WP_DEBUG', true );
+// define( 'WP_DEBUG_DISPLAY', false );
+// define( 'WP_DEBUG_LOG', true );
+
+/**
  * Load WordPress
  */
 if ( !defined( 'ABSPATH' ) ) {
   define( 'ABSPATH', dirname(__FILE__) . '/wp/' );
 }
 require_once( ABSPATH . 'wp-settings.php' );
-
-/**
- * Debugging stuff
- */
-// define( 'WP_DEBUG', true );
-// define( 'WP_DEBUG_DISPLAY', false );
-// define( 'WP_DEBUG_LOG', true );

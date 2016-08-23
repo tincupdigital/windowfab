@@ -54,8 +54,15 @@ Footer: Widgets
   }
 }
 
-/* CTA */
-.site-footer .wf-cta-link {
+/* Business Info */
+.site-footer .wf-business-info {
+  .wf-business-info__text p {
+    margin: 0;
+    @include widget-title($link-color--light);
+  }
+  a {
+    color: $link-color--light;
+  }
 }
 
 /*
