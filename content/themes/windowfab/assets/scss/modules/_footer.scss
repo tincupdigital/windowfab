@@ -43,6 +43,22 @@ Footer: Nav
 }
 
 /*
+Footer: Widgets
+ */
+.site-footer .widget {
+  .widget-title {
+    @include widget-title;
+  }
+  .button {
+    @include button-outline($text-color, $link-color--light);
+  }
+}
+
+/* CTA */
+.site-footer .wf-cta-link {
+}
+
+/*
 Sticky Footer
  */
 .site {

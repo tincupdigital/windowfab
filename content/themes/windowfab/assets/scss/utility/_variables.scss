@@ -44,6 +44,7 @@ $brand-colors: (
 $text-color: brand-color('gray-brown');
 $heading-color: brand-color('aqua-blue');
 $link-color: brand-color('aqua');
+$link-color--light: brand-color('aqua-light');
 
 $accent-color: brand-color('gold');
 $button-color: $link-color;

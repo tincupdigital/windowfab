@@ -9,28 +9,43 @@
 
 get_header(); ?>
 
-	<div id="content" class="site-content">
+  <!-- #content -->
+  <?php get_template_part( 'templates/global/site_content', 'open' ); ?>
 
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
+    <div class="container">
+      <div class="row">
 
-				<section class="error-404 not-found">
-					<header class="page-header">
-						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', '_s' ); ?></h1>
-					</header><!-- .page-header -->
+        <div class="col-xs-12">
+          <div id="primary" class="content-area">
+            <main id="main" class="site-main" role="main">
 
-					<div class="page-content">
-						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', '_s' ); ?></p>
+              <section class="error-404 not-found">
+                <header class="page-header">
+                  <h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', '_s' ); ?></h1>
+                </header><!-- .page-header -->
 
-						<?php /* Search form */
-						get_search_form(); ?>
-					</div><!-- .page-content -->
-				</section><!-- .error-404 -->
+                <div class="page-content">
+                  <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', '_s' ); ?></p>
 
-			</main><!-- #main -->
-		</div><!-- #primary -->
+                  <!-- Search form -->
+                  <form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <div>
+                      <label class="label screen-reader-text" for="s"><?php _x( 'Search for:', 'label' ); ?></label>
+                      <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="search" class="input search-input searchform__input" placeholder="Search" />
+                      <button id="searchsubmit" value="<?php echo esc_attr_x( 'Search', 'submit button' ); ?>" class="button button-color">Search</button>
+                    </div>
+                  </form>
+                </div><!-- .page-content -->
+              </section><!-- .error-404 -->
 
-	</div><!-- #content -->
+            </main><!-- #main -->
+          </div><!-- #primary -->
+        </div>
+
+      </div><!-- .row -->
+    </div><!-- .container -->
+
+  </div><!-- #content -->
 
 <?php
 get_footer();

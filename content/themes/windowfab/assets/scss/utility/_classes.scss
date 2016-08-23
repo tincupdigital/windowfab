@@ -20,7 +20,7 @@ Buttons
 
 .button-outline { @include button-outline; }
 
-// classes -- color on color
+// classes: color on color
 .bo--bg { @include button-outline($text-color, $accent-color); }
 .bo--ba { @include button-outline($text-color, $link-color); }
 .bo--bw { @include button-outline($text-color, white); }

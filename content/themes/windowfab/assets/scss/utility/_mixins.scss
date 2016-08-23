@@ -144,6 +144,17 @@ Text shadow (glow)
 }
 
 /*
+Widget Title
+ */
+// used for footer widgets
+@mixin widget-title {
+  font-family: $heading-font;
+  font-size: 1.728rem;
+  color: $heading-color;
+  text-transform: none;
+}
+
+/*
 Vertical centering
  */
 @mixin vertical-align {
