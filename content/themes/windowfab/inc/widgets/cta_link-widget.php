@@ -12,7 +12,7 @@ class CTA_Link_Widget extends WP_Widget {
   public function __construct() {
     $widget_args = array(
       'classname' => 'widget-cta-link',
-      'description' => __( 'CTA widget with title, text and link.', '_s' )
+      'description' => __( 'CTA widget with headline, text and link.', '_s' )
     );
     parent::__construct( 'cta_link_widget', __( 'WF CTA Link Widget', '_s' ), $widget_args );
   }

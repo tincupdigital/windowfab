@@ -1118,6 +1118,98 @@ acf_add_local_field_group(array (
 ));
 
 acf_add_local_field_group(array (
+  'key' => 'group_57bdf6bb119ca',
+  'title' => 'Widget: Page Link',
+  'fields' => array (
+    array (
+      'key' => 'field_57bdf6bb13e01',
+      'label' => 'Widget Headline',
+      'name' => 'widget_headline',
+      'type' => 'text',
+      'instructions' => 'Enter a headline for the widget.',
+      'required' => 1,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_57bdf6bb13f59',
+      'label' => 'Widget Link',
+      'name' => 'widget_link',
+      'type' => 'post_object',
+      'instructions' => 'Select a page for the widget headline to link to.',
+      'required' => 1,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'post_type' => array (
+        0 => 'page',
+      ),
+      'taxonomy' => array (
+      ),
+      'allow_null' => 0,
+      'multiple' => 0,
+      'return_format' => 'id',
+      'ui' => 1,
+    ),
+    array (
+      'key' => 'field_57bdfac047b17',
+      'label' => 'Widget Icon',
+      'name' => 'widget_icon',
+      'type' => 'image',
+      'instructions' => 'Upload an icon to use before the widget\'s headline.',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'return_format' => 'array',
+      'preview_size' => 'thumbnail',
+      'library' => 'all',
+      'min_width' => '',
+      'min_height' => '',
+      'min_size' => '',
+      'max_width' => '',
+      'max_height' => '',
+      'max_size' => '',
+      'mime_types' => 'gif,png,svg,webp',
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'widget',
+        'operator' => '==',
+        'value' => 'page_link_widget',
+      ),
+    ),
+  ),
+  'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+  'active' => 1,
+  'description' => '',
+));
+
+acf_add_local_field_group(array (
   'key' => 'group_5776e53f29ebb',
   'title' => 'Widget: WF Categories',
   'fields' => array (

@@ -45,23 +45,72 @@ Footer: Nav
 /*
 Footer: Widgets
  */
-.site-footer .widget {
+.site-footer__column .widget {
+  margin-bottom: 2rem;
+
   .widget-title {
     @include widget-title;
   }
   .button {
     @include button-outline($text-color, $link-color--light);
   }
+
+
+  @include break-md {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }
 
-/* Business Info */
-.site-footer .wf-business-info {
+/*
+Widget: Business Info
+ */
+.site-footer__column .wf-business-info {
   .wf-business-info__text p {
     margin: 0;
     @include widget-title($link-color--light);
   }
   a {
     color: $link-color--light;
+
+    &:focus,
+    &:hover {
+      color: darken($link-color--light, 10%);
+    }
+  }
+}
+
+/*
+Widget: Page Link
+ */
+.site-footer__column .wf-page-link {
+  position: relative;
+
+  a {
+    color: $accent-color;
+
+    &:focus,
+    &:hover {
+      color: darken($accent-color, 10%);
+    }
+  }
+  .widget-icon {
+    display: none;
+
+    @include break-md {
+      display: block;
+      position: absolute;
+      top: 0; left: 0;
+      margin: -95px 0 0 -15px;
+      height: 125px;
+      width: auto;
+      z-index: 9999;
+    }
+    @include break-lg {
+      margin: -168px 0 0 -23px;
+      height: 215px;
+    }
   }
 }
 

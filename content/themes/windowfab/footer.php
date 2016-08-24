@@ -15,11 +15,11 @@
     <div class="footer-top site-footer__top mb4">
       <div class="container">
         <div class="row center-xs">
-          <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12 col-sm-6 site-footer__column">
             <?php dynamic_sidebar( 'footer-widget-area-1' ); ?>
           </div>
 
-          <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12 col-sm-6 site-footer__column">
             <?php dynamic_sidebar( 'footer-widget-area-2' ); ?>
           </div>
         </div>

@@ -12,7 +12,7 @@ class Recent_Posts_Widget extends WP_Widget {
   public function __construct() {
     $widget_args = array(
       'classname' => 'widget-recent-posts',
-      'description' => __( 'Custom recent posts widget.', '_s' )
+      'description' => __( 'Recent posts widget with options.', '_s' )
     );
     parent::__construct( 'recent_posts_widget', __( 'WF Recent Posts Widget', '_s' ), $widget_args );
   }

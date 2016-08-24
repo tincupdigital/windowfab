@@ -168,3 +168,12 @@ Widget: Bio Image
   margin: 0 auto 1.5rem;
   border: 1px solid $border-color--dark;
 }
+
+/*
+Widget: Page Link
+ */
+.widget-area .wf-page-link {
+  .widget-icon {
+    display: none !important;
+  }
+}

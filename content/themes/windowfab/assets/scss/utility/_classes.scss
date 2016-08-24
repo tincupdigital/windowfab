@@ -17,7 +17,6 @@ Buttons
 .button { @include button; }
 .button-color { @include button-color; }
 .button-text { @include button-text; }
-
 .button-outline { @include button-outline; }
 
 // classes: color on color
@@ -28,6 +27,7 @@ Buttons
 /*
 Colors
  */
+.col--accent { color: $accent-color !important; }
 .col--heading { color: $heading-color !important; }
 .col--link { color: $link-color !important; }
 .col--text { color: $text-color !important; }
