@@ -82,6 +82,10 @@ lightSlider
     border: 2px solid $border-color--dark;
     border-radius: 50%;
     @include animate(background-color);
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 .lSPager[style] {

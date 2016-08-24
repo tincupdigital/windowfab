@@ -20,12 +20,13 @@ Header
         list-style-type: none;
         padding: 0;
         margin: 0;
+        overflow: hidden;
+      }
+      li, a {
+        display: block;
       }
       li {
-        display: inline;
-      }
-      a {
-        display: inline-block;
+        float: left;
       }
     }
   }
