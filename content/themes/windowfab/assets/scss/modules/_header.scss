@@ -87,6 +87,10 @@ Navigation
  */
 .main-navigation {
   margin: 1.5rem 0 1rem;
+
+  @include break-lg {
+    margin-top: 2rem;
+  }
 }
 .main-nav__menu {
   display: flex;
