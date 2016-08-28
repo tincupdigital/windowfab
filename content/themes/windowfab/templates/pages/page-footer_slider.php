@@ -10,7 +10,7 @@ $tst_posts = get_field( 'page_testimonials' );
 
 // check for testimonials
 if ( $tst_posts ) { ?>
-  <div class="page-footer page-footer--testimonial mt4">
+  <div class="page-footer page-footer--testimonial">
     <div class="tst-area pf-tst-area center">
       <ul class="lightslider pf-testimonials">
 
@@ -18,7 +18,7 @@ if ( $tst_posts ) { ?>
         foreach ( $tst_posts as $post ) {
           setup_postdata( $post ); ?>
 
-          <li>
+          <li class="testimonial-slide page-footer__slide">
             <!-- Text -->
             <div class="tst-text tst-area__text">
               <?php the_content(); ?>

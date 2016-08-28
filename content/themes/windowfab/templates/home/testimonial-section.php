@@ -26,8 +26,14 @@
               foreach ( $posts as $post ) {
                 setup_postdata( $post ); ?>
 
-                <li class="testimonial-slider__text glide__slide fnt--heading bold">
-                  <?php the_content(); ?>
+                <li class="testimonial-slide">
+                  <div class="testimonial-slide__text font-heading bold">
+                    <?php the_content(); ?>
+                  </div>
+
+                  <div class="testimonial-slide__author">
+                    <?php echo _s_get_tst_author_text( $post->post_title, $post->ID ); ?>
+                  </div>
                 </li>
 
               <?php }

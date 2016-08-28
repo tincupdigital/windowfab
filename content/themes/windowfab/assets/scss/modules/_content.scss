@@ -199,6 +199,15 @@ Blog: Bottom
 }
 
 /*
+Posts
+ */
+.single {
+  .page-footer {
+    margin: $margin-p 0 3rem;
+  }
+}
+
+/*
 Single: Bottom
  */
 .social-nav {
