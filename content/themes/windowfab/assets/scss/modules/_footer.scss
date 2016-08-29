@@ -95,8 +95,23 @@ Widget: Page Link
       color: darken($accent-color, 10%);
     }
   }
-  // replace this with .widget :before
-  .widget-icon {
+
+  .widget-title {
+    a, img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    img {
+      position: relative;
+      margin-right: 0.5rem;
+      width: 3.5rem;
+      padding-left: 0.75rem;
+      z-index: 4;
+    }
+  }
+
+  &:before {
+    content: "";
     display: none;
 
     @include break-md {
@@ -104,12 +119,15 @@ Widget: Page Link
       position: absolute;
       top: 0; left: 0;
       margin: -95px 0 0 -15px;
+      width: 68px;
       height: 125px;
-      width: auto;
-      z-index: 9999;
+      background: url('../img/icon-needle.png') left top no-repeat;
+      background-size: contain;
+      z-index: 3;
     }
     @include break-lg {
       margin: -168px 0 0 -23px;
+      width: 117px;
       height: 215px;
     }
   }

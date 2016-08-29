@@ -31,20 +31,25 @@ class Page_Link_Widget extends WP_Widget {
       $w_pid = get_field( 'widget_link', $wid );
       $w_lnk = get_permalink( $w_pid );
       $w_ico = get_field( 'widget_icon', $wid );
-      $w_ico = $w_ico['sizes']['medium'];
-
-      /* Icon */
-      if ( $w_ico ) { ?>
-        <img class="widget-icon wf-page-link__icon block" src="<?php echo $w_ico; ?>" />
-      <?php }
+      $w_ico = $w_ico['sizes']['thumbnail'];
 
       /* Headline */
-      if ( $w_hdl ) {
-        // check for link
-        if ( $w_lnk ) { ?>
+      // check if link also presents
+      if ( $w_hdl && $w_lnk ) {
+        // check for icon
+        if ( $w_ico ) { ?>
+          <h2 class="widget-title wf-page-link__title wbt">
+            <a href="<?php echo $w_lnk; ?>"><img src="<?php echo $w_ico; ?>" /><?php echo $w_hdl; ?></a>
+          </h2>
+        <?php } else { ?>
           <h2 class="widget-title wf-page-link__title wbt">
             <a href="<?php echo $w_lnk; ?>"><?php echo $w_hdl; ?></a>
           </h2>
+        <?php }
+      } elseif ( $w_hdl ) {
+        // check for icon
+        if ( $w_ico ) { ?>
+          <h2 class="widget-title wf-page-link__title wbt"><img src="<?php echo $w_ico; ?>" /><?php echo $w_hdl; ?></h2>
         <?php } else { ?>
           <h2 class="widget-title wf-page-link__title wbt"><?php echo $w_hdl; ?></h2>
         <?php }
