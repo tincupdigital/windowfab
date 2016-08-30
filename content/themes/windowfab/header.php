@@ -46,7 +46,7 @@ get_template_part( 'templates/global/mobile', 'nav' ); ?>
 		      <div class="col-xs-12">
 
 						<nav id="top-navigation" class="top-navigation" role="navigation">
-							<?php wp_nav_menu( array( 'theme_location' => 'top-nav', 'menu_id' => 'top-nav__menu', 'container_class' => 'top-nav__container' ) ); ?>
+							<?php wp_nav_menu( array( 'theme_location' => 'top-nav', 'menu_class' => 'top-nav__menu', 'container_class' => 'top-nav__container' ) ); ?>
 						</nav><!-- #site-navigation -->
 
 		      </div><!-- .col-# -->

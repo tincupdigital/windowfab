@@ -6,6 +6,9 @@
  */
 
 (function($){
+  // add items from the top nav to the mobile menu
+  // excluding the items with .no-mobile class
+  $('.mobile-nav__menu').append($('.top-nav__menu').find('.menu-item').clone());
 
   // add click function to toggle class
   $('.menu-toggle').click(function() {
@@ -22,5 +25,4 @@
       $('.site').removeClass('pushed');
     }
   });
-
 }(jQuery));
