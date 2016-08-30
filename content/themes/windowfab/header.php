@@ -31,10 +31,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-<!-- Mobile menu -->
-<div class="mobile-menu"></div>
 
-<!-- Site -->
+<?php /* Mobile Nav */
+get_template_part( 'templates/global/mobile', 'nav' ); ?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 

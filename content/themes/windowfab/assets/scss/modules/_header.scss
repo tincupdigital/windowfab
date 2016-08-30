@@ -128,3 +128,48 @@ Navigation
     }
   }
 }
+
+/*
+Mobile Nav
+ */
+.mobile-nav-area {
+  position: fixed;
+  padding: 0.25rem 1.7rem 1.5rem;
+  top: 0; left: 0;
+  width: 80%;
+  height: 100%;
+  transition: all 0.375s ease;
+  overflow-x: hidden;
+  background: url('../img/bg-aqua.png') left top repeat;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul ul {
+    margin-left: $margin-p;
+  }
+  li {
+    margin: 1.25rem 0 0;
+  }
+  a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.143rem;
+
+    &:hover,
+    &:focus {
+      color: $text-color;
+    }
+  }
+}
+.site {
+  position: relative;
+  @include animate(transform, 0.375s);
+
+  &.pushed {
+    transform: translateX(80%);
+  }
+}
