@@ -15,11 +15,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  border-top: 2px solid $heading-color;
-
-  @include break-sm {
-    border-top-width: 4px;
-  }
+  border-top: 0.3125rem solid $heading-color;
 
   &.blog,
   &.gift-certificates {
