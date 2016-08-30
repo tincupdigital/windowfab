@@ -43,8 +43,10 @@ var Roots = {
         item: 1,
         mode: "fade",
         speed: 725,
+        auto: true,
         pause: 6000,
         keyPress: true,
+        loop: true,
         controls: false,
         pager: true
       });

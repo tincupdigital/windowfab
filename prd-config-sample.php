@@ -40,6 +40,12 @@ define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
 
 /**
+ * Miscellaneous settings
+ */
+define( 'WP_POST_REVISIONS', 5 );
+define( 'DISALLOW_FILE_EDIT', true );
+
+/**
  * Load WordPress
  */
 if ( !defined( 'ABSPATH' ) ) {

@@ -11,7 +11,7 @@ $tst_po = get_field( 'page_testimonial' );
 // set post ID
 $pid = $tst_po->ID; ?>
 
-<div class="page-footer page-footer--testimonial mt4">
+<div class="page-footer page-footer--testimonial">
   <div class="tst-area pf-tst-area center">
     <!-- Text -->
     <div class="tst-text tst-area__text">

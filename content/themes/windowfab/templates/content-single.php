@@ -16,7 +16,7 @@
 		</div><!-- .entry-meta -->
 
 		<h1 class="entry-title mt0 mb3">
-			<?php echo _s_page_title(); ?>
+			<?php echo _s_get_the_title(); ?>
 		</h1>
 	</header><!-- .entry-header -->
 

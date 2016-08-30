@@ -234,11 +234,11 @@ add_filter( 'excerpt_length', '_s_excerpt_length' );
 function _s_get_tst_author_text( $title, $post_id ) {
   global $post;
 
-  $text = '<span>';
+  $text = '<span class="author block">';
   $text .= $title;
 
   if ( get_field( 'author_location', $post_id ) ) {
-    $text .= ' | ';
+    $text .= ' <span class="divider color-text--light">&vert;</span> ';
     $text .= get_field( 'author_location', $post_id );
   }
 

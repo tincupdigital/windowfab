@@ -27,16 +27,17 @@ Buttons
 /*
 Colors
  */
-.col--accent { color: $accent-color !important; }
-.col--heading { color: $heading-color !important; }
-.col--link { color: $link-color !important; }
-.col--text { color: $text-color !important; }
+.color-accent { color: $accent-color !important; }
+.color-heading { color: $heading-color !important; }
+.color-link { color: $link-color !important; }
+.color-text { color: $text-color !important; }
+.color-text--light { color: $text-color--light !important; }
 
 /*
 Fonts
  */
-.fnt--body { font-family: $body-font; }
-.fnt--heading { font-family: $heading-font; }
+.font-body { font-family: $body-font; }
+.font-heading { font-family: $heading-font; }
 
 /*
 Margins

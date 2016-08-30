@@ -44,7 +44,7 @@ class Business_Info_Widget extends WP_Widget {
 
         /* Fine Print */
         if ( get_field( 'fine_print_text', $wid ) ) { ?>
-          <div class="widget-text wf-business-info__fprint button-text col--heading mt1">
+          <div class="widget-text wf-business-info__fprint button-text color-heading mt1">
             <?php the_field( 'fine_print_text', $wid ); ?>
           </div>
         <?php }

@@ -21,7 +21,11 @@ get_header(); ?>
 						<?php
 						while ( have_posts() ) : the_post();
 
-							get_template_part( 'templates/content', 'single' ); ?>
+							get_template_part( 'templates/content', 'single' );
+
+              /* Page footer */
+              get_template_part( 'templates/pages/page', 'footer' );
+              ?>
 
 							<div class="single-content-bottom mt2">
 								<div class="single-content-social">

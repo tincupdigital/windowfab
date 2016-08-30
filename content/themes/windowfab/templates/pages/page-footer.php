@@ -5,14 +5,14 @@
  * @package _s
  */
 
-// check for footer CTA or testimonial
+// bail if field is not set
 if ( !get_field( 'display_cta_or_testimonials' ) ) {
-	return;
+  return;
 }
 
 // cta/testimonial setup is stored in a
 // select field, so let's get the values
-$cta_tst_setup = get_field( 'cta_testimonial_setup' );
+$cta_tst_setup = get_field( 'display_cta_or_testimonials' );
 
 // check for each CTA/testimonial setup
 if ( $cta_tst_setup == 'cta' ) {

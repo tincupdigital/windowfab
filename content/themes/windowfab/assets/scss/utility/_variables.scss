@@ -42,6 +42,8 @@ $brand-colors: (
 
 /* Definitions */
 $text-color: brand-color('gray-brown');
+$text-color--light: lighten($text-color, 45%);
+
 $heading-color: brand-color('aqua-blue');
 $link-color: brand-color('aqua');
 $link-color--light: brand-color('aqua-light');

@@ -10,6 +10,10 @@ Global
   .page-title {
     font-weight: 700;
   }
+
+  .page-footer {
+    margin-top: 4rem;
+  }
 }
 
 /*
@@ -127,17 +131,14 @@ Home: Testimonials
     }
   }
 }
-.testimonial-slider__text {
+.testimonial-slide__text {
   p {
+    margin: 0 0 1rem;
     font-size: 1.44rem;
-
-    &:first-of-type {
-      margin-top: 0;
-    }
-    &:last-of-type {
-      margin-bottom: 0;
-    }
   }
+}
+.testimonial-slide__author {
+  @include button-text(0.9375rem);
 }
 
 /*
@@ -298,9 +299,9 @@ Category Page
     &.category-tile--txt:after {
       content: "";
     }
-    .category-tile__author {
-      // margin-top: auto;
-    }
+    /*.category-tile__author {
+      margin-top: auto;
+    }*/
   }
 }
 .category-tile--img {
