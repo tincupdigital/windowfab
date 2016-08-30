@@ -59,26 +59,34 @@ Header: Top
 Header: Bottom
  */
 .main-nav__container {
-  li {
-    padding: 0 0.5rem;
-
-    @include break-sm {
-      padding: 0 1rem;
-    }
-    @include break-md {
-      padding: 0 1.25rem;
-    }
-    @include break-lg {
-      padding: 0 1.75rem;
-    }
-  }
   a {
+    padding: 0.5rem;
     color: $text-color;
   }
+
   a:hover, a:focus,
   li.current_page_item a,
   li.current_page_parent a {
     color: $link-color;
+  }
+
+  @include break-sm {
+    li {
+      padding: 0 0.25rem;
+    }
+    a {
+      padding: 0.75rem;
+    }
+  }
+  @include break-md {
+    li {
+      padding: 0 0.5rem;
+    }
+  }
+  @include break-lg {
+    li {
+      padding: 0 1rem;
+    }
   }
 }
 
@@ -105,6 +113,10 @@ Navigation
   }
   .site-logo {
     display: inherit;
+
+    a {
+      padding: 0;
+    }
   }
 
   @include break-sm {
