@@ -206,6 +206,7 @@ Navigation
       background-repeat: no-repeat;
       background-position: 50% 50%;
       @include animate(opacity);
+      @include hover-fix;
     }
 
     &:hover:before,
