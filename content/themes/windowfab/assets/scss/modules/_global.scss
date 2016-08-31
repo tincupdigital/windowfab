@@ -15,7 +15,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  border-top: 0.3125rem solid $heading-color;
+  overflow-x: hidden;
 
   &.blog,
   &.gift-certificates {

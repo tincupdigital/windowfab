@@ -66,6 +66,11 @@ Home: Headline
 /*
 Home: Categories
  */
+.home-section--pcats {
+  @media (max-width: $break-sm) {
+    padding-top: 1rem;
+  }
+}
 .home-pcats-section {
   @include break-xs {
     display: flex;
@@ -75,7 +80,7 @@ Home: Categories
 }
 .pcats-section__category {
   padding: 2rem 1.5rem 0;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   background-color: white;
 
   // flexbox
@@ -89,11 +94,11 @@ Home: Categories
 
     // width including margins
     width: calc(50% - 0.5rem);
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
+    margin: 0 0.25rem 3rem;
   }
   @include break-lg {
     width: calc(25% - 0.5rem);
+    margin-bottom: 1.5rem;
   }
 }
 .section-category__icon {

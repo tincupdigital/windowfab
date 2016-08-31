@@ -205,13 +205,13 @@ Navigation
     }
   }
   li.icon-community a:before {
-    background-image: url('../img/icon-community.png');
+    background-image: url('../img/icons/icon-community.png');
   }
   li.icon-history a:before {
-    background-image: url('../img/icon-history.png');
+    background-image: url('../img/icons/icon-history.png');
   }
   li.icon-partners a:before {
-    background-image: url('../img/icon-partners.png');
+    background-image: url('../img/icons/icon-partners.png');
   }
 
   /*
@@ -251,6 +251,7 @@ Mobile Nav
   transition: all 0.375s ease;
   overflow-x: hidden;
   background: url('../img/bg-aqua.png') left top repeat;
+  z-index: 0;
 
   ul {
     list-style-type: none;
