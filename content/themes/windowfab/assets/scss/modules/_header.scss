@@ -64,10 +64,9 @@ Header: Bottom
 .main-nav__container {
   a {
     padding: 0.5rem;
-    color: $text-color;
+    @include link-color($text-color, $link-color);
   }
 
-  a:hover, a:focus,
   li.current_page_item a,
   li.current_page_parent a {
     color: $link-color;
@@ -150,12 +149,15 @@ Navigation
       padding: 0;
       border-bottom: 1px solid $link-color;
 
+      a {
+        @include link-color(white, darken(white, 15%));
+      }
+
       &:last-of-type {
         border-bottom: none;
       }
     }
     a {
-      color: white;
       font-size: 0.875rem;
       font-weight: normal;
       text-transform: none;
@@ -193,6 +195,7 @@ Navigation
   li.icon-community a,
   li.icon-partners a,
   li.icon-history a {
+
     &:before {
       display: block;
       content: "";
@@ -202,6 +205,12 @@ Navigation
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 50% 50%;
+      @include animate(opacity);
+    }
+
+    &:hover:before,
+    &:focus:before {
+      opacity: 0.8;
     }
   }
   li.icon-community a:before {
