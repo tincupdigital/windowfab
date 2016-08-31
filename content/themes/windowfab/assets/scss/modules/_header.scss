@@ -20,12 +20,12 @@ Header
         list-style-type: none;
         padding: 0;
         margin: 0;
-        overflow: hidden;
       }
       li, a {
         display: block;
       }
       li {
+        position: relative;
         float: left;
       }
     }
@@ -39,6 +39,9 @@ Header: Top
   float: right;
 }
 .top-nav__container {
+  ul {
+    overflow: hidden;
+  }
   li {
     margin: 0 -0.125rem;
   }
@@ -119,6 +122,101 @@ Navigation
     }
   }
 
+  /*
+  Sub Menus
+   */
+  li.menu-item-has-children:hover,
+  li.menu-item-has-children:focus {
+    .sub-menu {
+      display: block;
+    }
+  }
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%; left: 50%;
+    transform: translateX(-50%);
+    padding: 0.75rem 1.5rem;
+    // margin creates space needed
+    // for the :after stuff below
+    margin-top: 0.5rem;
+    text-align: center;
+    background-color: $heading-color;
+    z-index: 9999;
+
+    li {
+      display: block;
+      float: none;
+      padding: 0;
+      border-bottom: 1px solid $link-color;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+    a {
+      color: white;
+      font-size: 0.875rem;
+      font-weight: normal;
+      text-transform: none;
+    }
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+    }
+
+    // inserts a line connecting the
+    // sub-menu to parent link above.
+    &:before {
+      display: inline-block;
+      left: 50%;
+      margin-top: -1rem;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 1rem;
+      background-color: $heading-color;
+    }
+    // this is just needed because the
+    // margin creates too much space
+    // and breaks the hover effect.
+    &:after {
+      display: block;
+      left: 0;
+      margin-top: -0.5rem;
+      width: 100%;
+      height: 0.5rem;
+    }
+  }
+  li.icon-community a,
+  li.icon-partners a,
+  li.icon-history a {
+    &:before {
+      display: block;
+      content: "";
+      height: 50px;
+      width: 80px;
+      margin: 0 auto 0.5rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+  li.icon-community a:before {
+    background-image: url('../img/icon-community.png');
+  }
+  li.icon-history a:before {
+    background-image: url('../img/icon-history.png');
+  }
+  li.icon-partners a:before {
+    background-image: url('../img/icon-partners.png');
+  }
+
+  /*
+  Media queries
+   */
   @include break-sm {
     // order the list items
     li:nth-child(1) { order: 1; }
