@@ -258,10 +258,10 @@ Navigation
 Logo
  */
 .site-logo__image {
-  width: 200px;
+  width: 175px;
 
   @include break-xs {
-    width: 225px;
+    width: 200px;
   }
 
   @include break-sm {
@@ -272,11 +272,17 @@ Logo
 /*
 Mobile Nav
  */
+.menu-toggle {
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
 .mobile-nav-area {
   position: fixed;
   // add height of .site-header
   // to top padding value below
-  padding: (0.25rem + 6.214rem) 1.7rem 1.5rem;
+  padding: (0.25rem + 5.786rem) 1.7rem 1.5rem;
   top: 0; left: 0;
   width: 80%;
   height: 100%;
@@ -314,6 +320,6 @@ Mobile Nav
   }
 
   @include break-xs {
-    padding-top: (0.25rem + 6.643rem);
+    padding-top: (0.25rem + 6.214rem);
   }
 }
