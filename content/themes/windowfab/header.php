@@ -62,11 +62,11 @@ get_template_part( 'templates/global/mobile', 'nav' ); ?>
 
 						<nav id="site-navigation" class="main-navigation" role="navigation">
 							<div class="row middle-xs">
-								<div class="col-xs-6 col-sm-12">
+								<div class="col-xs-8 col-sm-12">
 									<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_class' => 'main-nav__menu', 'container_class' => 'main-nav__container', 'items_wrap' => _s_main_nav_wrap() ) ); ?>
 								</div>
 
-								<div class="col-xs-6 visible-xs">
+								<div class="col-xs-4 visible-xs">
 									<button class="menu-toggle right button bo--ba" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_s' ); ?></button>
 								</div>
 							</div>
