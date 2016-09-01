@@ -6,7 +6,10 @@
 Header
  */
 .site-header {
+  position: relative;
   background-color: white;
+  border-top: 0.3125rem solid $heading-color;
+  z-index: 101;
 
   nav {
     a {
@@ -271,14 +274,17 @@ Mobile Nav
  */
 .mobile-nav-area {
   position: fixed;
-  padding: 0.25rem 1.7rem 1.5rem;
+  // add height of .site-header
+  // to top padding value below
+  padding: (0.25rem + 6.214rem) 1.7rem 1.5rem;
   top: 0; left: 0;
   width: 80%;
   height: 100%;
+  transform: translateX(-100%);
   transition: all 0.375s ease;
   overflow-x: hidden;
   background: url('../img/bg-aqua.png') left top repeat;
-  z-index: 0;
+  z-index: 100;
 
   ul {
     list-style-type: none;
@@ -302,12 +308,12 @@ Mobile Nav
       color: $text-color;
     }
   }
-}
-.site {
-  position: relative;
-  @include animate(transform, 0.375s);
 
-  &.pushed {
-    transform: translateX(80%);
+  &.visible {
+    transform: translateX(0);
+  }
+
+  @include break-xs {
+    padding-top: (0.25rem + 6.643rem);
   }
 }

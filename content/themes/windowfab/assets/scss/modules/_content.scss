@@ -6,10 +6,7 @@
 Site
  */
 .site {
-  position: relative;
   background-color: $site-bg-color;
-  border-top: 0.3125rem solid $heading-color;
-  z-index: 1;
 }
 .site-content {
   padding: 3.5rem 0 2.5rem;
