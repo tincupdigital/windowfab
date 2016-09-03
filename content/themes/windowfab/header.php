@@ -27,6 +27,10 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
+<!--[if lte IE 9]>
+	<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/vendor/flexibility.js"></script>
+<![endif]-->
+
 <?php wp_head(); ?>
 </head>
 
