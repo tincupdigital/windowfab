@@ -70,6 +70,15 @@ Clearfix
 }
 
 /*
+IE Flex Fix
+ */
+// fix flex child text width
+// overflow issue in IE11
+@mixin ie-flexfix {
+  max-width: 100%;
+}
+
+/*
 Font Smoothing
  */
 @mixin font-smoothing($value: on) {

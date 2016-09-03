@@ -9,7 +9,7 @@ Header
   position: relative;
   background-color: white;
   border-top: 0.3125rem solid $heading-color;
-  z-index: 101;
+  z-index: 100;
 
   nav {
     a {
@@ -17,8 +17,10 @@ Header
       text-transform: uppercase;
       line-height: 1.0;
     }
+  }
 
-    @include break-sm {
+  @include break-sm {
+    nav {
       ul {
         list-style-type: none;
         padding: 0;
@@ -168,9 +170,10 @@ Navigation
     // margin creates space needed
     // for the :after stuff below
     margin-top: 0.5rem;
+    min-width: 175px;
     text-align: center;
     background-color: $heading-color;
-    z-index: 9999;
+    z-index: 250;
 
     li {
       display: block;
@@ -221,10 +224,7 @@ Navigation
       height: 0.5rem;
     }
   }
-  li.icon-community a,
-  li.icon-partners a,
-  li.icon-history a {
-
+  li.icon a {
     &:before {
       display: block;
       content: "";
@@ -243,6 +243,22 @@ Navigation
       opacity: 0.8;
     }
   }
+
+  // "Products" dropdown
+  li.icon-shades a:before {
+    background-image: url('../img/icons/icon-shades.png');
+  }
+  li.icon-curtains a:before {
+    background-image: url('../img/icons/icon-curtains.png');
+  }
+  li.icon-valances a:before {
+    background-image: url('../img/icons/icon-valances.png');
+  }
+  li.icon-furnishings a:before {
+    background-image: url('../img/icons/icon-furnishings.png');
+  }
+
+  // "About" dropdown
   li.icon-community a:before {
     background-image: url('../img/icons/icon-community.png');
   }
@@ -258,10 +274,10 @@ Navigation
 Logo
  */
 .site-logo__image {
-  width: 175px;
+  width: 150px;
 
   @include break-xs {
-    width: 200px;
+    width: 175px;
   }
 
   @include break-sm {
@@ -282,15 +298,20 @@ Mobile Nav
   position: fixed;
   // add height of .site-header
   // to top padding value below
-  padding: (0.25rem + 5.786rem) 1.7rem 1.5rem;
+  padding: 0.25rem 1.7rem 1.5rem;
   top: 0; left: 0;
-  width: 80%;
+  width: auto;
   height: 100%;
   transform: translateX(-100%);
   transition: all 0.375s ease;
-  overflow-x: hidden;
+  overflow: hidden;
   background: url('../img/bg-aqua.png') left top repeat;
-  z-index: 100;
+  z-index: 300;
+
+  // add just a little space
+  .mobile-nav {
+    margin-right: 0.25rem;
+  }
 
   ul {
     list-style-type: none;
@@ -307,7 +328,7 @@ Mobile Nav
     color: white;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.143rem;
+    font-size: 1rem;
 
     &:hover,
     &:focus {
@@ -317,9 +338,5 @@ Mobile Nav
 
   &.visible {
     transform: translateX(0);
-  }
-
-  @include break-xs {
-    padding-top: (0.25rem + 6.214rem);
   }
 }

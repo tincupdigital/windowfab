@@ -25,7 +25,7 @@
                 if ( get_sub_field( 'category_icon' ) ) {
                   $c_ico = get_sub_field( 'category_icon' ); ?>
 
-                  <img class="category-icon section-category__icon mb2" src="<?php echo $c_ico['sizes']['medium']; ?>" alt="<?php echo $c_ico['alt']; ?>" />
+                  <img class="category-icon section-category__icon mb1" src="<?php echo $c_ico['sizes']['medium']; ?>" alt="<?php echo $c_ico['alt']; ?>" />
                 <?php }
 
                 /* Title */
