@@ -52,6 +52,10 @@ Home
   @include break-sm {
     padding: 2.5rem 0;
   }
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
 }
 
 /*
@@ -243,7 +247,6 @@ Category Page
   @include break-md {
     display: flex;
     flex-direction: row;
-    height: 300px; // for IE11
     min-height: 300px;
     margin-bottom: 0;
 
@@ -336,7 +339,15 @@ Category Page
 
   @include break-md {
     display: inherit;
+    // parent container is 300px
+    // tall; this fixes IE11 bug
+    height: 100%;
+    min-height: 300px;
   }
+}
+.category-tile__title,
+.category-tile__text {
+  @include ie-flexfix;
 }
 .category-tile__title {
   color: white;
@@ -344,13 +355,21 @@ Category Page
   line-height: 1.0;
   text-shadow: 0.125em 0.125em 1em black;
 }
+
+// fix IE11 text-shadow bug where text
+// jumps around by removing the shadow
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .category-tile__title {
+    transform: translate3d(0px,0px,0px);
+  }
+}
+
 .category-tile--txt {
   background-color: $border-color;
   font-weight: bold;
 }
 .category-tile__text {
   font-family: $heading-font;
-  @include ie-flexfix;
 
   p {
     margin: 0 0 1rem;
