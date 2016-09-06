@@ -109,9 +109,6 @@ Home: Categories
   max-height: 125px;
   max-width: 100%;
 }
-.section-category__text {
-  @include ie-flexfix;
-}
 .section-category__button {
   margin-top: auto;
   margin-bottom: -1rem;
@@ -228,9 +225,6 @@ Home: Image CTAs
 .section-cta__title {
   @include button-text(1.125rem);
 }
-.section-cta__text {
-  @include ie-flexfix;
-}
 
 /*
 Home: Banner
@@ -339,29 +333,13 @@ Category Page
 
   @include break-md {
     display: inherit;
-    // parent container is 300px
-    // tall; this fixes IE11 bug
-    height: 100%;
-    min-height: 300px;
   }
-}
-.category-tile__title,
-.category-tile__text {
-  @include ie-flexfix;
 }
 .category-tile__title {
   color: white;
   font-size: 4.75rem;
   line-height: 1.0;
   text-shadow: 0.125em 0.125em 1em black;
-}
-
-// fix IE11 text-shadow bug where text
-// jumps around by removing the shadow
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .category-tile__title {
-    transform: translate3d(0px,0px,0px);
-  }
 }
 
 .category-tile--txt {

@@ -1,0 +1,30 @@
+/**
+ * _ie.scss
+ */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  // fix issue with text not
+  // wrapping in flex containers
+  .section-category__text,
+  .section-cta__text,
+  .category-tile__title,
+  .category-tile__text {
+    @include ie-flexfix;
+  }
+
+  // fix issue with flex child
+  // divs not respecting min-height
+  // of parent containers (300px)
+  .category-tile--img {
+    @include break-md {
+      height: 100%;
+      min-height: 300px;
+    }
+  }
+
+  // fix issue with text jumping on hover
+  // *only happens with text-shadow text?
+  .category-tile--img a:hover {
+    transform: translate3d(0px,0px,0px);
+  }
+}
