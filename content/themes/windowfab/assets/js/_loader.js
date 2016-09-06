@@ -48,6 +48,7 @@ var Roots = {
         keyPress: true,
         loop: true,
         controls: false,
+        adaptiveHeight: true,
         pager: true
       });
 
