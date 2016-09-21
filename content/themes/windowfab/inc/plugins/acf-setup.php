@@ -306,6 +306,27 @@ acf_add_local_field_group(array (
                   'return_format' => 'id',
                   'ui' => 1,
                 ),
+                array (
+                  'key' => 'field_57e2e046ecd8a',
+                  'label' => 'Button Text',
+                  'name' => 'button_text',
+                  'type' => 'text',
+                  'instructions' => 'Enter text for the category link button.',
+                  'required' => '',
+                  'conditional_logic' => '',
+                  'wrapper' => array (
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                  ),
+                  'default_value' => '',
+                  'placeholder' => '',
+                  'prepend' => '',
+                  'append' => '',
+                  'maxlength' => '',
+                  'readonly' => 0,
+                  'disabled' => 0,
+                ),
               ),
             ),
           ),
@@ -643,7 +664,6 @@ acf_add_local_field_group(array (
   ),
   'active' => 1,
   'description' => '',
-  'local' => 'php',
 ));
 
 acf_add_local_field_group(array (
@@ -1105,6 +1125,27 @@ acf_add_local_field_group(array (
       'return_format' => 'id',
       'ui' => 1,
     ),
+    array (
+      'key' => 'field_57e2e2120289b',
+      'label' => 'Button Text',
+      'name' => 'button_text',
+      'type' => 'text',
+      'instructions' => 'Enter some text for the CTA link button.',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
   ),
   'location' => array (
     array (
@@ -1123,7 +1164,6 @@ acf_add_local_field_group(array (
   'hide_on_screen' => '',
   'active' => 1,
   'description' => '',
-  'local' => 'php',
 ));
 
 acf_add_local_field_group(array (
@@ -1521,6 +1561,7 @@ acf_add_local_field_group(array (
   'hide_on_screen' => '',
   'active' => 1,
   'description' => '',
+  'local' => 'php',
 ));
 
 endif;
