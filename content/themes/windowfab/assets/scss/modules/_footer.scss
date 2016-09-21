@@ -29,6 +29,10 @@ Footer: Nav
 .site-footer__nav {
   font-size: 0.875rem;
 
+  a {
+    @include link-color($heading-color, darken($heading-color, 10%));
+  }
+
   ul {
     list-style-type: none;
   }
@@ -57,7 +61,7 @@ Footer: Widgets
       @include widget-title;
     }
     .button {
-      @include button-outline($text-color, $link-color--light);
+      @include button-outline($text-color, $link-color);
     }
 
     &:last-of-type {
@@ -80,15 +84,10 @@ Widget: Business Info
 .site-footer__column .wf-business-info {
   .wf-business-info__text p {
     margin: 0;
-    @include widget-title($link-color--light);
+    @include widget-title($link-color);
   }
   a {
-    color: $link-color--light;
-
-    &:focus,
-    &:hover {
-      color: darken($link-color--light, 10%);
-    }
+    @include link-color($link-color, darken($link-color, 10%));
   }
 }
 
@@ -99,12 +98,7 @@ Widget: Page Link
   position: relative;
 
   a {
-    color: $accent-color;
-
-    &:focus,
-    &:hover {
-      color: darken($accent-color, 10%);
-    }
+    @include link-color($accent-color, darken($accent-color, 10%));
   }
 
   .widget-title {

@@ -71,7 +71,7 @@ get_template_part( 'templates/global/mobile', 'nav' ); ?>
 								</div>
 
 								<div class="col-xs-4 visible-xs">
-									<button class="menu-toggle right button bo--ba" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_s' ); ?></button>
+									<button class="menu-toggle right button button-outline--brown-aqua" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_s' ); ?></button>
 								</div>
 							</div>
 						</nav><!-- #site-navigation -->

@@ -43,16 +43,9 @@
                 /* Button */
                 if ( get_sub_field( 'category_link' ) ) {
                   // field returns page ID
-                  $pid = get_sub_field( 'category_link' );
+                  $pid = get_sub_field( 'category_link' ); ?>
 
-                  // check for button text
-                  if ( get_sub_field( 'button_text' ) ) {
-                    $b_txt = get_sub_field( 'button_text' );
-                  } else {
-                    $b_txt = 'Click here';
-                  } ?>
-
-                  <a class="category-button section-category__button button button-color" href="<?php the_permalink( $pid ); ?>"><?php echo $b_txt; ?></a>
+                  <a class="category-button section-category__button" href="<?php the_permalink( $pid ); ?>"><?php _s_sub_button_text( 'See more' ); ?></a>
                 <?php } ?>
               </div>
 

@@ -66,9 +66,11 @@ get_header(); ?>
                                   <?php /* Title */
                                   // check for URL and display if it exists
                                   if ( $c_pid ) { ?>
-                                    <a href="<?php the_permalink( $c_pid ); ?>">
-                                      <h2 class="tile-title category-tile__title h1"><?php echo $c_ttl; ?></h2>
-                                    </a>
+                                    <h2 class="tile-title category-tile__title h1">
+                                      <a href="<?php the_permalink( $c_pid ); ?>">
+                                        <?php echo $c_ttl; ?>
+                                      </a>
+                                    </h2>
                                   <?php } else { ?>
                                     <h2 class="tile-title category-tile__title h1"><?php echo $c_ttl; ?></h2>
                                   <?php } ?>

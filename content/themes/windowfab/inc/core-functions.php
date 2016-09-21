@@ -286,3 +286,25 @@ function _s_add_excerpt_to_obj_field( $title, $post, $field, $post_id ) {
   return $title;
 }
 add_filter( 'acf/fields/post_object/result/name=page_testimonial', '_s_add_excerpt_to_obj_field', 10, 4 );
+
+/**
+ * Button text field functions
+ */
+function _s_get_button_text( $text, $id ) {
+  if ( get_field( 'button_text', $id ) ) {
+    $text = get_field( 'button_text', $id );
+  }
+  return $text;
+}
+function _s_button_text( $text ) {
+  if ( get_field( 'button_text' ) ) {
+    $text = get_field( 'button_text' );
+  }
+  echo $text;
+}
+function _s_sub_button_text( $text ) {
+  if ( get_sub_field( 'button_text' ) ) {
+    $text = get_sub_field( 'button_text' );
+  }
+  echo $text;
+}

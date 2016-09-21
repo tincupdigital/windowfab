@@ -8,13 +8,6 @@
 // set CTA post object to variable
 $cta_po = get_field( 'page_cta' );
 
-// set button text to variable
-if ( get_field( 'button_text' ) ) {
-  $b_txt = get_field( 'button_text' );
-} else {
-  $b_txt = "Read more";
-}
-
 // set post ID
 $pid = $cta_po->ID; ?>
 
@@ -35,7 +28,7 @@ $pid = $cta_po->ID; ?>
       // CTA link field returns post ID
       $cta_id = get_field( 'cta_link', $pid ); ?>
 
-      <a class="cta-button cta-area__button bo--bw right" href="<?php the_permalink( $cta_id ); ?>"><?php echo $b_txt; ?></a>
+      <a class="cta-button cta-area__button button-outline--brown-white right" href="<?php the_permalink( $cta_id ); ?>"><?php _s_button_text( 'Read more' ); ?></a>
     <?php } ?>
   </div>
 </div>

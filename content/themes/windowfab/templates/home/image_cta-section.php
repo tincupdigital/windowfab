@@ -52,7 +52,7 @@
                       $b_txt = 'Click here';
                     } ?>
 
-                    <a class="cta-button section-cta__button button bo--bw" href="<?php the_permalink( $pid ); ?>"><?php echo $b_txt; ?></a>
+                    <a class="cta-button section-cta__button button button-outline--brown-white" href="<?php the_permalink( $pid ); ?>"><?php echo $b_txt; ?></a>
                   <?php } ?>
                 </section>
               </div>
