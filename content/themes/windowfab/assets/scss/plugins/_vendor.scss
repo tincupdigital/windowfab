@@ -18,6 +18,9 @@ lightSlider
   overflow: hidden;
   margin: 0;
 }
+.lightSlider[style] {
+  padding-bottom: 0 !important;
+}
 .lSSlideWrapper {
   max-width: 100%;
   overflow: hidden;

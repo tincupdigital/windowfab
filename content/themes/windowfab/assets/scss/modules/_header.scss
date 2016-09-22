@@ -279,9 +279,14 @@ Logo
   @include break-xs {
     width: 175px;
   }
-
   @include break-sm {
-    width: auto;
+    width: 205px;
+  }
+  @include break-md {
+    width: 250px;
+  }
+  @include break-lg {
+    width: 320px;
   }
 }
 
