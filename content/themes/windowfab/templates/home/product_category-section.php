@@ -30,7 +30,7 @@
 
                 /* Title */
                 if ( get_sub_field( 'category_title' ) ) { ?>
-                  <h3 class="category-title section-category__title h4 mb0 font-body bold"><?php the_sub_field( 'category_title' ); ?></h3>
+                  <h3 class="category-title section-category__title h4 mb2 font-body bold"><?php the_sub_field( 'category_title' ); ?></h3>
                 <?php }
 
                 /* Text */
