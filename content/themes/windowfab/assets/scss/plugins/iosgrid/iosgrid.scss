@@ -1,0 +1,196 @@
+/**
+ * iosgrid.scss
+ *
+ * Fix issues iPhone 4 & 5 issues with Flexbox Grid
+ */
+
+// target iPhone 4 and 5 (portrait and landscape)
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3), only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) {
+
+  .row {
+    display: block;
+    font-family: empty;
+  }
+  .col-xs,
+  .col-xs-1,
+  .col-xs-2,
+  .col-xs-3,
+  .col-xs-4,
+  .col-xs-5,
+  .col-xs-6,
+  .col-xs-7,
+  .col-xs-8,
+  .col-xs-9,
+  .col-xs-10,
+  .col-xs-11,
+  .col-xs-12 {
+    display: inline-block;
+    font-family: $body-font;
+  }
+  .col-xs {
+    width: 100%;
+  }
+  @for $i from 1 through 12 {
+    .col-xs-#{$i} {
+      width: percentage($i/12);
+    }
+  }
+
+  .start-xs {
+    text-align: left;
+  }
+  .center-xs {
+    text-align: center;
+  }
+  .end-xs {
+    text-align: right;
+  }
+  .top-xs {
+    vertical-align: top;
+  }
+  .middle-xs {
+    vertical-align: middle;
+  }
+  .bottom-xs {
+    vertical-align: bottom;
+  }
+
+  @media only screen and (min-width: $break-sm) {
+    .col-sm,
+    .col-sm-1,
+    .col-sm-2,
+    .col-sm-3,
+    .col-sm-4,
+    .col-sm-5,
+    .col-sm-6,
+    .col-sm-7,
+    .col-sm-8,
+    .col-sm-9,
+    .col-sm-10,
+    .col-sm-11,
+    .col-sm-12 {
+      display: inline-block;
+      font-family: $body-font;
+    }
+    .col-sm {
+      width: 100%;
+    }
+    @for $i from 1 through 12 {
+      .col-sm-#{$i} {
+        width: percentage($i/12);
+      }
+    }
+
+    .start-sm {
+      text-align: left;
+    }
+    .center-sm {
+      text-align: center;
+    }
+    .end-sm {
+      text-align: right;
+    }
+    .top-sm {
+      vertical-align: top;
+    }
+    .middle-sm {
+      vertical-align: middle;
+    }
+    .bottom-sm {
+      vertical-align: bottom;
+    }
+  }
+
+  @media only screen and (min-width: $break-md) {
+    .col-md,
+    .col-md-1,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12 {
+      display: inline-block;
+      font-family: $body-font;
+    }
+    .col-md {
+      width: 100%;
+    }
+    @for $i from 1 through 12 {
+      .col-md-#{$i} {
+        width: percentage($i/12);
+      }
+    }
+
+    .start-md {
+      text-align: left;
+    }
+    .center-md {
+      text-align: center;
+    }
+    .end-md {
+      text-align: right;
+    }
+    .top-md {
+      vertical-align: top;
+    }
+    .middle-md {
+      vertical-align: middle;
+    }
+    .bottom-md {
+      vertical-align: bottom;
+    }
+  }
+
+  @media only screen and (min-width: $break-lg) {
+    .col-lg,
+    .col-lg-1,
+    .col-lg-2,
+    .col-lg-3,
+    .col-lg-4,
+    .col-lg-5,
+    .col-lg-6,
+    .col-lg-7,
+    .col-lg-8,
+    .col-lg-9,
+    .col-lg-10,
+    .col-lg-11,
+    .col-lg-12 {
+      display: inline-block;
+      font-family: $body-font;
+    }
+    .col-lg {
+      width: 100%;
+    }
+    @for $i from 1 through 12 {
+      .col-lg-#{$i} {
+        width: percentage($i/12);
+      }
+    }
+
+    .start-lg {
+      text-align: left;
+    }
+    .center-lg {
+      text-align: center;
+    }
+    .end-lg {
+      text-align: right;
+    }
+    .top-lg {
+      vertical-align: top;
+    }
+    .middle-lg {
+      vertical-align: middle;
+    }
+    .bottom-lg {
+      vertical-align: bottom;
+    }
+  }
+
+}

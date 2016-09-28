@@ -13,20 +13,25 @@ Type Scale
 @import "type/type";
 
 /*
-Fluidity
- */
-@import "fluidity/fluidity";
-
-/*
 Basscss
  */
 @import "basscss-sass/basscss";
 @import "basscss-sass/basscss-addons";
 
 /*
+Fluidity
+ */
+@import "fluidity/fluidity";
+
+/*
 Flexbox Grid
  */
 @import "flexboxgrid/flexboxgrid";
+
+/*
+iOS Grid
+ */
+@import "iosgrid/iosgrid";
 
 /*
 Vendor
