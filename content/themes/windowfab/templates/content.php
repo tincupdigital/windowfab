@@ -19,9 +19,9 @@
 		<?php }
 
 		if ( is_single() ) {
-			the_title( '<h1 class="entry-title m0 wbt">', '</h1>' );
+			the_title( '<h1 class="entry-title mt0 wbt">', '</h1>' );
 		} else {
-			the_title( '<h2 class="entry-title m0 wbt"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2 class="entry-title mt0 wbt"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		} ?>
 	</header><!-- .entry-header -->
 

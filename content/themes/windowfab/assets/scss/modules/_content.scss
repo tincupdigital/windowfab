@@ -167,6 +167,16 @@ Navigation
 Blog
  */
 .blog {
+  .page-title {
+    margin-bottom: 3rem;
+  }
+  .post {
+    margin-bottom: 2.5rem;
+    
+    @include break-lg {
+      margin-bottom: 0;
+    }
+  }
   .entry-title a {
     color: $text-color;
   }
