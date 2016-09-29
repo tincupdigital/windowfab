@@ -43,16 +43,9 @@
                   /* Button */
                   if ( get_sub_field( 'cta_link' ) ) {
                     // field returns page ID
-                    $pid = get_sub_field( 'cta_link' );
+                    $pid = get_sub_field( 'cta_link' ); ?>
 
-                    // check for button text
-                    if ( get_sub_field( 'button_text' ) ) {
-                      $b_txt = get_sub_field( 'button_text' );
-                    } else {
-                      $b_txt = 'Click here';
-                    } ?>
-
-                    <a class="cta-button section-cta__button button button-outline--brown-white" href="<?php the_permalink( $pid ); ?>"><?php echo $b_txt; ?></a>
+                    <a class="cta-button section-cta__button button button-outline--brown-white" href="<?php the_permalink( $pid ); ?>"><?php _s_sub_button_text( 'Learn more' ); ?></a>
                   <?php } ?>
                 </section>
               </div>

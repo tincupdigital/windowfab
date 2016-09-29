@@ -483,6 +483,27 @@ acf_add_local_field_group(array (
                   'return_format' => 'id',
                   'ui' => 1,
                 ),
+                array (
+                  'key' => 'field_57eda7c3d259b',
+                  'label' => 'Button Text',
+                  'name' => 'button_text',
+                  'type' => 'text',
+                  'instructions' => 'Enter text for the CTA button.',
+                  'required' => 0,
+                  'conditional_logic' => '',
+                  'wrapper' => array (
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                  ),
+                  'default_value' => '',
+                  'placeholder' => '',
+                  'prepend' => '',
+                  'append' => '',
+                  'maxlength' => '',
+                  'readonly' => 0,
+                  'disabled' => 0,
+                ),
               ),
             ),
           ),
@@ -1164,6 +1185,7 @@ acf_add_local_field_group(array (
   'hide_on_screen' => '',
   'active' => 1,
   'description' => '',
+  'local' => 'php',
 ));
 
 acf_add_local_field_group(array (
