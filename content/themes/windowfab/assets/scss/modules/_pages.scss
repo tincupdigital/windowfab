@@ -22,27 +22,12 @@ Home
 .home {
   .site-content {
     padding: 2.5rem 0;
-  }
 
-  // page background setup
-  .site-content--bg:after {
-    background: linear-gradient(transparent, $site-bg-color 150px);
-  }
-
-  @include break-sm {
-    .site-content {
+    @include break-sm {
       padding-top: 3.5rem;
     }
-    .site-content--bg:after {
-      background: linear-gradient(transparent, $site-bg-color 375px);
-    }
-  }
-  @include break-lg {
-    .site-content {
+    @include break-lg {
       padding-top: 5rem;
-    }
-    .site-content--bg:after {
-      background: linear-gradient(transparent, $site-bg-color 600px);
     }
   }
 }

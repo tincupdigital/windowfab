@@ -14,6 +14,17 @@
     <!-- Top -->
     <div class="footer-top site-footer__top mb4">
       <div class="container">
+
+        <?php /* Divider */
+        // only display if page has no footer and isn't home
+        if ( !is_front_page() && !get_field( 'display_cta_or_testimonials' ) ) { ?>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="footer-divider"></div>
+            </div>
+          </div>
+        <?php } ?>
+
         <div class="row center-xs">
           <div class="col-xs-12 col-sm-6 site-footer__column">
             <?php dynamic_sidebar( 'footer-widget-area-1' ); ?>

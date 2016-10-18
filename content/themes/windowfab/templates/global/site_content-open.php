@@ -8,8 +8,10 @@
 
 // make sure this is a page and
 // that featured image is present
-if ( is_page() && has_post_thumbnail() ) { ?>
-  <div id="content" class="site-content site-content--bg" style="background-image: url('<?php echo _s_get_feat_img_url('hero'); ?>');">
+if ( get_field( 'background_image' ) ) {
+  $b_img = get_field( 'background_image' ); ?>
+
+  <div id="content" class="site-content site-content--bg" style="background-image: url('<?php echo $b_img['sizes']['hero']; ?>');">
 <?php } else { ?>
   <div id="content" class="site-content">
 <?php }

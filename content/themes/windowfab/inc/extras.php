@@ -29,6 +29,10 @@ function _s_body_classes( $classes ) {
     $classes[] = 'has-thumbnail';
   }
 
+  // Pages with footer CTA/testimonial
+  if ( !is_front_page() && !get_field( 'display_cta_or_testimonials' ) ) {
+    $classes[] = 'page-no-footer';
+  }
   return $classes;
 }
 add_filter( 'body_class', '_s_body_classes' );
