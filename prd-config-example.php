@@ -4,11 +4,6 @@ Define variables for production setup
 */
 
 /**
- * Development variable
- */
-define( 'WP_LOCAL_DEV', false );
-
-/**
  * MySQL configuration
  */
 define( 'DB_NAME', 'database_name_here' );
@@ -50,9 +45,17 @@ define( 'WP_POST_REVISIONS', 5 );
 define( 'DISALLOW_FILE_EDIT', true );
 
 /**
+ * Debugging stuff
+ */
+// define( 'WP_DEBUG', true );
+// define( 'WP_DEBUG_DISPLAY', false );
+// define( 'WP_DEBUG_LOG', true );
+
+/**
  * Load WordPress
  */
 if ( !defined( 'ABSPATH' ) ) {
   define( 'ABSPATH', dirname(__FILE__) . '/wp/' );
 }
 require_once( ABSPATH . 'wp-settings.php' );
+
