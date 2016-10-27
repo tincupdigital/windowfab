@@ -14,6 +14,7 @@ define( 'DB_HOST', 'localhost' );
 /**
  * Content directories
  */
+// add subfolder before /content if site is not located in domain root
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
 define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/starter/content' );
 
@@ -21,13 +22,6 @@ define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/starter/content'
  * Database table prefix
  */
 $table_prefix  = 'wp_';
-
-/**
- * Debugging stuff
- */
-// define( 'WP_DEBUG', true );
-// define( 'WP_DEBUG_DISPLAY', false );
-// define( 'WP_DEBUG_LOG', true );
 
 /**
  * Load WordPress

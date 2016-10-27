@@ -24,7 +24,7 @@ function _s_register_required_plugins() {
     array(
       'name' => 'Advanced Custom Fields Pro',
       'slug' => 'advanced-custom-fields-pro',
-      'source' => 'https://bitbucket.org/ecmdesign/advanced-custom-fields-pro/get/39e8d0f4d856.zip',
+      'source' => 'https://github.com/ecmdesign/advanced-custom-fields-pro/archive/master.zip',
       'required' => true,
       'force_activation' => true
     ),
@@ -70,7 +70,7 @@ function _s_register_required_plugins() {
       'name' => 'Akismet',
       'slug' => 'akismet',
       'required' => true,
-      'force_activation' => true
+      'force_activation' => false
     ),
     array(
       'name' => 'Brute Force Login Protection',
@@ -79,16 +79,10 @@ function _s_register_required_plugins() {
       'force_activation' => true
     ),
     array(
-      'name' => 'Ninja Forms',
-      'slug' => 'ninja-forms',
+      'name' => 'WP Fastest Cache',
+      'slug' => 'wp-fastest-cache',
       'required' => true,
       'force_activation' => false
-    ),
-    array(
-      'name' => 'WP Super Cache',
-      'slug' => 'wp-super-cache',
-      'required' => true,
-      'force_activation' => true
     ),
     array(
       'name' => 'Yoast SEO',
