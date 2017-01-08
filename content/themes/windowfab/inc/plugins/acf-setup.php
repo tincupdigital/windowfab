@@ -17,7 +17,9 @@ if ( wp_get_current_user()->user_login !== 'sean' ) {
 /*
 ACF field groups
  */
-// export field export code here:if( function_exists('acf_add_local_field_group') ):
+// export field export code here:
+
+if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
   'key' => 'group_58057702185bc',

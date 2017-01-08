@@ -73,8 +73,8 @@ function _s_register_required_plugins() {
       'force_activation' => false
     ),
     array(
-      'name' => 'Brute Force Login Protection',
-      'slug' => 'brute-force-login-protection',
+      'name' => 'Login Security Solution',
+      'slug' => 'login-security-solution',
       'required' => true,
       'force_activation' => true
     ),
