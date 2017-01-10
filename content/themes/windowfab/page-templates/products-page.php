@@ -7,8 +7,7 @@
 
 get_header(); ?>
 
-  <!-- #content -->
-  <?php get_template_part( 'templates/global/site_content', 'open' ); ?>
+  <div id="content" class="site-content">
 
   	<div id="primary" class="content-area">
   		<main id="main" class="site-main" role="main">
@@ -16,6 +15,7 @@ get_header(); ?>
   			<?php
   			while ( have_posts() ) : the_post(); ?>
 
+          <!-- move me -->
           <div class="container">
             <div class="row">
               <div class="col-xs-12">

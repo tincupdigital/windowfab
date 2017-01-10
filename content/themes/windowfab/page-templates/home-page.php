@@ -8,7 +8,7 @@
 get_header(); ?>
 
   <!-- #content -->
-  <?php get_template_part( 'templates/global/site_content', 'open' ); ?>
+  <?php get_template_part( 'templates/home/site_content', 'open' ); ?>
 
   	<div id="primary" class="content-area">
   		<main id="main" class="site-main" role="main">

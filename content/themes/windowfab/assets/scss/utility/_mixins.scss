@@ -93,6 +93,16 @@ Font Smoothing
 }
 
 /*
+Footer Links
+ */
+@mixin footer-link($size: $h6, $weight: 600) {
+  font-size: $size;
+  font-weight: $weight;
+  text-transform: uppercase;
+  @include link-color(black, $link-color);
+}
+
+/*
 Hover Fix
  */
 @mixin hover-fix {
