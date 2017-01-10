@@ -29,8 +29,10 @@ module.exports = function(grunt) {
           outputStyle: 'nested',
           sourceMap: false
         },
-        files: {
-          'assets/css/main.css': 'assets/scss/main.scss'
+        dist: {
+          files: {
+            'assets/css/main.css': 'assets/scss/main.scss'
+          }
         }
       },
       build: {
@@ -38,8 +40,10 @@ module.exports = function(grunt) {
           outputStyle: 'compressed',
           sourceMap: true
         },
-        files: {
-          'assets/css/main.min.css': 'assets/scss/main.scss'
+        dist: {
+          files: {
+            'assets/css/main.min.css': 'assets/scss/main.scss'
+          }
         }
       }
     },

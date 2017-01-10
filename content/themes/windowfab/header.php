@@ -28,7 +28,7 @@
 <![endif]-->
 
 <!--[if lte IE 9]>
-	<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/vendor/flexibility.js"></script>
+  <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/vendor/flexibility.js"></script>
 <![endif]-->
 
 <?php wp_head(); ?>
@@ -40,44 +40,44 @@
 get_template_part( 'templates/global/mobile', 'nav' ); ?>
 
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
+  <a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<!-- Top -->
-		<div class="site-header__top hidden-xs">
-		  <div class="container">
-		    <div class="row">
-		      <div class="col-xs-12">
+  <header id="masthead" class="site-header" role="banner">
+    <!-- Top -->
+    <div class="site-header__top hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
 
-						<nav id="top-navigation" class="top-navigation" role="navigation">
-							<?php wp_nav_menu( array( 'theme_location' => 'top-nav', 'menu_class' => 'top-nav__menu', 'container_class' => 'top-nav__container' ) ); ?>
-						</nav><!-- #site-navigation -->
+            <nav id="top-navigation" class="top-navigation" role="navigation">
+              <?php wp_nav_menu( array( 'theme_location' => 'top-nav', 'menu_class' => 'top-nav__menu', 'container_class' => 'top-nav__container' ) ); ?>
+            </nav><!-- #site-navigation -->
 
-		      </div><!-- .col-# -->
-		    </div><!-- .row -->
-		  </div><!-- .container -->
-		</div>
+          </div><!-- .col-# -->
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </div>
 
-		<!-- Bottom -->
-		<div class="site-header__bottom">
-		  <div class="container">
-		    <div class="row">
-		      <div class="col-xs-12">
+    <!-- Bottom -->
+    <div class="site-header__bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
 
-						<nav id="site-navigation" class="main-navigation" role="navigation">
-							<div class="row middle-xs">
-								<div class="col-xs-8 col-sm-12">
-									<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_class' => 'main-nav__menu', 'container_class' => 'main-nav__container', 'items_wrap' => _s_main_nav_wrap() ) ); ?>
-								</div>
+            <nav id="site-navigation" class="main-navigation" role="navigation">
+              <div class="row middle-xs">
+                <div class="col-xs-8 col-sm-12">
+                  <?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_class' => 'main-nav__menu', 'container_class' => 'main-nav__container', 'items_wrap' => _s_main_nav_wrap() ) ); ?>
+                </div>
 
-								<div class="col-xs-4 visible-xs">
-									<button class="menu-toggle right button button-outline--brown-aqua" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_s' ); ?></button>
-								</div>
-							</div>
-						</nav><!-- #site-navigation -->
+                <div class="col-xs-4 visible-xs">
+                  <button class="menu-toggle right button button-outline--brown-aqua" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_s' ); ?></button>
+                </div>
+              </div>
+            </nav><!-- #site-navigation -->
 
-		      </div><!-- .col-# -->
-		    </div><!-- .row -->
-		  </div><!-- .container -->
-		</div>
-	</header><!-- #masthead -->
+          </div><!-- .col-# -->
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </div>
+  </header><!-- #masthead -->
