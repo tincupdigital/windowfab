@@ -79,8 +79,8 @@ function _s_register_required_plugins() {
       'force_activation' => true
     ),
     array(
-      'name' => 'WP Fastest Cache',
-      'slug' => 'wp-fastest-cache',
+      'name' => 'WP Super Cache',
+      'slug' => 'wp-super-cache',
       'required' => true,
       'force_activation' => false
     ),
