@@ -10,6 +10,10 @@ html {
   overflow-y: scroll;
   background-color: $text-color;
   @include font-smoothing(on);
+
+  // fix for repaint issue
+  // link: https://goo.gl/gl4DXQ
+  -webkit-transform: translate3d(0,0,0);
 }
 *, *:before, *:after {
   box-sizing: inherit;
