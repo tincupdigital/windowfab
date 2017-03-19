@@ -24,6 +24,17 @@ define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/starter/content'
 $table_prefix  = 'wp_';
 
 /**
+ * Miscellaneous settings
+ */
+define( 'WP_POST_REVISIONS', 5 );
+/**
+ * Debugging stuff
+ */
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_DISPLAY', false );
+define( 'WP_DEBUG_LOG', true );
+
+/**
  * Load WordPress
  */
 if ( !defined( 'ABSPATH' ) ) {
