@@ -29,10 +29,8 @@ module.exports = function(grunt) {
           outputStyle: 'nested',
           sourceMap: false
         },
-        dist: {
-          files: {
-            'assets/css/main.css': 'assets/scss/main.scss'
-          }
+        files: {
+          'assets/css/main.css': 'assets/scss/main.scss'
         }
       },
       build: {
@@ -40,10 +38,8 @@ module.exports = function(grunt) {
           outputStyle: 'compressed',
           sourceMap: true
         },
-        dist: {
-          files: {
-            'assets/css/main.min.css': 'assets/scss/main.scss'
-          }
+        files: {
+          'assets/css/main.min.css': 'assets/scss/main.scss'
         }
       }
     },
@@ -77,30 +73,32 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: [
-          'assets/scss/**/**/*.scss'
+          'assets/scss/**/*.scss'
         ],
-        tasks: ['sass:dev']
+        tasks: ['sass:dev'],
+        options: {
+          livereload: true
+        }
       },
       js: {
         files: [
           jsFileList,
           '<%= jshint.all %>'
         ],
-        tasks: ['jshint', 'concat']
-      },
-      livereload: {
-        // Browser live reloading
-        // https://github.com/gruntjs/grunt-contrib-watch#live-reloading
+        tasks: ['jshint', 'concat'],
         options: {
           livereload: true
-        },
+        }
+      },
+      php: {
         files: [
-          'assets/css/main.css',
-          'assets/js/main.js',
           'page-templates/*.php',
           'templates/**/*.php',
           '*.php'
-        ]
+        ],
+        options: {
+          livereload: true
+        }
       }
     },
     svgmin: {
